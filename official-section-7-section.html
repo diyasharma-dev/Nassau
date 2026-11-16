@@ -1,0 +1,270 @@
+<section class="section" id="neighborhoods">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="section-tag">Coverage Map</span>
+                <h2>Areas We Inspect in Nassau County</h2>
+                <p style="font-size:17px;line-height:1.6;color:var(--text-secondary);">HomeStar performs certified home inspections across all 80 neighborhoods in Nassau County.</p>
+            </div>
+
+            
+            <div style="max-width:480px;margin:0 auto 24px;">
+                <label for="hood-search" class="sr-only">Search neighborhoods</label>
+                <div style="position:relative;">
+                    <input 
+                        type="text" 
+                        id="hood-search" 
+                        placeholder="Search Nassau County neighborhoods (e.g. Centre Island)..." 
+                        style="width:100%;padding:12px 16px 12px 42px;border:2.5px solid var(--border-strong);border-radius:10px;font-size:15px;background:#fff;box-shadow:3px 3px 0 var(--border-strong);outline:none;"
+                        oninput="filterHoods(this.value)"
+                    >
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--text-muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);pointer-events:none;" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                </div>
+                <div id="search-count" style="font-size:12px;color:var(--text-muted);font-weight:600;margin-top:6px;text-align:right;">
+                    Showing all 80 areas
+                </div>
+            </div>
+
+            <ul id="hood-list" data-r="four" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));gap:10px;" aria-label="Neighborhoods in Nassau County">
+                                                        <li class="hood-item" data-name="centre island" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Centre Island
+                    </li>
+                                                        <li class="hood-item" data-name="lattingtown" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Lattingtown
+                    </li>
+                                                        <li class="hood-item" data-name="cove neck" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Cove Neck
+                    </li>
+                                                        <li class="hood-item" data-name="sands point" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Sands Point
+                    </li>
+                                                        <li class="hood-item" data-name="locust valley" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Locust Valley
+                    </li>
+                                                        <li class="hood-item" data-name="baxter estates" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Baxter Estates
+                    </li>
+                                                        <li class="hood-item" data-name="glen head" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Glen Head
+                    </li>
+                                                        <li class="hood-item" data-name="east norwich" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        East Norwich
+                    </li>
+                                                        <li class="hood-item" data-name="kings point" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Kings Point
+                    </li>
+                                                        <li class="hood-item" data-name="great neck" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Great Neck
+                    </li>
+                                                        <li class="hood-item" data-name="flower hill" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Flower Hill
+                    </li>
+                                                        <li class="hood-item" data-name="brookville" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Brookville
+                    </li>
+                                                        <li class="hood-item" data-name="syosset" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Syosset
+                    </li>
+                                                        <li class="hood-item" data-name="great neck estates" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Great Neck Estates
+                    </li>
+                                                        <li class="hood-item" data-name="east hills" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        East Hills
+                    </li>
+                                                        <li class="hood-item" data-name="jericho" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Jericho
+                    </li>
+                                                        <li class="hood-item" data-name="plainview" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Plainview
+                    </li>
+                                                        <li class="hood-item" data-name="university gardens" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        University Gardens
+                    </li>
+                                                        <li class="hood-item" data-name="albertson" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Albertson
+                    </li>
+                                                        <li class="hood-item" data-name="westbury" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Westbury
+                    </li>
+                                                        <li class="hood-item" data-name="hicksville" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Hicksville
+                    </li>
+                                                        <li class="hood-item" data-name="carle place" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Carle Place
+                    </li>
+                                                        <li class="hood-item" data-name="bethpage" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Bethpage
+                    </li>
+                                                        <li class="hood-item" data-name="floral park" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Floral Park
+                    </li>
+                                                        <li class="hood-item" data-name="east meadow" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        East Meadow
+                    </li>
+                                                        <li class="hood-item" data-name="farmingdale" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Farmingdale
+                    </li>
+                                                        <li class="hood-item" data-name="south farmingdale" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        South Farmingdale
+                    </li>
+                                                        <li class="hood-item" data-name="elmont" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Elmont
+                    </li>
+                                                        <li class="hood-item" data-name="hempstead" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Hempstead
+                    </li>
+                                                        <li class="hood-item" data-name="north bellmore" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        North Bellmore
+                    </li>
+                                                        <li class="hood-item" data-name="east massapequa" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        East Massapequa
+                    </li>
+                                                        <li class="hood-item" data-name="lakeview" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Lakeview
+                    </li>
+                                                        <li class="hood-item" data-name="roosevelt" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Roosevelt
+                    </li>
+                                                        <li class="hood-item" data-name="lynbrook" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Lynbrook
+                    </li>
+                                                        <li class="hood-item" data-name="baldwin" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Baldwin
+                    </li>
+                                                        <li class="hood-item" data-name="bellmore" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Bellmore
+                    </li>
+                                                        <li class="hood-item" data-name="east rockaway" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        East Rockaway
+                    </li>
+                                                        <li class="hood-item" data-name="baldwin harbor" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Baldwin Harbor
+                    </li>
+                                                        <li class="hood-item" data-name="cedarhurst" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Cedarhurst
+                    </li>
+                                                        <li class="hood-item" data-name="lawrence" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Lawrence
+                    </li>
+                                                        <li class="hood-item" data-name="barnum island" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Barnum Island
+                    </li>
+                                                        <li class="hood-item" data-name="atlantic beach" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Atlantic Beach
+                    </li>
+                                                        <li class="hood-item" data-name="lido beach" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Lido Beach
+                    </li>
+                                                        <li class="hood-item" data-name="bayville" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Bayville
+                    </li>
+                                                        <li class="hood-item" data-name="glen cove" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Glen Cove
+                    </li>
+                                                        <li class="hood-item" data-name="oyster bay" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Oyster Bay
+                    </li>
+                                                        <li class="hood-item" data-name="upper brookville" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Upper Brookville
+                    </li>
+                                                        <li class="hood-item" data-name="muttontown" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Muttontown
+                    </li>
+                                                        <li class="hood-item" data-name="sea cliff" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Sea Cliff
+                    </li>
+                                                        <li class="hood-item" data-name="port washington" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Port Washington
+                    </li>
+                                                        <li class="hood-item" data-name="manhasset" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Manhasset
+                    </li>
+                                                        <li class="hood-item" data-name="roslyn" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Roslyn
+                    </li>
+                                                        <li class="hood-item" data-name="roslyn heights" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Roslyn Heights
+                    </li>
+                                                        <li class="hood-item" data-name="old westbury" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Old Westbury
+                    </li>
+                                                        <li class="hood-item" data-name="mineola" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Mineola
+                    </li>
+                                                        <li class="hood-item" data-name="new cassel" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        New Cassel
+                    </li>
+                                                        <li class="hood-item" data-name="salisbury" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Salisbury
+                    </li>
+                                                        <li class="hood-item" data-name="woodbury" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Woodbury
+                    </li>
+                                                        <li class="hood-item" data-name="old bethpage" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Old Bethpage
+                    </li>
+                                                        <li class="hood-item" data-name="levittown" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Levittown
+                    </li>
+                                                        <li class="hood-item" data-name="plainedge" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Plainedge
+                    </li>
+                                                        <li class="hood-item" data-name="north wantagh" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        North Wantagh
+                    </li>
+                                                        <li class="hood-item" data-name="wantagh" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Wantagh
+                    </li>
+                                                        <li class="hood-item" data-name="seaford" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Seaford
+                    </li>
+                                                        <li class="hood-item" data-name="massapequa" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Massapequa
+                    </li>
+                                                        <li class="hood-item" data-name="merrick" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Merrick
+                    </li>
+                                                        <li class="hood-item" data-name="north merrick" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        North Merrick
+                    </li>
+                                                        <li class="hood-item" data-name="freeport" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Freeport
+                    </li>
+                                                        <li class="hood-item" data-name="garden city" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Garden City
+                    </li>
+                                                        <li class="hood-item" data-name="franklin square" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Franklin Square
+                    </li>
+                                                        <li class="hood-item" data-name="new hyde park" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        New Hyde Park
+                    </li>
+                                                        <li class="hood-item" data-name="oceanside" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Oceanside
+                    </li>
+                                                        <li class="hood-item" data-name="island park" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Island Park
+                    </li>
+                                                        <li class="hood-item" data-name="valley stream" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Valley Stream
+                    </li>
+                                                        <li class="hood-item" data-name="north valley stream" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        North Valley Stream
+                    </li>
+                                                        <li class="hood-item" data-name="hewlett" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Hewlett
+                    </li>
+                                                        <li class="hood-item" data-name="woodmere" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Woodmere
+                    </li>
+                                                        <li class="hood-item" data-name="inwood" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Inwood
+                    </li>
+                                                        <li class="hood-item" data-name="long beach" style="background:var(--surface-card);color:var(--on-accent);font-weight:600;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        Long Beach
+                    </li>
+                                                        <li class="hood-item" data-name="and many others..." style="background:var(--accent);color:var(--on-accent);font-weight:800;border:2px solid var(--border-strong);border-radius:8px;padding:10px 14px;font-size:13.5px;box-shadow:2px 2px 0 var(--border-strong);transition:all var(--duration-fast) var(--ease-standard);">
+                        and many others...
+                    </li>
+                            </ul>
+        </div>
+    </section>
