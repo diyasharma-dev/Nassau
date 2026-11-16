@@ -10,19 +10,19 @@
         </p>
       </div>
 
-      <!-- Interactive FAQ Accordion Container -->
+      <!-- Proper Single-Open Interactive FAQ Accordion -->
       <div class="faq-container">
         <div
           v-for="(item, idx) in faqs"
           :key="idx"
           class="faq-card"
-          :class="{ 'is-open': openMap[idx] }"
+          :class="{ 'is-open': openIndex === idx }"
         >
           <!-- Clickable Header Button -->
           <button
             type="button"
             class="faq-question-btn"
-            :aria-expanded="openMap[idx]"
+            :aria-expanded="openIndex === idx"
             @click="toggleFaq(idx)"
           >
             <span class="faq-question-text">{{ item.question }}</span>
@@ -36,7 +36,7 @@
           <!-- Expandable Answer Body with Transition -->
           <transition name="faq-slide">
             <div
-              v-show="openMap[idx]"
+              v-show="openIndex === idx"
               class="faq-reply-wrapper"
             >
               <div class="faq-reply-box">
@@ -64,20 +64,13 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue';
+import { ref } from 'vue';
 
-// By default all FAQ answers are OPEN and fully visible
-const openMap = reactive({
-  0: true,
-  1: true,
-  2: true,
-  3: true,
-  4: true,
-  5: true
-});
+// By default only the first FAQ is open, like a proper professional accordion
+const openIndex = ref(0);
 
 const toggleFaq = (idx) => {
-  openMap[idx] = !openMap[idx];
+  openIndex.value = openIndex.value === idx ? null : idx;
 };
 
 const faqs = [
@@ -227,6 +220,7 @@ const faqs = [
   color: #121820;
 }
 
+/* Rotate chevron 180 degrees when open */
 .faq-card.is-open .faq-toggle-icon {
   transform: rotate(180deg);
   background: #e0f2fe;
@@ -238,7 +232,7 @@ const faqs = [
 }
 
 .faq-reply-box {
-  padding: 16px 26px 24px 26px;
+  padding: 0 26px 22px 26px;
   border-top: 1px solid #f1f5f9;
 }
 
@@ -247,7 +241,7 @@ const faqs = [
   font-size: 1rem;
   line-height: 1.72;
   color: #1e293b !important;
-  margin: 0 !important;
+  margin: 14px 0 0 0 !important;
   display: block !important;
   max-height: none !important;
   height: auto !important;
