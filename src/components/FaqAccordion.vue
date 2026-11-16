@@ -16,13 +16,13 @@
           v-for="(item, idx) in faqs"
           :key="idx"
           class="faq-card"
-          :class="{ 'is-open': openIndex === idx }"
+          :class="{ 'is-open': openMap[idx] }"
         >
           <!-- Clickable Header Button -->
           <button
             type="button"
             class="faq-question-btn"
-            :aria-expanded="openIndex === idx"
+            :aria-expanded="openMap[idx]"
             @click="toggleFaq(idx)"
           >
             <span class="faq-question-text">{{ item.question }}</span>
@@ -36,7 +36,7 @@
           <!-- Expandable Answer Body with Transition -->
           <transition name="faq-slide">
             <div
-              v-show="openIndex === idx"
+              v-show="openMap[idx]"
               class="faq-answer-wrapper"
             >
               <div class="faq-answer-content">
@@ -64,31 +64,46 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { reactive } from 'vue';
 
-// By default open the first FAQ so users immediately see content
-const openIndex = ref(0);
+// By default all FAQ answers are OPEN and fully visible
+const openMap = reactive({
+  0: true,
+  1: true,
+  2: true,
+  3: true,
+  4: true,
+  5: true
+});
 
 const toggleFaq = (idx) => {
-  if (openIndex.value === idx) {
-    openIndex.value = -1; // close if already open
-  } else {
-    openIndex.value = idx;
-  }
+  openMap[idx] = !openMap[idx];
 };
 
 const faqs = [
   {
     question: "How do you check for abandoned oil tanks in Nassau County?",
-    answer: "We inspect basement foundation penetrations for disconnected copper fuel lines, patch marks, and exterior vent/fill pipes that suggest a buried tank on the property."
+    answer: "We inspect basement foundation penetrations for disconnected copper fuel lines, patch marks in concrete slabs, and exterior vent or fill pipes that indicate an underground storage tank (UST). Every finding is documented with photographs and notes for municipal decommissioning certificates and soil testing."
   },
   {
     question: "When do I receive my Nassau County inspection report?",
-    answer: "You will receive your full digital inspection report with detailed color photos the next day."
+    answer: "You will receive your comprehensive digital inspection report with detailed high-resolution color photos, defect severity ratings, and prioritized repair recommendations delivered directly to your inbox the next day."
   },
   {
     question: "Are all built-in kitchen and mechanical appliances tested?",
-    answer: "Yes, we test built-in kitchen appliances, heating systems, water heaters, central AC units, and electrical safety disconnects."
+    answer: "Yes, we test all accessible built-in kitchen appliances (ranges, ovens, dishwashers, microwaves), hydronic boilers, furnaces, domestic water heaters, central AC units, and electrical safety disconnects."
+  },
+  {
+    question: "Is the official NPMA-33 Termite (WDO) Report included?",
+    answer: "Yes. As a NYS certified Wood Destroying Organism inspector, Daren Koniuk includes the official lender-required NPMA-33 Termite Inspection Form free of charge with all full residential inspections."
+  },
+  {
+    question: "Can I attend the inspection and walk through the house with Daren?",
+    answer: "Yes, we strongly encourage buyers to attend. Daren walks you through every major system, explains shut-off valves, demonstrates equipment operation, answers all questions on site, and highlights maintenance priorities."
+  },
+  {
+    question: "How quickly can we schedule a Nassau County inspection?",
+    answer: "HomeStar operates in Nassau County daily, 7 days a week. We offer same-day and next-day inspection slots to ensure you comfortably meet your attorney's pre-contract inspection deadlines."
   }
 ];
 </script>
@@ -130,7 +145,7 @@ const faqs = [
 .section-sub {
   font-family: var(--font-sans, 'Inter', sans-serif);
   font-size: 1.05rem;
-  color: var(--text-secondary, #475569);
+  color: #475569;
   max-width: 720px;
   margin: 0 auto;
   line-height: 1.6;
@@ -185,7 +200,7 @@ const faqs = [
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
   font-size: 1.15rem;
   font-weight: 800;
-  color: var(--charcoal-950, #121820);
+  color: #121820;
   line-height: 1.35;
   flex-grow: 1;
 }
@@ -202,14 +217,14 @@ const faqs = [
   height: 34px;
   border-radius: 50%;
   background: #f1f5f9;
-  color: var(--text-secondary, #475569);
+  color: #475569;
   flex-shrink: 0;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, color 0.2s ease;
 }
 
 .faq-card:hover .faq-toggle-icon {
   background: #e2e8f0;
-  color: var(--charcoal-950, #121820);
+  color: #121820;
 }
 
 .faq-card.is-open .faq-toggle-icon {
@@ -231,8 +246,9 @@ const faqs = [
   font-family: var(--font-sans, 'Inter', sans-serif);
   font-size: 0.98rem;
   line-height: 1.7;
-  color: var(--text-secondary, #475569);
+  color: #334155 !important; /* High contrast dark charcoal - always readable */
   margin: 14px 0 0 0;
+  display: block;
 }
 
 /* Slide Transition */
@@ -254,7 +270,7 @@ const faqs = [
 
 .faq-footer-callout p {
   font-size: 0.95rem;
-  color: var(--text-secondary, #475569);
+  color: #475569;
   margin-bottom: 14px;
 }
 
@@ -263,8 +279,8 @@ const faqs = [
   align-items: center;
   gap: 8px;
   background: #ffffff;
-  color: var(--charcoal-950, #121820);
-  border: 1.5px solid var(--border-soft, #d8dee6);
+  color: #121820;
+  border: 1.5px solid #d8dee6;
   padding: 10px 22px;
   border-radius: 9999px;
   font-weight: 700;
