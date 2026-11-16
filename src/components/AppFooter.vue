@@ -27,22 +27,22 @@
         <div class="footer-col">
           <h4>Nassau County Townships</h4>
           <ul class="footer-links">
-            <li><a href="#coverage">Town of North Hempstead (Great Neck, Manhasset, Roslyn)</a></li>
-            <li><a href="#coverage">Town of Hempstead (Garden City, Levittown, Merrick)</a></li>
-            <li><a href="#coverage">Town of Oyster Bay (Syosset, Massapequa, Plainview)</a></li>
-            <li><a href="#coverage">City of Long Beach (Beachfront &amp; Canals)</a></li>
-            <li><a href="#coverage">City of Glen Cove (North Shore Harbor)</a></li>
+            <li><a href="#neighborhoods">Town of North Hempstead (Great Neck, Manhasset, Roslyn)</a></li>
+            <li><a href="#neighborhoods">Town of Hempstead (Garden City, Levittown, Merrick)</a></li>
+            <li><a href="#neighborhoods">Town of Oyster Bay (Syosset, Massapequa, Plainview)</a></li>
+            <li><a href="#neighborhoods">City of Long Beach (Beachfront &amp; Canals)</a></li>
+            <li><a href="#neighborhoods">City of Glen Cove (North Shore Harbor)</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Nassau Inspection Scope</h4>
           <ul class="footer-links">
-            <li><a href="#nassau-redflags">6 Costly Nassau Red Flags</a></li>
+            <li><a href="#housing-types">Common Housing Types</a></li>
+            <li><a href="#costly-issues">Costly Issues We Uncover</a></li>
             <li><a href="#checklist">1,700-Point Systems Evaluation</a></li>
-            <li><a href="#nassau-hyperlocal">North Shore, Levittown &amp; South Shore</a></li>
-            <li><a href="#nassau-guide">Pre-Contract Inspection Playbook</a></li>
-            <li><a href="#calculator">Instant Nassau Fee Estimator</a></li>
+            <li><a href="#neighborhoods">80 Areas We Inspect</a></li>
+            <li><a href="#reviews">Google Verified Reviews (4.9★)</a></li>
           </ul>
         </div>
 

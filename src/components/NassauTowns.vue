@@ -1,63 +1,52 @@
 <template>
-  <section class="section coverage-section" id="coverage">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag">Nassau County Exclusive</span>
-        <h2 class="section-title">Serving Every Township, Village &amp; Hamlet in Nassau County</h2>
-        <p class="section-subtitle">
-          From historic North Shore Gold Coast estates to classic South Shore split-levels and suburban central ranch homes, Daren Koniuk brings deep knowledge of Nassau County's distinct building codes, foundations, and heating systems.
+  <section class="section coverage-section" id="neighborhoods">
+    <div class="wrap">
+      <!-- Section Head -->
+      <div class="section-head text-center">
+        <span class="section-tag">Coverage Map</span>
+        <h2 class="section-title">Areas We Inspect in Nassau County</h2>
+        <p class="section-sub">
+          HomeStar performs certified home inspections across all 80 neighborhoods in Nassau County.
         </p>
       </div>
 
-      <!-- Region Filter Tabs by Nassau Jurisdictions -->
-      <div class="region-tabs">
-        <button
-          v-for="region in nassauRegions"
-          :key="region.id"
-          class="region-tab"
-          :class="{ active: selectedRegion === region.id }"
-          @click="selectRegion(region.id)"
-        >
-          {{ region.label }}
-        </button>
-      </div>
-
-      <!-- Search Filter Input -->
-      <div class="town-search-wrapper">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-        <input
-          type="text"
-          v-model="searchQuery"
-          placeholder="Search any Nassau town (e.g. Garden City, Great Neck, Syosset, Massapequa...)"
-          @input="onSearchInput"
-        />
-      </div>
-
-      <!-- Towns Grid -->
-      <div class="towns-grid" v-if="filteredTowns.length > 0">
-        <div class="town-card" v-for="town in filteredTowns" :key="town.name" :data-region="town.region">
-          <div class="town-header">
-            <span class="town-jurisdiction" v-if="town.township">{{ town.township }}</span>
-            <h4 class="town-name">{{ town.name }}</h4>
-          </div>
-          <p class="town-desc">{{ town.description }}</p>
-          <div class="town-footer">
-            <span class="town-zip">ZIP: {{ town.zip }}</span>
-          </div>
+      <!-- Search Input Container -->
+      <div class="hood-search-wrap">
+        <div class="hood-input-box">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="hood-search-ico" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+          </svg>
+          <input
+            type="text"
+            v-model="searchQuery"
+            placeholder="Search Nassau County neighborhoods (e.g. Centre Island)..."
+            class="hood-search-input"
+            aria-label="Search Nassau County neighborhoods"
+          />
+          <button v-if="searchQuery" @click="searchQuery = ''" class="clear-btn" title="Clear search">&times;</button>
+        </div>
+        <div class="search-count">
+          Showing {{ filteredAreas.length }} of 80 areas
         </div>
       </div>
 
-      <!-- Empty State -->
-      <div v-else class="text-center" style="padding: 30px; color: var(--text-muted);">
-        <p>No towns matched "{{ searchQuery }}". But don't worry, we inspect every neighborhood in Nassau County!</p>
-      </div>
+      <!-- 80 Neighborhoods Grid -->
+      <ul class="hood-grid" aria-label="Neighborhoods in Nassau County">
+        <li
+          v-for="area in filteredAreas"
+          :key="area"
+          class="hood-item"
+        >
+          <span class="hood-pin">&bull;</span>
+          <span class="hood-name">{{ area }}</span>
+        </li>
+      </ul>
 
+      <!-- Bottom Coverage CTA -->
       <div class="coverage-cta-banner">
         <div class="coverage-cta-text">
           <h3>Need a same-day or next-day inspection in Nassau County?</h3>
-          <p>Daren Koniuk is in Nassau County daily. Available 7 days a week with fast 24-hour digital photo reports.</p>
+          <p>Daren Koniuk is in Nassau County daily. Available 7 days a week with fast next-day digital photo reports.</p>
         </div>
         <a href="tel:7182087092" class="btn btn-primary">Call Daren Directly: (718) 208-7092</a>
       </div>
@@ -67,113 +56,202 @@
 
 <script setup>
 import { ref, computed } from 'vue';
-import { nassauRegions, nassauTowns } from '../data/townsData.js';
 
-const selectedRegion = ref('all');
 const searchQuery = ref('');
 
-const selectRegion = (regionId) => {
-  selectedRegion.value = regionId;
-  searchQuery.value = '';
-};
+const all80Areas = [
+  "Centre Island", "Lattingtown", "Cove Neck", "Sands Point", "Locust Valley",
+  "Baxter Estates", "Glen Head", "East Norwich", "Kings Point", "Great Neck",
+  "Flower Hill", "Brookville", "Syosset", "Great Neck Estates", "East Hills",
+  "Jericho", "Plainview", "University Gardens", "Albertson", "Westbury",
+  "Hicksville", "Carle Place", "Bethpage", "Floral Park", "East Meadow",
+  "Farmingdale", "South Farmingdale", "Elmont", "Hempstead", "North Bellmore",
+  "East Massapequa", "Lakeview", "Roosevelt", "Lynbrook", "Baldwin",
+  "Bellmore", "East Rockaway", "Baldwin Harbor", "Cedarhurst", "Lawrence",
+  "Barnum Island", "Atlantic Beach", "Lido Beach", "Bayville", "Glen Cove",
+  "Oyster Bay", "Upper Brookville", "Muttontown", "Sea Cliff", "Port Washington",
+  "Manhasset", "Roslyn", "Roslyn Heights", "Old Westbury", "Mineola",
+  "New Cassel", "Salisbury", "Woodbury", "Old Bethpage", "Levittown",
+  "Plainedge", "North Wantagh", "Wantagh", "Seaford", "Massapequa",
+  "Merrick", "North Merrick", "Freeport", "Garden City", "Franklin Square",
+  "New Hyde Park", "Oceanside", "Island Park", "Valley Stream", "North Valley Stream",
+  "Hewlett", "Woodmere", "Inwood", "Long Beach"
+];
 
-const onSearchInput = () => {
-  if (searchQuery.value.trim().length > 0) {
-    selectedRegion.value = 'all';
-  }
-};
-
-const filteredTowns = computed(() => {
-  let list = nassauTowns;
-  if (selectedRegion.value !== 'all') {
-    list = list.filter(t => t.region === selectedRegion.value);
-  }
-  if (searchQuery.value.trim() !== '') {
-    const q = searchQuery.value.toLowerCase().trim();
-    list = list.filter(t => 
-      t.name.toLowerCase().includes(q) || 
-      t.description.toLowerCase().includes(q) || 
-      t.zip.toLowerCase().includes(q) ||
-      (t.township && t.township.toLowerCase().includes(q))
-    );
-  }
-  return list;
+const filteredAreas = computed(() => {
+  if (!searchQuery.value.trim()) return all80Areas;
+  const q = searchQuery.value.toLowerCase().trim();
+  return all80Areas.filter(area => area.toLowerCase().includes(q));
 });
 </script>
 
 <style scoped>
-.town-card {
+.coverage-section {
   background: #ffffff;
-  padding: 22px;
-  border-radius: 12px;
-  border: 1.5px solid var(--border-soft, #d8dee6);
-  box-shadow: 0 2px 8px rgba(18, 24, 32, 0.04);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  padding: 80px 0;
+  border-bottom: 1.5px solid var(--border-soft, #d8dee6);
 }
 
-.town-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--brick, #d94828);
-  box-shadow: 0 8px 20px rgba(18, 24, 32, 0.08);
+.section-head {
+  margin-bottom: 36px;
 }
 
-.town-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  margin-bottom: 12px;
-}
-
-.town-jurisdiction {
-  display: inline-block;
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.68rem;
-  font-weight: 700;
-  background: var(--surface-subtle, #eceef2);
-  color: var(--queens-blue, #0e5a8a);
-  border: 1px solid var(--border-soft, #d8dee6);
-  padding: 3px 8px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1.2;
-}
-
-.town-name {
-  font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  line-height: 1.25;
-  margin: 0;
-}
-
-.town-desc {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.88rem;
-  color: var(--text-secondary, #475569);
-  line-height: 1.55;
-  margin-bottom: 16px;
-  flex-grow: 1;
-}
-
-.town-footer {
-  margin-top: auto;
-  padding-top: 10px;
-  border-top: 1px dashed var(--border-soft, #d8dee6);
-}
-
-.town-zip {
+.section-tag {
   display: inline-block;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.74rem;
   font-weight: 700;
   color: var(--queens-blue, #0e5a8a);
-  background: var(--queens-blue-light, #ebf4fa);
-  padding: 3px 8px;
-  border-radius: 4px;
+  background: #e0f2fe;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: var(--charcoal-950, #121820);
+  line-height: 1.2;
+  margin: 0 0 12px 0;
+}
+
+.section-sub {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 1.05rem;
+  color: var(--text-secondary, #475569);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.hood-search-wrap {
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+.hood-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hood-search-ico {
+  position: absolute;
+  left: 14px;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.hood-search-input {
+  width: 100%;
+  padding: 13px 40px 13px 44px;
+  border: 2px solid var(--border-soft, #d8dee6);
+  border-radius: 10px;
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 0.95rem;
+  background: #ffffff;
+  color: var(--charcoal-950, #121820);
+  box-shadow: 0 2px 8px rgba(18, 24, 32, 0.04);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hood-search-input:focus {
+  border-color: var(--queens-blue, #0e5a8a);
+  box-shadow: 0 0 0 3px rgba(14, 90, 138, 0.15);
+}
+
+.clear-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.search-count {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-top: 8px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.hood-grid {
+  list-style: none;
+  margin: 0 0 48px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 10px;
+}
+
+.hood-item {
+  background: #ffffff;
+  color: var(--charcoal-950, #121820);
+  font-weight: 600;
+  font-size: 0.88rem;
+  border: 1.5px solid var(--border-soft, #d8dee6);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(18, 24, 32, 0.02);
+  transition: transform 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.hood-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--queens-blue, #0e5a8a);
+  color: var(--queens-blue, #0e5a8a);
+}
+
+.hood-pin {
+  color: var(--queens-blue, #0e5a8a);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.coverage-cta-banner {
+  background: #0f172a;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 860px) {
+  .coverage-cta-banner {
+    flex-direction: row;
+  }
+}
+
+.coverage-cta-text h3 {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+}
+
+.coverage-cta-text p {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  margin: 0;
+  max-width: 620px;
 }
 </style>

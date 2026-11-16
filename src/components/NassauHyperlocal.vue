@@ -1,175 +1,101 @@
 <template>
-  <section class="section nassau-hyperlocal-section" id="nassau-hyperlocal">
+  <section class="section housing-types-section" id="housing-types">
     <div class="wrap">
-      <!-- Section Header -->
-      <div class="section-heading text-center">
-        <span class="eyebrow-tag">Hyperlocal Nassau County Authority</span>
-        <h2 class="section-title">
-          Inspecting Nassau's Distinct Neighborhoods &amp; Housing Eras
-        </h2>
+      <!-- Section Head -->
+      <div class="section-head text-center">
+        <span class="section-tag">Property Profiles</span>
+        <h2 class="section-title">Common Housing Types in Nassau County</h2>
         <p class="section-sub">
-          Nassau County is not one-size-fits-all. Every township, decade, and coastline carries specific structural, mechanical, and environmental vulnerabilities that franchise inspectors miss.
+          We bring specialized building-science experience tailored to the specific construction styles found across Nassau County.
         </p>
       </div>
 
-      <!-- 4 Hyperlocal Architectural Dossiers Grid -->
-      <div class="hyperlocal-dossier-grid">
-        <!-- Card 1: North Shore Gold Coast -->
-        <article class="dossier-card">
-          <div class="dossier-img-box">
-            <img
-              src="/images/roslyn-willet-titus-house.jpg"
-              alt="Historic Roslyn Residence, Town of North Hempstead, Nassau County"
-              class="dossier-img"
-              loading="lazy"
-            />
-            <span class="dossier-tag gold-tag">Gold Coast &bull; Town of North Hempstead</span>
-          </div>
-          <div class="dossier-body">
-            <h3 class="dossier-title">North Shore Historic Colonials &amp; Gold Coast Tudors</h3>
-            <p class="dossier-villages">
-              <strong>Key Towns:</strong> Great Neck, Manhasset, Roslyn, Port Washington, Locust Valley, Oyster Bay.
-            </p>
-            <p class="dossier-desc">
-              Pre-war 1920s architecture with expansive footprints, multi-flue masonry chimneys, and historical charm.
-            </p>
-
-            <div class="dossier-hazards">
-              <span class="hazard-title">Critical Nassau Inspection Focus:</span>
-              <ul class="hazard-list">
-                <li>
-                  <strong>Buried Oil Tanks (UST):</strong> Testing for active or abandoned underground oil tanks that require Nassau County Dept. of Health closure paperwork.
-                </li>
-                <li>
-                  <strong>Heavy Slate &amp; Clay Tile Roofs:</strong> Inspecting fragile valleys, copper flashing, and deteriorated mortar ridges.
-                </li>
-                <li>
-                  <strong>Asbestos Pipe Insulation:</strong> Identifying friable white wrapping on vintage steam pipes in basements.
-                </li>
-                <li>
-                  <strong>Multi-Zone Hydronic Heating:</strong> Verifying expansion tanks, circulating pumps, and cast-iron boiler heat exchangers.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 2: Central Nassau Colonials & Splits -->
-        <article class="dossier-card">
-          <div class="dossier-img-box">
+      <!-- 4 Common Housing Types Grid -->
+      <div class="housing-types-grid">
+        <!-- 1. Suburban Colonials & Split-Levels -->
+        <article class="housing-card">
+          <div class="housing-img-box">
             <img
               src="/images/garden-city-actual-house.jpg"
-              alt="Historic Garden City Residence, Town of Hempstead, Nassau County"
-              class="dossier-img"
+              alt="Suburban Colonials & Split-Levels in Garden City, Syosset, Jericho, Plainview, and Merrick"
+              class="housing-img"
               loading="lazy"
             />
-            <span class="dossier-tag blue-tag">Central Suburbs &bull; Hempstead &amp; Oyster Bay</span>
+            <span class="card-loc-pill">Garden City &bull; Syosset &bull; Merrick</span>
           </div>
-          <div class="dossier-body">
-            <h3 class="dossier-title">Central Nassau Colonials &amp; 1950s Split-Levels</h3>
-            <p class="dossier-villages">
-              <strong>Key Towns:</strong> Garden City, Syosset, Jericho, Plainview, Mineola, Westbury, New Hyde Park.
+          <div class="housing-card-body">
+            <h3 class="housing-type-title">Suburban Colonials &amp; Split-Levels</h3>
+            <p class="housing-type-desc">
+              Classic single-family residences in Garden City, Syosset, Jericho, Plainview, and Merrick with attached garages.
             </p>
-            <p class="dossier-desc">
-              The classic post-war suburban dream featuring tri-level living, full basements, and attached 2-car garages.
-            </p>
-
-            <div class="dossier-hazards">
-              <span class="hazard-title">Critical Nassau Inspection Focus:</span>
-              <ul class="hazard-list">
-                <li>
-                  <strong>Aging Cast-Iron Waste Stacks:</strong> Scoping vertical plumbing stacks for internal corrosion, leaks, and tree root ingress.
-                </li>
-                <li>
-                  <strong>Cesspool vs. County Sewer Connections:</strong> Checking whether property discharges to Nassau County Sewer District #2 or requires private septic maintenance.
-                </li>
-                <li>
-                  <strong>Electrical Panel Capacity:</strong> Identifying overloaded 100A service boxes requiring 200A upgrades for EV chargers and heat pumps.
-                </li>
-                <li>
-                  <strong>Basement Moisture Intrusion:</strong> Checking efflorescence on foundation walls and sump pump discharge lines.
-                </li>
-              </ul>
+            <div class="housing-card-foot">
+              <span class="checklist-badge">&#10003; Full Checklist Evaluation</span>
             </div>
           </div>
         </article>
 
-        <!-- Card 3: Levittown & Mid-Century Slab Tracts -->
-        <article class="dossier-card">
-          <div class="dossier-img-box">
+        <!-- 2. North Shore Luxury Estates -->
+        <article class="housing-card">
+          <div class="housing-img-box">
             <img
-              src="/images/levittown-weber-house-color.jpg"
-              alt="Authentic Levittown Post-War Concrete Slab House, Levittown, Town of Hempstead, Nassau County"
-              class="dossier-img"
+              src="/images/great-neck-actual-house.jpg"
+              alt="North Shore Luxury Estates in Great Neck, Roslyn, Oyster Bay, Sands Point, and Locust Valley"
+              class="housing-img"
               loading="lazy"
             />
-            <span class="dossier-tag brick-tag">Historic Post-War &bull; Town of Hempstead</span>
+            <span class="card-loc-pill">Great Neck &bull; Roslyn &bull; Oyster Bay</span>
           </div>
-          <div class="dossier-body">
-            <h3 class="dossier-title">Levittown &amp; Mid-Century Concrete Slab Ranches</h3>
-            <p class="dossier-villages">
-              <strong>Key Towns:</strong> Levittown, East Meadow, Bethpage, Plainedge.
+          <div class="housing-card-body">
+            <h3 class="housing-type-title">North Shore Luxury Estates</h3>
+            <p class="housing-type-desc">
+              Expansive multi-acre Gold Coast properties in Great Neck, Roslyn, Oyster Bay, Sands Point, and Locust Valley.
             </p>
-            <p class="dossier-desc">
-              Iconic 1947–1951 post-war development built on poured concrete slabs without cellars or standard basements.
-            </p>
-
-            <div class="dossier-hazards">
-              <span class="hazard-title">Critical Nassau Inspection Focus:</span>
-              <ul class="hazard-list">
-                <li>
-                  <strong>In-Slab Radiant Heating Leaks:</strong> Utilizing infrared thermal imaging to trace copper coils buried in the slab for pinhole pressure loss.
-                </li>
-                <li>
-                  <strong>Absence of Foundation Basements:</strong> Checking perimeter slab edges for spalling, soil settlement, and moisture wicking.
-                </li>
-                <li>
-                  <strong>Federal Pacific / Zinsco Panels:</strong> Identifying obsolete breaker panels that are known fire hazards in original Levitt tracts.
-                </li>
-                <li>
-                  <strong>Roof Truss Modifications:</strong> Inspecting homeowner attic expansions where load-bearing framing members were cut improperly.
-                </li>
-              </ul>
+            <div class="housing-card-foot">
+              <span class="checklist-badge">&#10003; Full Checklist Evaluation</span>
             </div>
           </div>
         </article>
 
-        <!-- Card 4: South Shore & Waterfront -->
-        <article class="dossier-card">
-          <div class="dossier-img-box">
+        <!-- 3. South Shore Waterfront Homes -->
+        <article class="housing-card">
+          <div class="housing-img-box">
             <img
               src="/images/massapequa-actual-house.jpg"
-              alt="South Shore Long Island Waterfront & Canalfront Home - Ocean Avenue, Massapequa, Town of Oyster Bay, Nassau County"
-              class="dossier-img"
+              alt="South Shore Waterfront Homes in Massapequa, Bellmore, Freeport, and Oceanside"
+              class="housing-img"
               loading="lazy"
             />
-            <span class="dossier-tag blue-tag">Waterfront &bull; Town of Oyster Bay &amp; Long Beach</span>
+            <span class="card-loc-pill">Massapequa &bull; Bellmore &bull; Freeport</span>
           </div>
-          <div class="dossier-body">
-            <h3 class="dossier-title">South Shore Canals &amp; Barrier Island Waterfront</h3>
-            <p class="dossier-villages">
-              <strong>Key Towns:</strong> Massapequa, Freeport, Merrick, Bellmore, Long Beach, Oceanside, Island Park.
+          <div class="housing-card-body">
+            <h3 class="housing-type-title">South Shore Waterfront Homes</h3>
+            <p class="housing-type-desc">
+              Canal and bayfront residences in Massapequa, Bellmore, Freeport, and Oceanside requiring bulkhead awareness.
             </p>
-            <p class="dossier-desc">
-              Canal-front and barrier beach properties subject to high groundwater tables, tidal surges, and salt air.
-            </p>
+            <div class="housing-card-foot">
+              <span class="checklist-badge">&#10003; Full Checklist Evaluation</span>
+            </div>
+          </div>
+        </article>
 
-            <div class="dossier-hazards">
-              <span class="hazard-title">Critical Nassau Inspection Focus:</span>
-              <ul class="hazard-list">
-                <li>
-                  <strong>Bulkhead &amp; Seawall Integrity:</strong> Evaluating timber piles, deadman tieback rods, and soil sinkholes behind the dock.
-                </li>
-                <li>
-                  <strong>Post-Sandy Flood Elevation Compliance:</strong> Checking mechanical elevation, flood vents, and foundation piling stability.
-                </li>
-                <li>
-                  <strong>Salt Air HVAC Corrosion:</strong> Testing outdoor compressor fins for accelerated oxidation and electrical connection failure.
-                </li>
-                <li>
-                  <strong>Crawlspace Vapor Barriers:</strong> Checking for standing water, high humidity, wood rot, and fungal growth underneath joists.
-                </li>
-              </ul>
+        <!-- 4. Co-Op & Condo Communities -->
+        <article class="housing-card">
+          <div class="housing-img-box">
+            <img
+              src="/images/mineola-actual-house.jpg"
+              alt="Co-Op & Condo Communities in Great Neck, Mineola, and Floral Park"
+              class="housing-img"
+              loading="lazy"
+            />
+            <span class="card-loc-pill">Great Neck &bull; Mineola &bull; Floral Park</span>
+          </div>
+          <div class="housing-card-body">
+            <h3 class="housing-type-title">Co-Op &amp; Condo Communities</h3>
+            <p class="housing-type-desc">
+              Established garden apartment co-operatives in Great Neck, Mineola, and Floral Park.
+            </p>
+            <div class="housing-card-foot">
+              <span class="checklist-badge">&#10003; Full Checklist Evaluation</span>
             </div>
           </div>
         </article>
@@ -182,17 +108,17 @@
 </script>
 
 <style scoped>
-.nassau-hyperlocal-section {
-  background-color: var(--surface-page, #f4f6f8);
+.housing-types-section {
+  background: #ffffff;
   padding: 80px 0;
   border-bottom: 1.5px solid var(--border-soft, #d8dee6);
 }
 
-.section-heading {
+.section-head {
   margin-bottom: 48px;
 }
 
-.eyebrow-tag {
+.section-tag {
   display: inline-block;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.74rem;
@@ -208,35 +134,41 @@
 
 .section-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
   font-weight: 800;
   color: var(--charcoal-950, #121820);
   line-height: 1.2;
-  margin-bottom: 12px;
+  margin: 0 0 12px 0;
 }
 
 .section-sub {
   font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   color: var(--text-secondary, #475569);
   max-width: 720px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
-.hyperlocal-dossier-grid {
+.housing-types-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
 }
 
-@media (min-width: 1040px) {
-  .hyperlocal-dossier-grid {
+@media (min-width: 640px) {
+  .housing-types-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.dossier-card {
+@media (min-width: 1040px) {
+  .housing-types-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.housing-card {
   background: #ffffff;
   border: 1.5px solid var(--border-soft, #d8dee6);
   border-radius: 12px;
@@ -244,37 +176,32 @@
   box-shadow: 0 4px 16px rgba(18, 24, 32, 0.04);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.dossier-card:hover {
+.housing-card:hover {
   transform: translateY(-3px);
+  border-color: var(--brick, #d94828);
   box-shadow: 0 8px 24px rgba(18, 24, 32, 0.08);
 }
 
-.dossier-img-box {
+.housing-img-box {
   position: relative;
-  height: 290px;
+  height: 200px;
   width: 100%;
   overflow: hidden;
   background: #121820;
 }
 
-.dossier-img-box::after {
+.housing-img-box::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(14, 24, 36, 0.65) 0%, rgba(14, 24, 36, 0) 35%);
+  background: linear-gradient(to top, rgba(14, 24, 36, 0.75) 0%, rgba(14, 24, 36, 0) 40%);
   pointer-events: none;
 }
 
-@media (max-width: 640px) {
-  .dossier-img-box {
-    height: 220px;
-  }
-}
-
-.dossier-img {
+.housing-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -283,117 +210,63 @@
   transition: transform 0.3s ease;
 }
 
-.dossier-card:hover .dossier-img {
-  transform: scale(1.03);
+.housing-card:hover .housing-img {
+  transform: scale(1.04);
 }
 
-.dossier-tag {
+.card-loc-pill {
   position: absolute;
-  bottom: 12px;
-  left: 12px;
+  bottom: 10px;
+  left: 10px;
   z-index: 2;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   font-weight: 700;
-  padding: 4px 10px;
+  padding: 3px 8px;
   border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+  background: rgba(18, 24, 32, 0.85);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.gold-tag {
-  background: #121820;
-  color: var(--hazard-gold, #c9a86a);
-  border: 1px solid rgba(201, 168, 106, 0.4);
-}
-
-.blue-tag {
-  background: #121820;
-  color: #60a5fa;
-  border: 1px solid rgba(96, 165, 250, 0.4);
-}
-
-.brick-tag {
-  background: #121820;
-  color: #fb923c;
-  border: 1px solid rgba(251, 146, 60, 0.4);
-}
-
-.dossier-body {
-  padding: 24px;
+.housing-card-body {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.dossier-title {
+.housing-type-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--charcoal-950, #121820);
-  line-height: 1.25;
-  margin-bottom: 8px;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
 }
 
-.dossier-villages {
-  font-size: 0.84rem;
-  color: var(--queens-blue, #0e5a8a);
-  margin-bottom: 10px;
-  line-height: 1.4;
-}
-
-.dossier-desc {
-  font-size: 0.92rem;
+.housing-type-desc {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.6;
   color: var(--text-secondary, #475569);
-  line-height: 1.55;
-  margin-bottom: 18px;
+  margin: 0 0 16px 0;
+  flex-grow: 1;
 }
 
-.dossier-hazards {
+.housing-card-foot {
   margin-top: auto;
-  background: var(--surface-subtle, #eceef2);
-  border: 1px solid var(--border-soft, #d8dee6);
-  border-radius: 8px;
-  padding: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed #e2e8f0;
 }
 
-.hazard-title {
-  display: block;
+.checklist-badge {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.72rem;
-  font-weight: 800;
-  color: var(--brick, #d94828);
+  font-weight: 700;
+  color: var(--queens-blue, #0e5a8a);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 10px;
-}
-
-.hazard-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.hazard-list li {
-  font-size: 0.82rem;
-  line-height: 1.5;
-  color: var(--charcoal-900, #1a222d);
-  padding-left: 14px;
-  position: relative;
-}
-
-.hazard-list li::before {
-  content: "•";
-  color: var(--brick, #d94828);
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-}
-
-.hazard-list li strong {
-  color: var(--charcoal-950, #121820);
+  letter-spacing: 0.03em;
 }
 </style>

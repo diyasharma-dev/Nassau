@@ -6,51 +6,42 @@
     <!-- Site Header & Navigation (Official HomeStar Logo & Wordmark) -->
     <AppHeader @open-modal="handleOpenModal" />
 
-    <!-- Main Content -->
+    <!-- Main Content Strictly Aligned with Official HomeStar Nassau County Page -->
     <main>
-      <!-- Hero Section (Balanced 2-Column Editorial Authority & Verified Dispatch Card) -->
+      <!-- Section 1: Hero Section (Official Breadcrumb, Title, Lede & CTA) -->
       <HeroSection 
         @open-modal="handleOpenModal" 
       />
 
-      <!-- Metrics / Trust Ribbon with Official Badges & Seals -->
+      <!-- Section 2: 3 Key Pillars (Owner On-Site, Next-Day Report, Free Termite Report) -->
       <MetricsRibbon />
 
-      <!-- Real Client Video Walkthroughs (20+ Years. Verified Clients from Queens & Nassau) -->
+      <!-- Real Client Video Walkthroughs (20+ Years. Verified Clients from Nassau & Queens) -->
       <VideoTestimonials />
 
-      <!-- Hyperlocal Nassau Architectural Dossiers (North Shore, Central, Levittown, South Shore) -->
+      <!-- Section 3: Property Profiles (Common Housing Types in Nassau County) -->
       <NassauHyperlocal />
 
-      <!-- 5 Costly Red Flags Unique to Nassau County Homes (Real Field Knowledge) -->
-      <NassauRedFlags @open-modal="handleOpenModal" />
-
-      <!-- Nassau Town Hall Certificate of Occupancy (CO) Traps & 5-Day Contingency -->
-      <LocalChallenges />
-
-      <!-- Costly Serious Defects We Uncover Before You Buy (Real Inspection Photos) -->
+      <!-- Section 4: Defect Watchlist (Costly Issues We Uncover in Nassau County) -->
       <ReportPreview @open-modal="handleOpenModal" />
 
-      <!-- Over 1,700 Items Inside & Out with Official Cross-Section Systems Diagram -->
+      <!-- Section 5: What's Checked (1,700+ Point Inspection Checklist in Nassau County) -->
       <ChecklistExplorer />
 
-      <!-- Why Choose Daren Koniuk (Owner Personally Inspects Over Franchises) -->
-      <WhyInspector />
-
-      <!-- Nassau Towns & Hamlets Coverage Search -->
-      <NassauTowns />
-
-      <!-- The Nassau County Pre-Contract Inspection Playbook (Real Estate Law & Strategy) -->
-      <NassauPreContractGuide />
-
-      <!-- Transparent Fee Calculator -->
-      <FeeCalculator @open-modal="handleOpenModal" />
-
-      <!-- Hyperlocal Nassau FAQs (COs, Termites, 5-Day Contingency) -->
+      <!-- Section 6: Frequently Asked (Nassau County Home Inspection Questions) -->
       <FaqAccordion />
 
-      <!-- Direct Scheduling / Booking Section -->
-      <BookingSection @booking-submitted="handleFullBooking" />
+      <!-- Section 7: Coverage Map (Areas We Inspect in Nassau County - 80 Neighborhoods) -->
+      <NassauTowns />
+
+      <!-- Section 8: All Service Areas (Explore other NYC & Long Island regions) -->
+      <OtherRegions />
+
+      <!-- Section 9: Verified Client Feedback (Rated 4.9 Stars Across NYC & Long Island) -->
+      <ReviewsSection />
+
+      <!-- Section 10: Final CTA Band (Know what you're buying before you buy it) -->
+      <BookingSection @open-modal="handleOpenModal" />
     </main>
 
     <!-- Site Footer -->
@@ -72,22 +63,19 @@
 <script setup>
 import { ref } from 'vue';
 
-// Components
+// Official Components
 import TopAnnouncement from './components/TopAnnouncement.vue';
 import AppHeader from './components/AppHeader.vue';
 import HeroSection from './components/HeroSection.vue';
 import MetricsRibbon from './components/MetricsRibbon.vue';
 import VideoTestimonials from './components/VideoTestimonials.vue';
 import NassauHyperlocal from './components/NassauHyperlocal.vue';
-import NassauRedFlags from './components/NassauRedFlags.vue';
-import LocalChallenges from './components/LocalChallenges.vue';
 import ReportPreview from './components/ReportPreview.vue';
 import ChecklistExplorer from './components/ChecklistExplorer.vue';
-import WhyInspector from './components/WhyInspector.vue';
-import NassauTowns from './components/NassauTowns.vue';
-import NassauPreContractGuide from './components/NassauPreContractGuide.vue';
-import FeeCalculator from './components/FeeCalculator.vue';
 import FaqAccordion from './components/FaqAccordion.vue';
+import NassauTowns from './components/NassauTowns.vue';
+import OtherRegions from './components/OtherRegions.vue';
+import ReviewsSection from './components/ReviewsSection.vue';
 import BookingSection from './components/BookingSection.vue';
 import AppFooter from './components/AppFooter.vue';
 import MobileContactBar from './components/MobileContactBar.vue';
@@ -108,22 +96,12 @@ const closeModal = () => {
   modalOpen.value = false;
   modalNotes.value = '';
 };
-
-const handleHeroQuote = (quoteData) => {
-  handleOpenModal(
-    quoteData.propType,
-    `Instant Quote: $${quoteData.price} | Town: ${quoteData.town} | SqFt: ${quoteData.sqft} sq ft | Timeframe: ${quoteData.timeline}`
-  );
-};
-
-const handleFullBooking = (bookingData) => {
-  handleOpenModal(
-    bookingData.serviceType,
-    `Address: ${bookingData.address} | Town: ${bookingData.town || 'Nassau County'} | Date: ${bookingData.date || 'Flexible'}`
-  );
-};
 </script>
 
 <style>
 /* Global styles imported via main.js */
+.app-root {
+  overflow-x: hidden;
+  width: 100%;
+}
 </style>

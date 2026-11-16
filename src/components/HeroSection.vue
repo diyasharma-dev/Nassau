@@ -7,80 +7,62 @@
       <div class="hero-grid">
         <!-- Left Column: Authority, Headline, Lede & Actions -->
         <div class="hero-left-col">
+          <!-- Official Breadcrumb -->
+          <nav aria-label="Breadcrumb" class="hero-breadcrumb">
+            <span>Home</span>
+            <span class="crumb-sep">/</span>
+            <span>Service Areas</span>
+            <span class="crumb-sep">/</span>
+            <span class="crumb-active">Nassau County</span>
+          </nav>
+
           <!-- Official Licensing Tag -->
           <div class="hero-eyebrow-pill">
             <span class="gold-star">&#9733;</span>
-            <span class="eyebrow-text">NYS LICENSED HOME INSPECTOR #16000009862 &bull; INTERNACHI CPI</span>
+            <span class="eyebrow-text">NYS Licensed &bull; Nassau County</span>
           </div>
 
-          <!-- Main Editorial Display Headline -->
+          <!-- Main Official H1 Headline -->
           <h1 class="hero-headline">
-            Don't buy a Nassau County home
-            <span class="headline-gold">without knowing what's underneath.</span>
+            Nassau County Home Inspection Services
           </h1>
 
-          <!-- Hyperlocal Lede -->
-          <p class="hero-description">
-            From 1920s Garden City &amp; Great Neck brick Tudors to Mid-Century Levittown slab ranches and Massapequa waterfront bulkheads. We examine over 1,700 physical points from roof to foundation before you sign contracts or risk your deposit.
+          <!-- Official Subtitle -->
+          <p class="hero-subtitle">
+            Precision Pre-Purchase Inspections Across Nassau County's North &amp; South Shores
           </p>
 
-          <!-- Core Value Badges Ribbon -->
-          <div class="hero-badges-ribbon">
-            <div class="badge-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="badge-svg">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-              <span><strong>Owner Inspects</strong> (No apprentices)</span>
-            </div>
-
-            <div class="badge-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="badge-svg">
-                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-              </svg>
-              <span><strong>Next-Day</strong> Photo Report</span>
-            </div>
-
-            <div class="badge-item badge-highlight">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="badge-svg text-gold">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
-              <span><strong>FREE Termite Report</strong> ($150 Value)</span>
-            </div>
-
-            <div class="badge-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="badge-svg">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
-              </svg>
-              <span><strong>100% Money-Back</strong> Guarantee</span>
-            </div>
+          <!-- Official Hyperlocal Lede Paragraphs -->
+          <div class="hero-description-block">
+            <p class="hero-description">
+              From North Shore Gold Coast estates in Great Neck and Oyster Bay to suburban split-levels in Garden City, Syosset, and Merrick, Nassau County home buyers require thorough, meticulous inspection standards.
+            </p>
+            <p class="hero-description">
+              HomeStar brings over 20 years of dedicated Long Island inspection experience. We evaluate older oil-to-gas conversions, central air condensers, subterranean termite risks, roof shingle life, and crawlspace waterproofing so you know exactly what you are purchasing.
+            </p>
           </div>
 
-          <!-- CTAs Row -->
+          <!-- CTAs Row Matching Official Page -->
           <div class="hero-cta-group">
             <a href="tel:7182087092" class="btn-call-hero">
-              <span class="live-pulse-dot" aria-hidden="true"></span>
               <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" class="phone-ico">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.28-.28.68-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.6 21 3 13.4 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.34.03.73-.24 1.01L6.6 10.8z"/>
               </svg>
-              <span>Call Daren: (718) 208-7092</span>
+              <span>Call 718-208-7092</span>
             </a>
 
-            <button class="btn-schedule-hero" @click="$emit('open-modal', 'Schedule Nassau Inspection')">
-              <span>Schedule Inspection &rarr;</span>
+            <button class="btn-schedule-hero" @click="$emit('open-modal', 'Nassau County Home Inspection')">
+              <span>Request Quote Online &rarr;</span>
             </button>
-
-            <a href="#calculator" class="btn-pricing-link">
-              <span>Calculate Fee &darr;</span>
-            </a>
           </div>
 
           <!-- Trust Subtext -->
           <div class="hero-trust-notes">
-            <span class="note-pill">&#10003; Available 7 Days a Week</span>
+            <span class="note-pill">&#10003; 80 Nassau County Areas Covered</span>
             <span class="sep">&bull;</span>
-            <span class="note-pill">&#10003; Same-Day &amp; Weekend Slots</span>
+            <span class="note-pill">&#10003; Licensed Owner On-Site</span>
             <span class="sep">&bull;</span>
-            <span class="note-pill">&#10003; Direct cell line to lead inspector</span>
+            <span class="note-pill">&#10003; Next-Day Digital Photo Report</span>
           </div>
         </div>
 
@@ -275,6 +257,27 @@ defineEmits(['open-modal']);
   align-items: flex-start;
 }
 
+.hero-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 14px;
+}
+
+.crumb-sep {
+  margin: 0 8px;
+  opacity: 0.6;
+}
+
+.crumb-active {
+  color: var(--hazard-gold, #c9a86a);
+}
+
 .hero-eyebrow-pill {
   display: inline-flex;
   align-items: center;
@@ -283,7 +286,7 @@ defineEmits(['open-modal']);
   border: 1px solid rgba(201, 168, 106, 0.4);
   border-radius: 9999px;
   padding: 6px 14px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .gold-star {
@@ -302,28 +305,34 @@ defineEmits(['open-modal']);
 
 .hero-headline {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: clamp(2.3rem, 3.8vw, 3.4rem);
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
   font-weight: 800;
-  line-height: 1.14;
+  line-height: 1.15;
   color: #ffffff;
   letter-spacing: -0.025em;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
-.headline-gold {
-  color: var(--hazard-gold, #c9a86a);
-  font-style: italic;
+.hero-subtitle {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
   font-weight: 700;
-  display: block;
+  font-size: 1.18rem;
+  line-height: 1.4;
+  color: var(--hazard-gold, #c9a86a);
+  margin: 0 0 18px 0;
+}
+
+.hero-description-block {
+  margin-bottom: 24px;
+  max-width: 620px;
 }
 
 .hero-description {
   font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 1.05rem;
-  line-height: 1.68;
+  font-size: 0.98rem;
+  line-height: 1.65;
   color: #cbd5e1;
-  margin-bottom: 28px;
-  max-width: 620px;
+  margin-bottom: 12px;
 }
 
 .hero-badges-ribbon {

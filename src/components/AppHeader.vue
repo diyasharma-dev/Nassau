@@ -13,15 +13,14 @@
         />
       </a>
 
-      <!-- Desktop Navigation Menu (Streamlined 6 Core Links) -->
+      <!-- Desktop Navigation Menu (Matching Official Nassau Page) -->
       <nav class="desktop-nav" aria-label="Primary site navigation">
-        <a href="#why-daren" class="nav-item">Why Us</a>
-        <a href="#nassau-hyperlocal" class="nav-item">Nassau Eras</a>
-        <a href="#nassau-redflags" class="nav-item">6 Red Flags</a>
+        <a href="#housing-types" class="nav-item">Housing Types</a>
+        <a href="#costly-issues" class="nav-item">Costly Issues</a>
         <a href="#checklist" class="nav-item">1,700-Pt Scope</a>
-        <a href="#nassau-guide" class="nav-item">Playbook</a>
-        <a href="#calculator" class="nav-item">Pricing</a>
-        <a href="#faq" class="nav-item">FAQ</a>
+        <a href="#neighborhoods" class="nav-item">80 Areas</a>
+        <a href="#faq" class="nav-item">FAQs</a>
+        <a href="#reviews" class="nav-item">Reviews</a>
       </nav>
 
       <!-- Header Actions: Never Cut Off -->
@@ -59,16 +58,15 @@
     <transition name="drawer-slide">
       <div v-if="mobileMenuOpen" class="mobile-drawer">
         <nav class="mobile-nav-list">
-          <a href="#why-daren" class="m-link" @click="closeMobileMenu">Why Choose Daren Koniuk</a>
-          <a href="#nassau-hyperlocal" class="m-link" @click="closeMobileMenu">Nassau Housing Eras &amp; Architecture</a>
-          <a href="#nassau-redflags" class="m-link" @click="closeMobileMenu">6 Costly Nassau Red Flags</a>
-          <a href="#co-traps" class="m-link" @click="closeMobileMenu">Nassau Town Hall CO Traps</a>
-          <a href="#checklist" class="m-link" @click="closeMobileMenu">1,700-Point Inspection Scope</a>
-          <a href="#serious-defects" class="m-link" @click="closeMobileMenu">Serious Defects We Uncover</a>
+          <a href="#hero" class="m-link" @click="closeMobileMenu">Home</a>
+          <a href="#housing-types" class="m-link" @click="closeMobileMenu">Common Housing Types</a>
+          <a href="#costly-issues" class="m-link" @click="closeMobileMenu">Costly Issues We Uncover</a>
+          <a href="#checklist" class="m-link" @click="closeMobileMenu">1,700+ Point Checklist</a>
           <a href="#video-reviews" class="m-link" @click="closeMobileMenu">On-Site Client Video Reviews</a>
-          <a href="#nassau-guide" class="m-link" @click="closeMobileMenu">Pre-Contract Inspection Playbook</a>
-          <a href="#calculator" class="m-link" @click="closeMobileMenu">Nassau Fee Calculator</a>
-          <a href="#faq" class="m-link" @click="closeMobileMenu">Frequently Asked Questions</a>
+          <a href="#neighborhoods" class="m-link" @click="closeMobileMenu">80 Areas We Inspect</a>
+          <a href="#faq" class="m-link" @click="closeMobileMenu">Nassau Inspection Questions</a>
+          <a href="#regions" class="m-link" @click="closeMobileMenu">Other NYC &amp; Long Island Regions</a>
+          <a href="#reviews" class="m-link" @click="closeMobileMenu">Google Reviews (4.9 Stars)</a>
         </nav>
         <div class="mobile-drawer-cta">
           <a href="tel:7182087092" class="btn btn-outline btn-block">

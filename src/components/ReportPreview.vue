@@ -1,133 +1,104 @@
 <template>
-  <section class="section serious-defects-section" id="serious-defects">
+  <section class="section defect-watchlist-section" id="costly-issues">
     <div class="wrap">
-      <div class="section-heading text-center">
-        <span class="eyebrow-tag brick-tag">Nassau Home Inspection Case Studies</span>
-        <h2 class="section-title">Real Nassau County Homes We Inspect &amp; The Costly Defects Uncovered</h2>
+      <!-- Section Head -->
+      <div class="section-head text-center">
+        <span class="section-tag danger-tag">Defect Watchlist</span>
+        <h2 class="section-title">Costly Issues We Uncover in Nassau County</h2>
         <p class="section-sub">
-          Every Nassau County town has unique architectural vulnerabilities. Here is how our comprehensive pre-contract inspections protected home buyers across Garden City, Levittown, Great Neck, and Massapequa.
+          Don't buy an inherited repair bill. We inspect all high-risk systems and look for structural and safety hazards before you close.
         </p>
       </div>
 
-      <!-- Defect Cards Grid -->
-      <div class="defects-grid">
-        <!-- Card 1: Garden City -->
-        <article class="defect-card">
-          <div class="defect-img-wrap">
-            <img
-              src="/images/garden-city-actual-house.jpg"
-              alt="Historic Garden City Residence in Town of Hempstead, Nassau County"
-              class="defect-img"
-              loading="lazy"
-            />
-            <span class="defect-badge tag-warning">Town of Hempstead &bull; Historic Colonial</span>
-          </div>
-          <div class="defect-body">
-            <div class="defect-meta-row">
-              <span class="defect-loc">Garden City &bull; Historic Estate</span>
-              <span class="defect-savings">Saved Buyer: $9,500</span>
+      <!-- 4 Costly Issues Grid -->
+      <div class="watchlist-grid">
+        <!-- 1. Buried Heating Oil Tanks -->
+        <article class="watchlist-card">
+          <div class="watchlist-card-top">
+            <div class="risk-badge">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+              </svg>
+              <span>Risk: $10,000&ndash;$40,000+</span>
             </div>
-            <h3 class="defect-title">Cracked Cast-Iron Boiler &amp; Vintage Hydronic Piping</h3>
-            <p class="defect-desc">
-              During the basement mechanical evaluation, heavy corrosion and thermal stress cracks were uncovered in the cast-iron sectional heat exchanger, creating an active carbon monoxide hazard. The seller was forced to credit the buyer $9,500 for a full boiler replacement before closing.
+            <h3 class="watchlist-title">Buried Heating Oil Tanks (USTs)</h3>
+            <p class="watchlist-desc">
+              Disconnected copper fuel lines, patch marks in the basement floor, and exterior vent or fill pipes pointing to an abandoned underground tank with no municipal decommissioning certificate.
             </p>
-            <div class="defect-takeaway">
-              <strong>Inspector Action:</strong> Combustion gas analyzer &amp; FLIR thermal imaging verified heat exchanger failure.
-            </div>
+          </div>
+          <div class="watchlist-card-foot">
+            <span class="report-proof-text">&#128247; Photo-documented in report</span>
           </div>
         </article>
 
-        <!-- Card 2: Levittown -->
-        <article class="defect-card">
-          <div class="defect-img-wrap">
-            <img
-              src="/images/levittown-weber-house-color.jpg"
-              alt="Original 1950s Concrete Slab Home in Levittown, Town of Hempstead, Nassau County"
-              class="defect-img"
-              loading="lazy"
-            />
-            <span class="defect-badge tag-danger">Town of Hempstead &bull; Post-War Slab</span>
-          </div>
-          <div class="defect-body">
-            <div class="defect-meta-row">
-              <span class="defect-loc">Levittown &bull; 1950s Slab Ranch</span>
-              <span class="defect-savings">Saved Buyer: $3,200</span>
+        <!-- 2. Central Air Condenser End-of-Life -->
+        <article class="watchlist-card">
+          <div class="watchlist-card-top">
+            <div class="risk-badge">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+              </svg>
+              <span>Risk: $6,000&ndash;$15,000</span>
             </div>
-            <h3 class="defect-title">Hazardous Double-Tapped Main Panel &amp; Slab In-Piping</h3>
-            <p class="defect-desc">
-              Multiple circuits were crammed into single breaker terminals with scorched neutral conductors inside an obsolete vintage Zinsco panel. Infrared scanning was also deployed to inspect copper radiant heating coils embedded in the concrete slab for pinhole pressure loss.
+            <h3 class="watchlist-title">Central Air Condenser End-of-Life</h3>
+            <p class="watchlist-desc">
+              Aging AC condensers with obsolete refrigerant, compressor wear, and failing evaporator coils near the end of their operational lifespan.
             </p>
-            <div class="defect-takeaway">
-              <strong>Inspector Action:</strong> FLIR scan documented a 138°F bus hot spot; seller funded full 200A electrical service replacement.
-            </div>
+          </div>
+          <div class="watchlist-card-foot">
+            <span class="report-proof-text">&#128247; Photo-documented in report</span>
           </div>
         </article>
 
-        <!-- Card 3: Great Neck -->
-        <article class="defect-card">
-          <div class="defect-img-wrap">
-            <img
-              src="/images/great-neck-actual-house.jpg"
-              alt="Historic North Shore Residence in Great Neck Estates, Nassau County"
-              class="defect-img"
-              loading="lazy"
-            />
-            <span class="defect-badge tag-danger">Town of North Hempstead &bull; Gold Coast</span>
-          </div>
-          <div class="defect-body">
-            <div class="defect-meta-row">
-              <span class="defect-loc">Great Neck Estates &bull; North Shore</span>
-              <span class="defect-savings">Saved Buyer: $14,000</span>
+        <!-- 3. Crawlspace Moisture & Sill Plate Rot -->
+        <article class="watchlist-card">
+          <div class="watchlist-card-top">
+            <div class="risk-badge">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+              </svg>
+              <span>Risk: $8,000&ndash;$28,000</span>
             </div>
-            <h3 class="defect-title">Delaminated Flat Roof Membrane &amp; Hidden Flashing Leaks</h3>
-            <p class="defect-desc">
-              Improper slope on a low-pitch rear architectural addition created severe water ponding, saturated wood framing, and rusted copper valley flashing leaking into upper wall cavities—completely invisible from street level.
+            <h3 class="watchlist-title">Crawlspace Moisture &amp; Sill Plate Rot</h3>
+            <p class="watchlist-desc">
+              Inadequate crawlspace ventilation causing subfloor wood decay, organic growth, and subterranean termite activity.
             </p>
-            <div class="defect-takeaway">
-              <strong>Inspector Action:</strong> Walked the full roof surface and documented active seam splitting; secured a $14,000 credit.
-            </div>
+          </div>
+          <div class="watchlist-card-foot">
+            <span class="report-proof-text">&#128247; Photo-documented in report</span>
           </div>
         </article>
 
-        <!-- Card 4: Massapequa -->
-        <article class="defect-card">
-          <div class="defect-img-wrap">
-            <img
-              src="/images/massapequa-actual-house.jpg"
-              alt="South Shore Canalfront Property on Ocean Avenue, Massapequa, Nassau County"
-              class="defect-img"
-              loading="lazy"
-            />
-            <span class="defect-badge tag-warning">Town of Oyster Bay &bull; South Shore Waterfront</span>
-          </div>
-          <div class="defect-body">
-            <div class="defect-meta-row">
-              <span class="defect-loc">Massapequa &bull; Ocean Ave Coastal</span>
-              <span class="defect-savings">Saved Buyer: $4,800</span>
+        <!-- 4. Attic Ventilation & Ice Damming -->
+        <article class="watchlist-card">
+          <div class="watchlist-card-top">
+            <div class="risk-badge">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+              </svg>
+              <span>Risk: $4,000&ndash;$12,000</span>
             </div>
-            <h3 class="defect-title">Subterranean Termite Mud Tubes on Timber Sill Plates</h3>
-            <p class="defect-desc">
-              Active eastern subterranean termite mud shelter tubes tunneling into load-bearing sill plates behind finished basement sheetrock. Discovered during our included <strong>Free Official NPMA-33 Termite Inspection</strong>.
+            <h3 class="watchlist-title">Attic Ventilation &amp; Ice Damming</h3>
+            <p class="watchlist-desc">
+              Blocked soffit vents, inadequate insulation R-value, and historical roof sheathing moisture staining.
             </p>
-            <div class="defect-takeaway">
-              <strong>Inspector Action:</strong> Probed structural timber and provided official NPMA-33 form requiring professional seller treatment.
-            </div>
+          </div>
+          <div class="watchlist-card-foot">
+            <span class="report-proof-text">&#128247; Photo-documented in report</span>
           </div>
         </article>
       </div>
 
-      <!-- Report Delivery Callout -->
-      <div class="report-delivery-banner">
-        <div class="rdb-left">
-          <span class="rdb-tag">24-Hour Digital Delivery</span>
-          <h3 class="rdb-title">Delivered in Plain English with High-Res Photo Proof</h3>
-          <p class="rdb-text">
-            No 90-page boilerplate checklists. You receive a prioritized, photo-documented digital PDF with color-coded severity tags, exact location references, and clear repair recommendations your attorney can attach directly to the contract rider.
-          </p>
+      <!-- Bottom Banner -->
+      <div class="watchlist-bottom-banner">
+        <div class="wbb-text">
+          <h3>Need a thorough inspection before signing contracts?</h3>
+          <p>Every defect is photo-documented with clear repair recommendations for your attorney to attach to contract riders.</p>
         </div>
-        <div class="rdb-right">
-          <button class="btn btn-primary" @click="$emit('open-modal', 'Sample Report Request')">
-            Request Sample Nassau Report
+        <div class="wbb-actions">
+          <a href="tel:7182087092" class="btn btn-call-white">Call 718-208-7092</a>
+          <button class="btn btn-primary" @click="$emit('open-modal', 'Costly Defect Evaluation')">
+            Schedule Nassau Inspection &rarr;
           </button>
         </div>
       </div>
@@ -140,31 +111,29 @@ defineEmits(['open-modal']);
 </script>
 
 <style scoped>
-.serious-defects-section {
-  background-color: var(--surface-page, #f4f6f8);
+.defect-watchlist-section {
+  background: #fafbfd;
   padding: 80px 0;
   border-bottom: 1.5px solid var(--border-soft, #d8dee6);
 }
 
-.section-heading {
+.section-head {
   margin-bottom: 48px;
 }
 
-.eyebrow-tag {
+.danger-tag {
   display: inline-block;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.74rem;
   font-weight: 700;
+  color: #991b1b;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
   padding: 4px 12px;
   border-radius: 9999px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 12px;
-}
-
-.brick-tag {
-  color: var(--brick, #d94828);
-  background: var(--brick-light, #fff1ee);
 }
 
 .section-title {
@@ -173,203 +142,163 @@ defineEmits(['open-modal']);
   font-weight: 800;
   color: var(--charcoal-950, #121820);
   line-height: 1.2;
-  margin-bottom: 12px;
+  margin: 0 0 12px 0;
 }
 
 .section-sub {
   font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   color: var(--text-secondary, #475569);
   max-width: 720px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
-.defects-grid {
+.watchlist-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(1, 1fr);
   gap: 24px;
   margin-bottom: 48px;
 }
 
-@media (min-width: 1040px) {
-  .defects-grid {
+@media (min-width: 640px) {
+  .watchlist-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.defect-card {
-  background: #ffffff;
-  border: 1.5px solid var(--border-soft, #d8dee6);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(18, 24, 32, 0.04);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease;
-}
-
-.defect-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--brick, #d94828);
-}
-
-.defect-img-wrap {
-  position: relative;
-  height: 290px;
-  width: 100%;
-  background: #121820;
-  overflow: hidden;
-}
-
-.defect-img-wrap::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(14, 24, 36, 0.55) 0%, rgba(14, 24, 36, 0) 30%);
-  pointer-events: none;
-}
-
-@media (max-width: 640px) {
-  .defect-img-wrap {
-    height: 220px;
+@media (min-width: 1040px) {
+  .watchlist-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.defect-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-
-.defect-badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-
-.tag-danger {
-  background: #dc2626;
-  color: #ffffff;
-}
-
-.tag-warning {
-  background: #d97706;
-  color: #ffffff;
-}
-
-.defect-body {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.defect-meta-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.8rem;
-  margin-bottom: 10px;
-}
-
-.defect-loc {
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  color: #64748b;
-  font-weight: 600;
-}
-
-.defect-savings {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-weight: 800;
-  color: #059669;
-  background: #ecfdf5;
-  padding: 3px 8px;
-  border-radius: 4px;
-}
-
-.defect-title {
-  font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  line-height: 1.3;
-  margin-bottom: 10px;
-}
-
-.defect-desc {
-  font-size: 0.88rem;
-  color: var(--text-secondary, #475569);
-  line-height: 1.6;
-  margin-bottom: 16px;
-  flex-grow: 1;
-}
-
-.defect-takeaway {
-  background: var(--surface-subtle, #eceef2);
-  border: 1px solid var(--border-soft, #d8dee6);
-  border-radius: 6px;
-  padding: 10px 12px;
-  font-size: 0.8rem;
-  color: var(--charcoal-900, #1a222d);
-}
-
-.defect-takeaway strong {
-  color: var(--brick, #d94828);
-}
-
-.report-delivery-banner {
+.watchlist-card {
   background: #ffffff;
   border: 1.5px solid var(--border-soft, #d8dee6);
   border-radius: 12px;
-  padding: 32px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(18, 24, 32, 0.04);
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-  box-shadow: 0 4px 20px rgba(18, 24, 32, 0.05);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.rdb-left {
-  flex: 1;
-  min-width: 300px;
+.watchlist-card:hover {
+  transform: translateY(-3px);
+  border-color: #f87171;
+  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.08);
 }
 
-.rdb-tag {
-  display: inline-block;
+.watchlist-card-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.risk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fef2f2;
+  border: 1.5px solid #f87171;
+  border-radius: 6px;
+  padding: 4px 9px;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #991b1b;
+  margin-bottom: 14px;
+  align-self: flex-start;
+}
+
+.watchlist-title {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--charcoal-950, #121820);
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.watchlist-desc {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-secondary, #475569);
+  margin: 0 0 16px 0;
+}
+
+.watchlist-card-foot {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.report-proof-text {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--queens-blue, #0e5a8a);
-  background: var(--queens-blue-light, #ebf4fa);
-  padding: 3px 8px;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  color: #64748b;
   text-transform: uppercase;
 }
 
-.rdb-title {
+.watchlist-bottom-banner {
+  background: #121820;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 860px) {
+  .watchlist-bottom-banner {
+    flex-direction: row;
+  }
+}
+
+.wbb-text h3 {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
   font-size: 1.35rem;
   font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  margin-bottom: 6px;
+  color: #ffffff;
+  margin: 0 0 6px 0;
 }
 
-.rdb-text {
-  font-size: 0.9rem;
-  color: var(--text-secondary, #475569);
-  line-height: 1.55;
+.wbb-text p {
+  font-size: 0.92rem;
+  color: #cbd5e1;
   margin: 0;
+  max-width: 620px;
+}
+
+.wbb-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.btn-call-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  color: #121820;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-call-white:hover {
+  background: var(--hazard-gold, #c9a86a);
 }
 </style>

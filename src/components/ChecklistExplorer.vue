@@ -1,11 +1,12 @@
 <template>
   <section class="section checklist-section" id="checklist">
     <div class="wrap">
-      <div class="section-heading text-center">
-        <span class="eyebrow-tag blue-tag">Exhaustive Scope</span>
-        <h2 class="section-title">Over 1,700 Items, Inside and Out</h2>
+      <!-- Section Head -->
+      <div class="section-head text-center">
+        <span class="section-tag">What's Checked</span>
+        <h2 class="section-title">1,700+ Point Inspection Checklist in Nassau County</h2>
         <p class="section-sub">
-          We don't do 45-minute drive-by walk-throughs. Lead inspector Daren Koniuk evaluates every primary structural, mechanical, and environmental system across your Nassau property.
+          From roof parapets to foundation slabs, every accessible component is rigorously tested.
         </p>
       </div>
 
@@ -25,67 +26,80 @@
           <p class="df-desc">
             A comprehensive inspection requires hands-on physical access. We physically climb into accessible attics, walk safe roof surfaces, open electrical panel dead fronts, fire steam boilers and air conditioners, and probe foundation sill plates.
           </p>
-          <div class="df-points-grid">
-            <div class="df-point">
-              <strong>Exterior &amp; Grading</strong>
-              <span>Driveways, drainage slope, masonry, stoops</span>
-            </div>
-            <div class="df-point">
-              <strong>Roofing &amp; Flashing</strong>
-              <span>Shingles, valley metal, skylights, gutters</span>
-            </div>
-            <div class="df-point">
-              <strong>Structure &amp; Framing</strong>
-              <span>Sill plates, rim joists, subfloors, main beams</span>
-            </div>
-            <div class="df-point">
-              <strong>Heating &amp; Boilers</strong>
-              <span>Cast iron boilers, steam loops, radiators, burners</span>
-            </div>
-            <div class="df-point">
-              <strong>Electrical Service</strong>
-              <span>200A panels, grounding, branch wiring, GFCI/AFCI</span>
-            </div>
-            <div class="df-point">
-              <strong>Plumbing &amp; Waste</strong>
-              <span>Supply lines, cast iron waste stacks, water heaters</span>
-            </div>
+          <div class="df-trust-pills">
+            <span>&#10003; NYS Licensed Inspector On-Site</span>
+            <span>&#10003; 24-Hour Digital Photo Report</span>
+            <span>&#10003; Free Bank Termite Report</span>
           </div>
         </div>
       </div>
 
-      <!-- Interactive System Tabs -->
-      <div class="systems-interactive-wrap">
-        <div class="systems-nav-strip">
-          <button
-            v-for="(system, key) in inspectionSystems"
-            :key="key"
-            class="sys-tab-btn"
-            :class="{ active: currentSystemKey === key }"
-            @click="currentSystemKey = key"
-          >
-            {{ system.title }}
-          </button>
+      <!-- 6 Official Checklist System Cards Grid -->
+      <div class="checklist-six-grid">
+        <!-- 1. Roofing & Exterior Envelope -->
+        <div class="check-card">
+          <div class="check-card-header">
+            <span class="check-num">01</span>
+            <h3 class="check-title">Roofing &amp; Exterior Envelope</h3>
+          </div>
+          <p class="check-desc">
+            Shingles, flat membranes, parapet walls, step flashing, skylights, gutters, drainage scuppers, siding, brickwork, and soil grading.
+          </p>
         </div>
 
-        <div class="system-panel" v-if="currentSystem">
-          <div class="sys-panel-header">
-            <div>
-              <span class="sys-scope-tag">System Inspection Scope</span>
-              <h3 class="sys-panel-title">{{ currentSystem.title }}</h3>
-              <p class="sys-panel-desc">{{ currentSystem.description }}</p>
-            </div>
+        <!-- 2. Electrical Service & Panels -->
+        <div class="check-card">
+          <div class="check-card-header">
+            <span class="check-num">02</span>
+            <h3 class="check-title">Electrical Service &amp; Panels</h3>
           </div>
+          <p class="check-desc">
+            Main service entrance, circuit breaker ratings, grounding, sub-panels, branch wiring, GFCI/AFCI outlets, and reverse polarity hazards.
+          </p>
+        </div>
 
-          <div class="sys-checklist-grid">
-            <div class="checklist-item-card" v-for="(item, iIdx) in currentSystem.items" :key="iIdx">
-              <span class="check-bullet">&#10003;</span>
-              <div class="check-content">
-                <strong>{{ item.name }}</strong>
-                <p>{{ item.desc }}</p>
-              </div>
-            </div>
+        <!-- 3. Heating & Cooling (HVAC) -->
+        <div class="check-card">
+          <div class="check-card-header">
+            <span class="check-num">03</span>
+            <h3 class="check-title">Heating &amp; Cooling (HVAC)</h3>
           </div>
+          <p class="check-desc">
+            Steam and hydronic boilers, gas furnaces, central AC condensers, ductwork, thermostats, zone valves, and combustion safety vents.
+          </p>
+        </div>
+
+        <!-- 4. Plumbing & Water Heaters -->
+        <div class="check-card">
+          <div class="check-card-header">
+            <span class="check-num">04</span>
+            <h3 class="check-title">Plumbing &amp; Water Heaters</h3>
+          </div>
+          <p class="check-desc">
+            Supply piping, waste drainage stacks, vent pipes, water heater tanks, pressure relief valves, functional flow, and fixture leaks.
+          </p>
+        </div>
+
+        <!-- 5. Foundation & Structure -->
+        <div class="check-card">
+          <div class="check-card-header">
+            <span class="check-num">05</span>
+            <h3 class="check-title">Foundation &amp; Structure</h3>
+          </div>
+          <p class="check-desc">
+            Basement walls, floor slabs, crawlspaces, load-bearing wood framing, floor joists, settlement indicators, and water intrusion.
+          </p>
+        </div>
+
+        <!-- 6. Interiors, Attics & Termite WDO -->
+        <div class="check-card">
+          <div class="check-card-header">
+            <span class="check-num">06</span>
+            <h3 class="check-title">Interiors, Attics &amp; Termite WDO</h3>
+          </div>
+          <p class="check-desc">
+            Doors, windows, stairs, ceiling integrity, attic insulation depth, roof ventilation, and official wood destroying organism (termite) check.
+          </p>
         </div>
       </div>
     </div>
@@ -93,42 +107,31 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
-import { inspectionSystems } from '../data/inspectionSystems.js';
-
-const currentSystemKey = ref('roof');
-
-const currentSystem = computed(() => {
-  return inspectionSystems[currentSystemKey.value] || inspectionSystems.roof;
-});
 </script>
 
 <style scoped>
 .checklist-section {
-  background-color: #ffffff;
+  background: #ffffff;
   padding: 80px 0;
   border-bottom: 1.5px solid var(--border-soft, #d8dee6);
 }
 
-.section-heading {
-  margin-bottom: 40px;
+.section-head {
+  margin-bottom: 44px;
 }
 
-.eyebrow-tag {
+.section-tag {
   display: inline-block;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.74rem;
   font-weight: 700;
+  color: var(--queens-blue, #0e5a8a);
+  background: #e0f2fe;
   padding: 4px 12px;
   border-radius: 9999px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 12px;
-}
-
-.blue-tag {
-  color: var(--queens-blue, #0e5a8a);
-  background: var(--queens-blue-light, #ebf4fa);
 }
 
 .section-title {
@@ -137,12 +140,12 @@ const currentSystem = computed(() => {
   font-weight: 800;
   color: var(--charcoal-950, #121820);
   line-height: 1.2;
-  margin-bottom: 12px;
+  margin: 0 0 12px 0;
 }
 
 .section-sub {
   font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   color: var(--text-secondary, #475569);
   max-width: 720px;
   margin: 0 auto;
@@ -150,197 +153,145 @@ const currentSystem = computed(() => {
 }
 
 .diagram-feature-box {
-  background: var(--surface-page, #f4f6f8);
-  border: 1.5px solid var(--border-soft, #d8dee6);
+  background: #0f172a;
+  color: #ffffff;
   border-radius: 14px;
   padding: 32px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
   align-items: center;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 900px) {
   .diagram-feature-box {
-    grid-template-columns: 1fr 1.2fr;
-    gap: 40px;
+    grid-template-columns: 0.85fr 1.15fr;
   }
-}
-
-.df-image-col {
-  background: #ffffff;
-  border: 1px solid var(--border-soft, #d8dee6);
-  border-radius: 10px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .inspection-diagram-img {
   width: 100%;
-  max-width: 480px;
   height: auto;
   object-fit: contain;
   display: block;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 12px;
 }
 
 .df-badge {
+  display: inline-block;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  color: var(--brick, #d94828);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  display: block;
-  margin-bottom: 6px;
+  color: var(--hazard-gold, #c9a86a);
+  background: rgba(201, 168, 106, 0.15);
+  border: 1px solid rgba(201, 168, 106, 0.3);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 12px;
 }
 
 .df-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--charcoal-950, #121820);
+  color: #ffffff;
+  margin: 0 0 12px 0;
   line-height: 1.25;
-  margin-bottom: 10px;
 }
 
 .df-desc {
-  font-size: 0.92rem;
-  color: var(--text-secondary, #475569);
-  line-height: 1.6;
-  margin-bottom: 20px;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+  margin: 0 0 20px 0;
 }
 
-.df-points-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-}
-
-.df-point {
-  background: #ffffff;
-  border: 1px solid var(--border-soft, #d8dee6);
-  border-radius: 6px;
-  padding: 10px 12px;
+.df-trust-pills {
   display: flex;
-  flex-direction: column;
-}
-
-.df-point strong {
+  flex-wrap: wrap;
+  gap: 10px;
   font-size: 0.82rem;
-  color: var(--charcoal-950, #121820);
-  margin-bottom: 2px;
+  font-weight: 600;
+  color: #94a3b8;
 }
 
-.df-point span {
-  font-size: 0.74rem;
-  color: #64748b;
+.df-trust-pills span {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
 }
 
-/* Systems Interactive Tabs */
-.systems-interactive-wrap {
+.checklist-six-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .checklist-six-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .checklist-six-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.check-card {
+  background: #fafbfd;
   border: 1.5px solid var(--border-soft, #d8dee6);
   border-radius: 12px;
-  overflow: hidden;
-  background: #ffffff;
-}
-
-.systems-nav-strip {
+  padding: 24px;
   display: flex;
-  overflow-x: auto;
-  background: var(--surface-subtle, #eceef2);
-  border-bottom: 1.5px solid var(--border-soft, #d8dee6);
-  padding: 6px 6px 0;
-  gap: 4px;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.sys-tab-btn {
-  padding: 10px 16px;
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.86rem;
-  font-weight: 600;
-  background: none;
-  border: none;
-  border-radius: 6px 6px 0 0;
-  color: var(--text-secondary, #475569);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.15s ease;
+.check-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--queens-blue, #0e5a8a);
 }
 
-.sys-tab-btn:hover {
-  color: var(--charcoal-950, #121820);
+.check-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
-.sys-tab-btn.active {
-  background: #ffffff;
-  color: var(--brick, #d94828);
-  font-weight: 700;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.04);
-}
-
-.system-panel {
-  padding: 28px 32px;
-}
-
-.sys-scope-tag {
+.check-num {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.7rem;
-  color: #94a3b8;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--queens-blue, #0e5a8a);
+  background: #e0f2fe;
+  padding: 2px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
 }
 
-.sys-panel-title {
+.check-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.4rem;
+  font-size: 1.08rem;
   font-weight: 800;
   color: var(--charcoal-950, #121820);
-  margin-bottom: 4px;
+  margin: 0;
+  line-height: 1.3;
 }
 
-.sys-panel-desc {
-  font-size: 0.9rem;
+.check-desc {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 0.88rem;
+  line-height: 1.6;
   color: var(--text-secondary, #475569);
-  margin-bottom: 24px;
-}
-
-.sys-checklist-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-}
-
-.checklist-item-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  background: var(--surface-page, #f4f6f8);
-  border: 1px solid var(--border-soft, #d8dee6);
-  border-radius: 8px;
-  padding: 14px;
-}
-
-.check-bullet {
-  color: #059669;
-  font-weight: bold;
-  font-size: 1rem;
-  line-height: 1.2;
-}
-
-.check-content strong {
-  display: block;
-  font-size: 0.86rem;
-  color: var(--charcoal-950, #121820);
-  margin-bottom: 2px;
-}
-
-.check-content p {
-  font-size: 0.78rem;
-  color: var(--text-secondary, #475569);
-  line-height: 1.45;
   margin: 0;
 }
 </style>

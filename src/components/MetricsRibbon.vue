@@ -1,74 +1,41 @@
 <template>
-  <section class="trust-ribbon" aria-label="Official Inspection Certifications and Guarantees">
-    <div class="wrap ribbon-wrap">
-      <!-- 100% Satisfaction Guarantee Seal -->
-      <div class="trust-item">
-        <img
-          src="/images/satisfaction-seal.webp"
-          alt="100% Money-Back Satisfaction Guarantee"
-          class="seal-img"
-          width="54"
-          height="54"
-          loading="lazy"
-        />
-        <div class="trust-text">
-          <strong class="trust-title">100% Satisfaction Guarantee</strong>
-          <span class="trust-desc">If unsatisfied at inspection end, you owe $0</span>
+  <section class="section three-pillars-section">
+    <div class="wrap">
+      <div class="pillars-grid">
+        <!-- Pillar 01 -->
+        <div class="pillar-card">
+          <div class="pillar-top">
+            <span class="card-step">01</span>
+            <span class="pillar-tag">Guaranteed Authority</span>
+          </div>
+          <h3 class="pillar-title">Licensed Owner On-Site</h3>
+          <p class="pillar-text">
+            Every Nassau County inspection is personally conducted by NYS licensed inspector Daren Koniuk (never an apprentice, trainee, or sub-contractor).
+          </p>
         </div>
-      </div>
 
-      <!-- InterNACHI Certified Seal -->
-      <div class="trust-item">
-        <img
-          src="/images/internachi-seal.webp"
-          alt="InterNACHI Certified Professional Inspector"
-          class="seal-img"
-          width="48"
-          height="50"
-          loading="lazy"
-        />
-        <div class="trust-text">
-          <strong class="trust-title">InterNACHI Certified CPI</strong>
-          <span class="trust-desc">Rigorous international inspection standard</span>
+        <!-- Pillar 02 -->
+        <div class="pillar-card">
+          <div class="pillar-top">
+            <span class="card-step">02</span>
+            <span class="pillar-tag">Rapid Turnaround</span>
+          </div>
+          <h3 class="pillar-title">Next-Day Digital Report</h3>
+          <p class="pillar-text">
+            Receive your comprehensive digital PDF report with high-resolution color photographs delivered to your inbox the next day.
+          </p>
         </div>
-      </div>
 
-      <!-- NYS Licensed Authority -->
-      <div class="trust-item">
-        <div class="trust-badge-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="svg-icon">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-        </div>
-        <div class="trust-text">
-          <strong class="trust-title">NYS DOS Lic. #16000009862</strong>
-          <span class="trust-desc">Over 20 years inspecting Long Island</span>
-        </div>
-      </div>
-
-      <!-- Free Termite NPMA-33 Report -->
-      <div class="trust-item">
-        <div class="trust-badge-icon gold-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="svg-icon">
-            <circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/>
-          </svg>
-        </div>
-        <div class="trust-text">
-          <strong class="trust-title">Free NPMA-33 Termite Form</strong>
-          <span class="trust-desc">Official lender-approved report ($150 value)</span>
-        </div>
-      </div>
-
-      <!-- 24-Hour Digital Report -->
-      <div class="trust-item">
-        <div class="trust-badge-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="svg-icon">
-            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-          </svg>
-        </div>
-        <div class="trust-text">
-          <strong class="trust-title">Next-Day Photo Report</strong>
-          <span class="trust-desc">Delivered within 24 hours to beat contingency</span>
+        <!-- Pillar 03 -->
+        <div class="pillar-card">
+          <div class="pillar-top">
+            <span class="card-step">03</span>
+            <span class="pillar-tag highlight-tag">Free $150 Value</span>
+          </div>
+          <h3 class="pillar-title">Free Bank Termite Report</h3>
+          <p class="pillar-text">
+            Includes an official Wood Destroying Organism (WDO) inspection report (NPMA-33) required by mortgage lenders at no additional charge.
+          </p>
         </div>
       </div>
     </div>
@@ -79,73 +46,89 @@
 </script>
 
 <style scoped>
-.trust-ribbon {
-  background: #ffffff;
+.three-pillars-section {
+  background: #fafbfd;
+  padding: 42px 0;
   border-bottom: 1.5px solid var(--border-soft, #d8dee6);
-  padding: 18px 0;
-  box-shadow: 0 2px 10px rgba(18, 24, 32, 0.04);
 }
 
-.ribbon-wrap {
+.pillars-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 20px;
-  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
 }
 
-.trust-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+@media (min-width: 840px) {
+  .pillars-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.seal-img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.trust-badge-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--surface-subtle, #eceef2);
+.pillar-card {
+  background: #ffffff;
   border: 1.5px solid var(--border-soft, #d8dee6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--queens-blue, #0e5a8a);
-  flex-shrink: 0;
-}
-
-.gold-badge {
-  background: var(--gold-light, #fbf7ee);
-  border-color: var(--gold-border, #d6c2a2);
-  color: #927238;
-}
-
-.svg-icon {
-  width: 22px;
-  height: 22px;
-}
-
-.trust-text {
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px rgba(18, 24, 32, 0.04);
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.trust-title {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.86rem;
+.pillar-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--queens-blue, #0e5a8a);
+}
+
+.pillar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.card-step {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--queens-blue, #0e5a8a);
+  background: #e0f2fe;
+  padding: 2px 10px;
+  border-radius: 6px;
+}
+
+.pillar-tag {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.68rem;
   font-weight: 700;
-  color: var(--charcoal-950, #121820);
-  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 3px 8px;
+  border-radius: 4px;
 }
 
-.trust-desc {
-  font-size: 0.74rem;
-  color: var(--text-secondary, #475569);
+.highlight-tag {
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.pillar-title {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--charcoal-950, #121820);
+  margin: 0 0 10px 0;
   line-height: 1.3;
+}
+
+.pillar-text {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary, #475569);
+  margin: 0;
 }
 </style>
