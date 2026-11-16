@@ -37,10 +37,10 @@
           <transition name="faq-slide">
             <div
               v-show="openMap[idx]"
-              class="faq-answer-wrapper"
+              class="faq-reply-wrapper"
             >
-              <div class="faq-answer-content">
-                <p class="faq-answer">
+              <div class="faq-reply-box">
+                <p class="faq-reply-para">
                   {{ item.answer }}
                 </p>
               </div>
@@ -233,34 +233,39 @@ const faqs = [
   color: var(--queens-blue, #0e5a8a);
 }
 
-.faq-answer-wrapper {
-  overflow: hidden;
+.faq-reply-wrapper {
+  overflow: visible !important;
 }
 
-.faq-answer-content {
-  padding: 0 26px 22px 26px;
+.faq-reply-box {
+  padding: 16px 26px 24px 26px;
   border-top: 1px solid #f1f5f9;
 }
 
-.faq-answer {
+.faq-reply-para {
   font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.98rem;
-  line-height: 1.7;
-  color: #334155 !important; /* High contrast dark charcoal - always readable */
-  margin: 14px 0 0 0;
-  display: block;
+  font-size: 1rem;
+  line-height: 1.72;
+  color: #1e293b !important;
+  margin: 0 !important;
+  display: block !important;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* Slide Transition */
 .faq-slide-enter-active,
 .faq-slide-leave-active {
-  transition: all 0.25s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .faq-slide-enter-from,
 .faq-slide-leave-to {
   opacity: 0;
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 }
 
 .faq-footer-callout {
