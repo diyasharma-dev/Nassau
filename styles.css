@@ -1491,17 +1491,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .why-section {
   background-color: var(--bg-light);
+  overflow: visible !important;
 }
 
 .why-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 36px;
+  align-items: start;
+  overflow: visible !important;
 }
 
 @media (min-width: 1024px) {
   .why-grid {
-    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-columns: 1.25fr 0.75fr;
+    align-items: start;
+  }
+  .why-sidebar-card {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 96px;
+    align-self: start;
+    z-index: 20;
   }
 }
 
@@ -2469,6 +2480,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-phone:hover {
   color: var(--accent);
+}
+
+.footer-email,
+.footer-contact-item a[href^="mailto:"] {
+  color: #38bdf8 !important;
+  text-decoration: underline;
+  text-decoration-color: rgba(56, 189, 248, 0.4);
+}
+
+.footer-email:hover,
+.footer-contact-item a[href^="mailto:"]:hover {
+  color: #ffffff !important;
+  text-decoration-color: #ffffff;
 }
 
 .footer-bottom {

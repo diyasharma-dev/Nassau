@@ -1,155 +1,195 @@
 <template>
   <section class="hero-section" id="hero">
-    <div class="hero-scrim"></div>
+    <!-- Ambient Glow Layers -->
+    <div class="hero-ambient-glow"></div>
+
     <div class="wrap hero-wrap">
       <div class="hero-grid">
-        <!-- Left Column: Editorial Authority -->
-        <div class="hero-text-col">
-          <!-- Monospace Technical Badge -->
-          <div class="hero-eyebrow-badge">
-            <span class="mono-badge-text">
-              1,700+ PHYSICAL POINTS CHECKED &bull; NYS LICENSED #16000009862
-            </span>
+        <!-- Left Column: Authority, Headline, Lede & Actions -->
+        <div class="hero-left-col">
+          <!-- Official Licensing Tag -->
+          <div class="hero-eyebrow-pill">
+            <span class="gold-star">&#9733;</span>
+            <span class="eyebrow-text">NYS LICENSED HOME INSPECTOR #16000009862 &bull; INTERNACHI CPI</span>
           </div>
 
           <!-- Main Editorial Display Headline -->
-          <h1 class="hero-main-title">
-            Don't buy a Nassau County home <span class="title-highlight">without knowing what's underneath.</span>
+          <h1 class="hero-headline">
+            Don't buy a Nassau County home
+            <span class="headline-gold">without knowing what's underneath.</span>
           </h1>
 
           <!-- Hyperlocal Lede -->
-          <p class="hero-lede">
-            From 1920s Garden City and Great Neck Colonials and Mid-Century Levittown slab ranches to Massapequa waterfront bulkheads and Syosset luxury estates. We inspect the roofs, foundations, cast-iron oil boilers, and electrical panels before you sign the contract.
+          <p class="hero-description">
+            From 1920s Garden City &amp; Great Neck brick Tudors to Mid-Century Levittown slab ranches and Massapequa waterfront bulkheads. We examine over 1,700 physical points from roof to foundation before you sign contracts or risk your deposit.
           </p>
 
-          <!-- Core Value Badges Row -->
-          <div class="hero-value-ribbon">
-            <div class="val-pill">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="val-icon">
+          <!-- Core Value Badges Ribbon -->
+          <div class="hero-badges-ribbon">
+            <div class="badge-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="badge-svg">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
               <span><strong>Owner Inspects</strong> (No apprentices)</span>
             </div>
-            <div class="val-pill">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="val-icon">
+
+            <div class="badge-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="badge-svg">
                 <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
               </svg>
-              <span><strong>Next-Day</strong> Digital Photo Report</span>
+              <span><strong>Next-Day</strong> Photo Report</span>
             </div>
-            <div class="val-pill highlight-pill">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="val-icon text-gold">
+
+            <div class="badge-item badge-highlight">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="badge-svg text-gold">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
               <span><strong>FREE Termite Report</strong> ($150 Value)</span>
             </div>
-            <div class="val-pill">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="val-icon">
+
+            <div class="badge-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="badge-svg">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
               </svg>
               <span><strong>100% Money-Back</strong> Guarantee</span>
             </div>
           </div>
 
-          <!-- Direct Contact & Trust Row -->
-          <div class="hero-cta-row">
-            <a href="tel:7182087092" class="btn-hero-call">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+          <!-- CTAs Row -->
+          <div class="hero-cta-group">
+            <a href="tel:7182087092" class="btn-call-hero">
+              <span class="live-pulse-dot" aria-hidden="true"></span>
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" class="phone-ico">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.28-.28.68-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.6 21 3 13.4 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.34.03.73-.24 1.01L6.6 10.8z"/>
               </svg>
-              <span>Call Daren Directly: (718) 208-7092</span>
+              <span>Call Daren: (718) 208-7092</span>
             </a>
-            <span class="hero-call-sub">Available 7 Days a Week &bull; Same-Day &amp; Weekend Appointments</span>
+
+            <button class="btn-schedule-hero" @click="$emit('open-modal', 'Schedule Nassau Inspection')">
+              <span>Schedule Inspection &rarr;</span>
+            </button>
+
+            <a href="#calculator" class="btn-pricing-link">
+              <span>Calculate Fee &darr;</span>
+            </a>
+          </div>
+
+          <!-- Trust Subtext -->
+          <div class="hero-trust-notes">
+            <span class="note-pill">&#10003; Available 7 Days a Week</span>
+            <span class="sep">&bull;</span>
+            <span class="note-pill">&#10003; Same-Day &amp; Weekend Slots</span>
+            <span class="sep">&bull;</span>
+            <span class="note-pill">&#10003; Direct cell line to lead inspector</span>
           </div>
         </div>
 
-        <!-- Right Column: Clean Instant Nassau Fee & Quote Card -->
-        <div class="hero-card-col">
-          <div class="instant-quote-card">
-            <div class="quote-card-header">
-              <span class="card-tag">Instant Nassau Fee Estimator</span>
-              <h2 class="card-title">Get an Instant Quote</h2>
-              <p class="card-sub">Select your property details for upfront Nassau pricing</p>
+        <!-- Right Column: Inspector Credibility & Dispatch Assurance Card -->
+        <div class="hero-right-col">
+          <div class="inspector-card">
+            <!-- Card Header: Profile Info -->
+            <div class="card-inspector-header">
+              <div class="inspector-photo-wrapper">
+                <img
+                  src="/images/inspector-daren.jpg"
+                  alt="Daren Koniuk - NYS Licensed Home Inspector #16000009862"
+                  class="inspector-avatar-img"
+                  width="72"
+                  height="72"
+                />
+                <span class="status-indicator" title="Available for Nassau County Inspections"></span>
+              </div>
+
+              <div class="inspector-meta">
+                <div class="inspector-name-row">
+                  <h3 class="inspector-name">Daren Koniuk</h3>
+                  <span class="verified-badge" title="NYS State Licensed">
+                    <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    NYS Lic.
+                  </span>
+                </div>
+                <p class="inspector-title">Owner &amp; Lead Home Inspector</p>
+                <p class="inspector-license">License #16000009862 &bull; 20+ Yrs Exp.</p>
+              </div>
             </div>
 
-            <form @submit.prevent="handleQuoteSubmit" class="quote-card-form">
-              <!-- Property Type -->
-              <div class="form-field">
-                <label class="field-label">Property Type</label>
-                <div class="type-pill-grid">
-                  <button
-                    type="button"
-                    v-for="type in propertyTypes"
-                    :key="type.id"
-                    class="type-pill-btn"
-                    :class="{ active: selectedType === type.id }"
-                    @click="selectedType = type.id"
-                  >
-                    {{ type.name }}
-                  </button>
-                </div>
+            <!-- Rating & Verified Seals Row -->
+            <div class="card-rating-bar">
+              <div class="rating-stars-box">
+                <div class="stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <span class="rating-text"><strong>5.0 Google Rating</strong> (180+ Reviews)</span>
               </div>
-
-              <!-- Nassau Town Input -->
-              <div class="form-field">
-                <label for="nassauTownInput" class="field-label">Town or Hamlet in Nassau County</label>
-                <div class="input-with-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="input-icon">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                  </svg>
-                  <input
-                    type="text"
-                    id="nassauTownInput"
-                    v-model="townInput"
-                    placeholder="e.g. Garden City, Great Neck, Syosset..."
-                    required
-                    class="form-input"
-                  />
-                </div>
-              </div>
-
-              <!-- Square Footage Slider -->
-              <div class="form-field">
-                <div class="slider-label-row">
-                  <label class="field-label">Approximate Square Footage</label>
-                  <span class="slider-val-badge">{{ sqftDisplay }} sq. ft.</span>
-                </div>
-                <input
-                  type="range"
-                  min="800"
-                  max="5000"
-                  step="100"
-                  v-model.number="sqft"
-                  class="custom-slider"
+              <div class="seals-preview">
+                <img
+                  src="/images/internachi-seal.webp"
+                  alt="InterNACHI CPI"
+                  class="mini-seal"
+                  width="30"
+                  height="30"
+                  title="InterNACHI Certified Professional Inspector"
+                />
+                <img
+                  src="/images/satisfaction-seal.webp"
+                  alt="100% Satisfaction"
+                  class="mini-seal"
+                  width="30"
+                  height="30"
+                  title="100% Satisfaction Guarantee"
                 />
               </div>
+            </div>
 
-              <!-- Price Calculation Box -->
-              <div class="quote-price-box">
-                <div class="price-left">
-                  <span class="price-caption">Estimated Full Inspection Fee</span>
-                  <div class="price-number">
-                    ${{ calculatedPrice }}
-                    <span class="price-all-in">All-inclusive</span>
-                  </div>
-                </div>
-                <div class="price-badge-free">
-                  <span>FREE NPMA-33 Termite Report</span>
-                  <strong>$150 Value Included</strong>
-                </div>
-              </div>
+            <!-- What You Get Deliverables Checklist -->
+            <div class="card-deliverables">
+              <span class="deliverables-title">Included With Every Nassau Inspection:</span>
+              <ul class="deliverables-list">
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="deliv-ico">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span><strong>1,700+ Item Evaluation:</strong> Full structural, roof, basement, electrical &amp; plumbing.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="deliv-ico">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span><strong>Infrared Thermal Scan:</strong> Hidden moisture, insulation gaps &amp; slab leaks.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="deliv-ico">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span><strong>Official NPMA-33 Termite Form:</strong> Bank-certified ($150 value included free).</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="deliv-ico">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span><strong>On-Site Plain-English Walkthrough:</strong> Clear answers directly from Daren.</span>
+                </li>
+              </ul>
+            </div>
 
-              <!-- Submit Button -->
-              <button type="submit" class="btn-quote-submit">
-                <span>Lock In This Rate &amp; Schedule</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="arrow-svg">
+            <!-- Card Bottom Action -->
+            <div class="card-footer-action">
+              <button class="btn-card-schedule" @click="$emit('open-modal', 'Schedule Nassau Inspection')">
+                <span>Book Nassau Inspection Online</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-arrow">
                   <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
                 </svg>
               </button>
-
-              <div class="quote-reassurance">
-                &#10003; No payment until inspection is complete &bull; 100% Satisfaction Guarantee
+              <div class="card-reassurance">
+                <span>&#128274; No advance payment &bull; Pay only after inspection is complete</span>
               </div>
-            </form>
+            </div>
+
+            <!-- Real-time Municipal Coverage Tag -->
+            <div class="card-towns-ticker">
+              <span class="ticker-dot"></span>
+              <span class="ticker-text">Inspecting North Shore, Central Nassau &amp; South Shore Daily</span>
+            </div>
           </div>
         </div>
       </div>
@@ -158,76 +198,41 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
-
-const emit = defineEmits(['open-modal', 'quote-submitted']);
-
-const propertyTypes = [
-  { id: 'single', name: 'Single Family', base: 495 },
-  { id: 'condo', name: 'Condo / Co-Op', base: 395 },
-  { id: 'multi', name: '2–4 Family', base: 645 },
-  { id: 'townhouse', name: 'Townhouse', base: 465 }
-];
-
-const selectedType = ref('single');
-const townInput = ref('Garden City');
-const sqft = ref(2200);
-
-const sqftDisplay = computed(() => {
-  return sqft.value.toLocaleString();
-});
-
-const calculatedPrice = computed(() => {
-  const currentType = propertyTypes.find(t => t.id === selectedType.value) || propertyTypes[0];
-  let price = currentType.base;
-  
-  if (sqft.value > 1500) {
-    const extraBlocks = Math.ceil((sqft.value - 1500) / 500);
-    price += extraBlocks * 40;
-  }
-  
-  return price;
-});
-
-const handleQuoteSubmit = () => {
-  const selectedTypeName = propertyTypes.find(t => t.id === selectedType.value)?.name || 'Single Family';
-  emit('quote-submitted', {
-    propType: selectedTypeName,
-    town: townInput.value,
-    sqft: sqft.value,
-    price: calculatedPrice.value,
-    timeline: 'Within 48 hours'
-  });
-};
+defineEmits(['open-modal']);
 </script>
 
 <style scoped>
 .hero-section {
   position: relative;
-  background-color: #121820;
-  background-image: url('/images/nassau-hero-house.webp');
+  background-color: #0b1523;
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(201, 168, 106, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 10% 80%, rgba(14, 90, 138, 0.18) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(11, 21, 35, 0.94) 0%, rgba(15, 29, 48, 0.88) 50%, rgba(11, 21, 35, 0.92) 100%),
+    url('/images/nassau-hero-house.webp');
   background-size: cover;
   background-position: center 30%;
   color: #ffffff;
-  padding: 64px 0 84px;
+  padding: 68px 0 84px;
   overflow: hidden;
 }
 
-.hero-scrim {
+.hero-ambient-glow {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(14, 24, 36, 0.94) 0%,
-    rgba(14, 24, 36, 0.88) 45%,
-    rgba(14, 24, 36, 0.78) 100%
-  );
-  backdrop-filter: blur(1.5px);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  height: 280px;
+  background: radial-gradient(ellipse at top, rgba(201, 168, 106, 0.15), transparent 70%);
+  pointer-events: none;
 }
 
 .hero-wrap {
   position: relative;
   z-index: 2;
+  max-width: 1240px;
 }
 
 .hero-grid {
@@ -237,89 +242,104 @@ const handleQuoteSubmit = () => {
   align-items: center;
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1.15fr 0.85fr;
     gap: 48px;
   }
 }
 
-.hero-eyebrow-badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+/* --- Left Column Styling --- */
+.hero-left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(201, 168, 106, 0.14);
+  border: 1px solid rgba(201, 168, 106, 0.4);
   border-radius: 9999px;
   padding: 6px 14px;
   margin-bottom: 20px;
 }
 
-.mono-badge-text {
+.gold-star {
+  color: #d4af37;
+  font-size: 0.85rem;
+}
+
+.eyebrow-text {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.72rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #fbf7ee;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-.hero-main-title {
+.hero-headline {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-size: clamp(2.3rem, 3.8vw, 3.4rem);
   font-weight: 800;
-  line-height: 1.12;
+  line-height: 1.14;
   color: #ffffff;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   margin-bottom: 18px;
 }
 
-.title-highlight {
+.headline-gold {
   color: var(--hazard-gold, #c9a86a);
   font-style: italic;
   font-weight: 700;
+  display: block;
 }
 
-.hero-lede {
+.hero-description {
   font-family: var(--font-sans, 'Inter', sans-serif);
   font-size: 1.05rem;
-  line-height: 1.65;
+  line-height: 1.68;
   color: #cbd5e1;
-  margin-bottom: 26px;
-  max-width: 600px;
+  margin-bottom: 28px;
+  max-width: 620px;
 }
 
-.hero-value-ribbon {
+.hero-badges-ribbon {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
-.val-pill {
+.badge-item {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   padding: 7px 12px;
   font-size: 0.82rem;
   color: #e2e8f0;
 }
 
-.val-pill strong {
+.badge-item strong {
   color: #ffffff;
 }
 
-.val-icon {
+.badge-svg {
   width: 15px;
   height: 15px;
   color: #94a3b8;
   flex-shrink: 0;
 }
 
-.highlight-pill {
-  background: rgba(201, 168, 106, 0.15);
-  border-color: rgba(201, 168, 106, 0.35);
+.badge-highlight {
+  background: rgba(201, 168, 106, 0.16);
+  border-color: rgba(201, 168, 106, 0.45);
   color: #fbf7ee;
 }
 
@@ -327,231 +347,303 @@ const handleQuoteSubmit = () => {
   color: var(--hazard-gold, #c9a86a);
 }
 
-.hero-cta-row {
+.hero-cta-group {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
 }
 
-.btn-hero-call {
+.btn-call-hero {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
   background: #ffffff;
   color: var(--charcoal-950, #121820);
   border-radius: 9999px;
-  padding: 13px 24px;
+  padding: 13px 22px;
   font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.98rem;
+  font-size: 0.96rem;
   font-weight: 700;
   text-decoration: none;
-  width: fit-content;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
   transition: all 0.2s ease;
 }
 
-.btn-hero-call:hover {
+.btn-call-hero:hover {
   background: var(--hazard-gold, #c9a86a);
   color: #121820;
   transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(201, 168, 106, 0.4);
 }
 
-.hero-call-sub {
+.live-pulse-dot {
+  width: 9px;
+  height: 9px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+  70% { box-shadow: 0 0 0 7px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.phone-ico {
+  color: var(--charcoal-950, #121820);
+}
+
+.btn-schedule-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--brick, #d94828);
+  color: #ffffff;
+  border: 1.5px solid var(--brick, #d94828);
+  border-radius: 9999px;
+  padding: 13px 22px;
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 0.96rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(217, 72, 40, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-schedule-hero:hover {
+  background: var(--brick-700, #b83619);
+  border-color: var(--brick-700, #b83619);
+  transform: translateY(-2px);
+}
+
+.btn-pricing-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+  padding: 12px 18px;
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-pricing-link:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.hero-trust-notes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
   font-size: 0.8rem;
   color: #94a3b8;
 }
 
-/* Instant Quote Card */
-.instant-quote-card {
+.note-pill {
+  color: #cbd5e1;
+}
+
+.sep {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* --- Right Column: Credibility & Dispatch Assurance Card --- */
+.hero-right-col {
+  width: 100%;
+}
+
+.inspector-card {
   background: #ffffff;
-  border-radius: 14px;
-  padding: 28px 24px;
+  border-radius: 16px;
+  padding: 24px;
   color: var(--charcoal-950, #121820);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.quote-card-header {
-  margin-bottom: 20px;
-  text-align: center;
+.card-inspector-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.card-tag {
-  display: inline-block;
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+.inspector-photo-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.inspector-avatar-img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid var(--hazard-gold, #c9a86a);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 14px;
+  height: 14px;
+  background: #10b981;
+  border: 2.5px solid #ffffff;
+  border-radius: 50%;
+}
+
+.inspector-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.inspector-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inspector-name {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--charcoal-950, #121820);
+  line-height: 1.2;
+}
+
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #e0f2fe;
+  color: #0284c7;
   font-size: 0.68rem;
   font-weight: 700;
-  color: var(--brick, #d94828);
-  background: var(--brick-light, #fff1ee);
-  padding: 3px 8px;
+  padding: 2px 6px;
   border-radius: 4px;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 6px;
 }
 
-.card-title {
-  font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  margin-bottom: 4px;
-}
-
-.card-sub {
-  font-size: 0.82rem;
-  color: var(--text-secondary, #475569);
-}
-
-.quote-card-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.field-label {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--charcoal-900, #1a222d);
-}
-
-.type-pill-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6px;
-}
-
-.type-pill-btn {
-  background: var(--surface-subtle, #eceef2);
-  border: 1.5px solid var(--border-soft, #d8dee6);
-  border-radius: 6px;
-  padding: 8px 10px;
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.78rem;
+.inspector-title {
+  font-size: 0.84rem;
   font-weight: 600;
-  color: var(--charcoal-900, #1a222d);
-  cursor: pointer;
-  transition: all 0.15s ease;
-  text-align: center;
+  color: var(--queens-blue, #0e5a8a);
+  margin-top: 2px;
 }
 
-.type-pill-btn:hover {
-  border-color: var(--brick, #d94828);
+.inspector-license {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.72rem;
+  color: #64748b;
+  margin-top: 1px;
 }
 
-.type-pill-btn.active {
-  background: var(--charcoal-950, #121820);
-  color: #ffffff;
-  border-color: var(--charcoal-950, #121820);
-}
-
-.input-with-icon {
-  position: relative;
+/* Rating Bar */
+.card-rating-bar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.input-icon {
-  position: absolute;
-  left: 12px;
+.rating-stars-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stars-gold {
+  color: #f59e0b;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  color: #334155;
+}
+
+.seals-preview {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mini-seal {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Deliverables Checklist */
+.card-deliverables {
+  padding: 16px 0 14px;
+}
+
+.deliverables-title {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.deliverables-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.deliverables-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #1e293b;
+}
+
+.deliv-ico {
   width: 16px;
   height: 16px;
-  color: #94a3b8;
-  pointer-events: none;
-}
-
-.form-input {
-  width: 100%;
-  padding: 10px 12px 10px 36px;
-  border: 1.5px solid var(--border-soft, #d8dee6);
-  border-radius: 6px;
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.88rem;
-  color: var(--charcoal-950, #121820);
-  background: #ffffff;
-}
-
-.form-input:focus {
-  outline: none;
-  border-color: var(--brick, #d94828);
-}
-
-.slider-label-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.slider-val-badge {
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--queens-blue, #0e5a8a);
-}
-
-.custom-slider {
-  width: 100%;
-  accent-color: var(--brick, #d94828);
-  height: 6px;
-  cursor: pointer;
-}
-
-.quote-price-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--surface-subtle, #eceef2);
-  border: 1.5px solid var(--border-soft, #d8dee6);
-  border-radius: 8px;
-  padding: 12px 16px;
-}
-
-.price-caption {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--text-secondary, #475569);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.price-number {
-  font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  line-height: 1;
-}
-
-.price-all-in {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.72rem;
-  font-weight: 600;
   color: #10b981;
-  margin-left: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
-.price-badge-free {
+.deliv-ico strong {
+  color: #0f172a;
+}
+
+/* Card Footer Action */
+.card-footer-action {
   display: flex;
   flex-direction: column;
-  text-align: right;
-  font-size: 0.72rem;
-  color: #065f46;
+  gap: 8px;
+  margin-top: 8px;
 }
 
-.price-badge-free strong {
-  font-weight: 800;
-  color: #047857;
-}
-
-.btn-quote-submit {
+.btn-card-schedule {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -559,29 +651,88 @@ const handleQuoteSubmit = () => {
   background: var(--brick, #d94828);
   color: #ffffff;
   border: none;
-  border-radius: 8px;
+  border-radius: 9999px;
   padding: 13px 20px;
   font-family: var(--font-sans, 'Inter', sans-serif);
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(217, 72, 40, 0.3);
+  box-shadow: 0 4px 14px rgba(217, 72, 40, 0.32);
   transition: all 0.2s ease;
 }
 
-.btn-quote-submit:hover {
+.btn-card-schedule:hover {
   background: var(--brick-700, #b83619);
   transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(217, 72, 40, 0.42);
 }
 
-.arrow-svg {
+.btn-arrow {
   width: 16px;
   height: 16px;
 }
 
-.quote-reassurance {
+.card-reassurance {
   font-size: 0.74rem;
-  color: var(--text-muted, #64748b);
+  color: #64748b;
   text-align: center;
+}
+
+.card-towns-ticker {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  color: #475569;
+}
+
+.ticker-dot {
+  width: 6px;
+  height: 6px;
+  background: #0284c7;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 44px 0 54px;
+  }
+
+  .hero-headline {
+    font-size: 2rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .btn-call-hero,
+  .btn-schedule-hero,
+  .btn-pricing-link {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-trust-notes {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .sep {
+    display: none;
+  }
+
+  .inspector-card {
+    padding: 18px;
+  }
 }
 </style>

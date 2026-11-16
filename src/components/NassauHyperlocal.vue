@@ -18,8 +18,8 @@
         <article class="dossier-card">
           <div class="dossier-img-box">
             <img
-              src="/images/service-single-family.jpg"
-              alt="North Shore Gold Coast Estates - Great Neck, Manhasset, Roslyn"
+              src="/images/nassau-colonial-real.jpg"
+              alt="North Shore Gold Coast Colonials & Tudors - Great Neck, Manhasset, Roslyn"
               class="dossier-img"
               loading="lazy"
             />
@@ -58,7 +58,7 @@
         <article class="dossier-card">
           <div class="dossier-img-box">
             <img
-              src="/images/hero-house.jpg"
+              src="/images/nassau-split-level-real.jpg"
               alt="Central Nassau Colonials & Split-Levels - Garden City, Syosset, Jericho"
               class="dossier-img"
               loading="lazy"
@@ -98,7 +98,7 @@
         <article class="dossier-card">
           <div class="dossier-img-box">
             <img
-              src="/images/service-warranty.jpg"
+              src="/images/nassau-levittown-cape-real.jpg"
               alt="Levittown & Mid-Century Slab Ranches"
               class="dossier-img"
               loading="lazy"
@@ -138,7 +138,7 @@
         <article class="dossier-card">
           <div class="dossier-img-box">
             <img
-              src="/images/waterfront-southshore.jpg"
+              src="/images/nassau-southshore-real.jpg"
               alt="South Shore & Barrier Island Waterfront - Massapequa, Long Beach, Freeport"
               class="dossier-img"
               loading="lazy"

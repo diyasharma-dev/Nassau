@@ -8,20 +8,22 @@
 
     <!-- Main Content -->
     <main>
-      <!-- Hero Section (Full-Bleed Photographic Hero + Instant Quote) -->
+      <!-- Hero Section (Balanced 2-Column Editorial Authority & Verified Dispatch Card) -->
       <HeroSection 
         @open-modal="handleOpenModal" 
-        @quote-submitted="handleHeroQuote"
       />
 
       <!-- Metrics / Trust Ribbon with Official Badges & Seals -->
       <MetricsRibbon />
 
-      <!-- Video Walkthrough Testimonials (20+ Years. Mostly Word of Mouth) -->
+      <!-- Real Client Video Walkthroughs (20+ Years. Verified Clients from Queens & Nassau) -->
       <VideoTestimonials />
 
       <!-- Hyperlocal Nassau Architectural Dossiers (North Shore, Central, Levittown, South Shore) -->
       <NassauHyperlocal />
+
+      <!-- 5 Costly Red Flags Unique to Nassau County Homes (Real Field Knowledge) -->
+      <NassauRedFlags @open-modal="handleOpenModal" />
 
       <!-- Nassau Town Hall Certificate of Occupancy (CO) Traps & 5-Day Contingency -->
       <LocalChallenges />
@@ -32,20 +34,17 @@
       <!-- Over 1,700 Items Inside & Out with Official Cross-Section Systems Diagram -->
       <ChecklistExplorer />
 
-      <!-- Comprehensive Inspection Packages -->
-      <ServicesGrid @open-modal="handleOpenModal" />
-
-      <!-- Why Choose Daren Koniuk (Owner Personally Inspects) -->
+      <!-- Why Choose Daren Koniuk (Owner Personally Inspects Over Franchises) -->
       <WhyInspector />
 
       <!-- Nassau Towns & Hamlets Coverage Search -->
       <NassauTowns />
 
+      <!-- The Nassau County Pre-Contract Inspection Playbook (Real Estate Law & Strategy) -->
+      <NassauPreContractGuide />
+
       <!-- Transparent Fee Calculator -->
       <FeeCalculator @open-modal="handleOpenModal" />
-
-      <!-- Verified 5-Star Nassau Customer Reviews -->
-      <ReviewsSection />
 
       <!-- Hyperlocal Nassau FAQs (COs, Termites, 5-Day Contingency) -->
       <FaqAccordion />
@@ -80,14 +79,14 @@ import HeroSection from './components/HeroSection.vue';
 import MetricsRibbon from './components/MetricsRibbon.vue';
 import VideoTestimonials from './components/VideoTestimonials.vue';
 import NassauHyperlocal from './components/NassauHyperlocal.vue';
+import NassauRedFlags from './components/NassauRedFlags.vue';
 import LocalChallenges from './components/LocalChallenges.vue';
 import ReportPreview from './components/ReportPreview.vue';
 import ChecklistExplorer from './components/ChecklistExplorer.vue';
-import ServicesGrid from './components/ServicesGrid.vue';
 import WhyInspector from './components/WhyInspector.vue';
 import NassauTowns from './components/NassauTowns.vue';
+import NassauPreContractGuide from './components/NassauPreContractGuide.vue';
 import FeeCalculator from './components/FeeCalculator.vue';
-import ReviewsSection from './components/ReviewsSection.vue';
 import FaqAccordion from './components/FaqAccordion.vue';
 import BookingSection from './components/BookingSection.vue';
 import AppFooter from './components/AppFooter.vue';

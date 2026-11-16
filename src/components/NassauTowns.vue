@@ -39,11 +39,13 @@
       <div class="towns-grid" v-if="filteredTowns.length > 0">
         <div class="town-card" v-for="town in filteredTowns" :key="town.name" :data-region="town.region">
           <div class="town-header">
-            <h4>{{ town.name }}</h4>
             <span class="town-jurisdiction" v-if="town.township">{{ town.township }}</span>
+            <h4 class="town-name">{{ town.name }}</h4>
           </div>
-          <p>{{ town.description }}</p>
-          <span class="town-zip">{{ town.zip }}</span>
+          <p class="town-desc">{{ town.description }}</p>
+          <div class="town-footer">
+            <span class="town-zip">ZIP: {{ town.zip }}</span>
+          </div>
         </div>
       </div>
 
@@ -100,19 +102,78 @@ const filteredTowns = computed(() => {
 </script>
 
 <style scoped>
+.town-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border-soft, #d8dee6);
+  box-shadow: 0 2px 8px rgba(18, 24, 32, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.town-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--brick, #d94828);
+  box-shadow: 0 8px 20px rgba(18, 24, 32, 0.08);
+}
+
 .town-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 8px;
-  gap: 8px;
+  gap: 6px;
+  margin-bottom: 12px;
 }
+
 .town-jurisdiction {
-  font-size: 0.7rem;
-  background: #f1f5f9;
-  color: #64748b;
-  padding: 2px 6px;
+  display: inline-block;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: var(--surface-subtle, #eceef2);
+  color: var(--queens-blue, #0e5a8a);
+  border: 1px solid var(--border-soft, #d8dee6);
+  padding: 3px 8px;
   border-radius: 4px;
-  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.town-name {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--charcoal-950, #121820);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.town-desc {
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 0.88rem;
+  color: var(--text-secondary, #475569);
+  line-height: 1.55;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.town-footer {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border-soft, #d8dee6);
+}
+
+.town-zip {
+  display: inline-block;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--queens-blue, #0e5a8a);
+  background: var(--queens-blue-light, #ebf4fa);
+  padding: 3px 8px;
+  border-radius: 4px;
 }
 </style>

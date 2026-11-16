@@ -1,11 +1,11 @@
 <template>
   <footer class="site-footer">
-    <div class="container footer-container">
+    <div class="wrap footer-container">
       <div class="footer-top-grid">
         <div class="footer-col brand-col">
           <div class="footer-logo-wrap">
             <img
-              src="/images/homestar-nassau-logo.svg"
+              src="/images/homestar-nassau-logo-white.svg"
               alt="HomeStar Inspections - Nassau County Division"
               class="footer-logo-img"
               width="240"
@@ -13,14 +13,14 @@
               loading="lazy"
             />
           </div>
-          <h4>HomeStar Inspection Services, LLC</h4>
+          <h4 class="brand-subname">HomeStar Inspection Services, LLC</h4>
           <p class="footer-desc">
-            Nassau County's dedicated home inspection authority. Providing thorough, unbiased 1,700-point residential and commercial building evaluations across every village and hamlet in Nassau County, Long Island.
+            Nassau County's dedicated home inspection authority. Providing thorough, unbiased 1,700-point residential building evaluations across every village and hamlet in Nassau County, Long Island.
           </p>
           <p class="footer-license">
             <strong>NYS Licensed Home Inspector:</strong> #16000009862<br>
             <strong>Lead Inspector &amp; Owner:</strong> Daren Koniuk<br>
-            <strong>Nassau County Office Direct:</strong> (718) 208-7092
+            <strong>Nassau Direct Line:</strong> (718) 208-7092
           </p>
         </div>
 
@@ -36,36 +36,38 @@
         </div>
 
         <div class="footer-col">
-          <h4>Inspection Services</h4>
+          <h4>Nassau Inspection Scope</h4>
           <ul class="footer-links">
-            <li><a href="#services">Buyer Pre-Purchase Inspections</a></li>
-            <li><a href="#services">Free Official NPMA-33 Termite Reports</a></li>
-            <li><a href="#services">Condo &amp; Co-Op Unit Inspections</a></li>
-            <li><a href="#services">Multi-Family 2-4 Unit Inspections</a></li>
+            <li><a href="#nassau-redflags">6 Costly Nassau Red Flags</a></li>
+            <li><a href="#checklist">1,700-Point Systems Evaluation</a></li>
+            <li><a href="#nassau-hyperlocal">North Shore, Levittown &amp; South Shore</a></li>
+            <li><a href="#nassau-guide">Pre-Contract Inspection Playbook</a></li>
             <li><a href="#calculator">Instant Nassau Fee Estimator</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Direct Nassau Inspector Contact</h4>
-          <p class="footer-contact-item">
-            <strong>Direct Phone / Text:</strong><br>
+          <div class="footer-contact-item">
+            <span class="contact-lbl">Direct Phone / Text:</span>
             <a href="tel:7182087092" class="footer-phone">(718) 208-7092</a>
-          </p>
-          <p class="footer-contact-item">
-            <strong>Inspector Email:</strong><br>
-            <a href="mailto:daren@homestarinspectionsny.com">daren@homestarinspectionsny.com</a>
-          </p>
-          <p class="footer-contact-item">
-            <strong>Availability:</strong><br>
-            7 Days a Week &bull; 7:00 AM – 9:00 PM<br>
-            <span style="font-size:0.78rem; color:#94a3b8;">Same-day &amp; next-day Nassau bookings available</span>
-          </p>
+          </div>
+          <div class="footer-contact-item">
+            <span class="contact-lbl">Inspector Email:</span>
+            <a href="mailto:daren@homestarinspectionsny.com" class="footer-email">
+              daren@homestarinspectionsny.com
+            </a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="contact-lbl">Availability:</span>
+            <span class="contact-val">7 Days a Week &bull; 7:00 AM – 9:00 PM</span>
+            <span class="sub-availability">Same-day &amp; next-day Nassau bookings available</span>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 HomeStar Inspection Services, LLC &bull; Nassau County Division. All Rights Reserved.</p>
+        <p class="copyright-p">&copy; 2026 HomeStar Inspection Services, LLC &bull; Nassau County Division. All Rights Reserved.</p>
         <p class="footer-disclaimer-text">
           NYS Licensed Home Inspector License #16000009862. Free official NPMA-33 Wood Destroying Insect inspection report included with all paid single and multi-family residential inspections.
         </p>
@@ -75,5 +77,187 @@
 </template>
 
 <script setup>
-// Component for footer
 </script>
+
+<style scoped>
+.site-footer {
+  background-color: #0b1420;
+  color: #94a3b8;
+  padding: 68px 0 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 640px) {
+  .footer-top-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1040px) {
+  .footer-top-grid {
+    grid-template-columns: 1.35fr 1fr 1fr 1.15fr;
+  }
+}
+
+.footer-logo-wrap {
+  margin-bottom: 14px;
+}
+
+.footer-logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 250px;
+  display: block;
+}
+
+.brand-subname {
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-desc {
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 14px;
+  max-width: 320px;
+}
+
+.footer-license {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+.footer-license strong {
+  color: #ffffff;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-links a:hover {
+  color: var(--hazard-gold, #c9a86a);
+}
+
+.footer-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+
+.contact-lbl {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #94a3b8;
+}
+
+.footer-phone {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-phone:hover {
+  color: var(--hazard-gold, #c9a86a) !important;
+}
+
+.footer-email {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #38bdf8 !important; /* High-contrast Sky Blue for perfect legibility on dark background */
+  text-decoration: underline;
+  text-decoration-color: rgba(56, 189, 248, 0.4);
+  transition: all 0.2s ease;
+  word-break: break-all;
+}
+
+.footer-email:hover {
+  color: #ffffff !important;
+  text-decoration-color: #ffffff;
+}
+
+.contact-val {
+  font-size: 0.84rem;
+  color: #e2e8f0;
+}
+
+.sub-availability {
+  font-size: 0.76rem;
+  color: #94a3b8;
+}
+
+.footer-bottom {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.copyright-p {
+  color: #94a3b8;
+  margin: 0;
+}
+
+.footer-disclaimer-text {
+  font-size: 0.74rem;
+  color: #64748b;
+  margin: 0;
+  max-width: 520px;
+}
+</style>
