@@ -123,8 +123,9 @@
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.74rem;
   font-weight: 700;
-  color: var(--brick, #d94828);
-  background: var(--brick-light, #fff1ee);
+  color: var(--nassau-gold-dark, #9d7718);
+  background: #fdfaf2;
+  border: 1px solid #e6ce8a;
   padding: 4px 12px;
   border-radius: 9999px;
   text-transform: uppercase;
@@ -181,8 +182,8 @@
 
 .housing-card:hover {
   transform: translateY(-3px);
-  border-color: var(--brick, #d94828);
-  box-shadow: 0 8px 24px rgba(18, 24, 32, 0.08);
+  border-color: var(--nassau-gold, #c59b27);
+  box-shadow: 0 10px 28px rgba(197, 155, 39, 0.15);
 }
 
 .housing-img-box {
@@ -264,9 +265,9 @@
 .checklist-badge {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--queens-blue, #0e5a8a);
+  font-weight: 800;
+  color: var(--nassau-gold-dark, #9d7718);
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
 }
 </style>

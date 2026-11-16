@@ -68,45 +68,48 @@
   background: #ffffff;
   border: 1.5px solid var(--border-soft, #d8dee6);
   border-radius: 12px;
-  padding: 28px 24px;
-  box-shadow: 0 4px 16px rgba(18, 24, 32, 0.04);
+  padding: 30px 26px;
+  box-shadow: 0 4px 16px rgba(11, 26, 46, 0.04);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
 }
 
 .pillar-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--queens-blue, #0e5a8a);
+  transform: translateY(-3px);
+  border-color: var(--nassau-gold, #c59b27);
+  box-shadow: 0 10px 24px rgba(11, 26, 46, 0.08);
 }
 
 .pillar-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .card-step {
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 1.25rem;
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-size: 1.7rem;
   font-weight: 800;
-  color: var(--queens-blue, #0e5a8a);
-  background: #e0f2fe;
-  padding: 2px 10px;
-  border-radius: 6px;
+  color: var(--nassau-gold, #c59b27);
+  background: transparent;
+  padding: 0;
+  line-height: 1;
 }
 
 .pillar-tag {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #64748b;
-  background: #f1f5f9;
-  padding: 3px 8px;
-  border-radius: 4px;
+  letter-spacing: 0.05em;
+  color: var(--nassau-gold-dark, #9d7718);
+  background: #fdfaf2;
+  border: 1px solid #e6ce8a;
+  padding: 4px 10px;
+  border-radius: 9999px;
 }
 
 .highlight-tag {
@@ -117,9 +120,9 @@
 
 .pillar-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.2rem;
+  font-size: 1.22rem;
   font-weight: 800;
-  color: var(--charcoal-950, #121820);
+  color: var(--nassau-navy, #0b1a2e);
   margin: 0 0 10px 0;
   line-height: 1.3;
 }

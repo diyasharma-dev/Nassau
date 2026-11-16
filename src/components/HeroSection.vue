@@ -388,22 +388,24 @@ defineEmits(['open-modal']);
   align-items: center;
   gap: 9px;
   background: #ffffff;
-  color: var(--charcoal-950, #121820);
+  color: #0b1a2e;
+  border: 1.5px solid #d8dee6;
   border-radius: 9999px;
-  padding: 13px 22px;
+  padding: 13px 24px;
   font-family: var(--font-sans, 'Inter', sans-serif);
   font-size: 0.96rem;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
   transition: all 0.2s ease;
 }
 
 .btn-call-hero:hover {
-  background: var(--hazard-gold, #c9a86a);
-  color: #121820;
+  background: #f8fafc;
+  border-color: #c59b27;
+  color: #0b1a2e;
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(201, 168, 106, 0.4);
+  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.25);
 }
 
 .live-pulse-dot {
@@ -422,30 +424,31 @@ defineEmits(['open-modal']);
 }
 
 .phone-ico {
-  color: var(--charcoal-950, #121820);
+  color: var(--nassau-gold-dark, #9d7718);
 }
 
 .btn-schedule-hero {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--brick, #d94828);
-  color: #ffffff;
-  border: 1.5px solid var(--brick, #d94828);
+  background: linear-gradient(135deg, #c59b27 0%, #b08719 100%);
+  color: #0b1a2e;
+  border: 1.5px solid #e6ce8a;
   border-radius: 9999px;
-  padding: 13px 22px;
+  padding: 13px 26px;
   font-family: var(--font-sans, 'Inter', sans-serif);
   font-size: 0.96rem;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(217, 72, 40, 0.35);
+  box-shadow: 0 4px 18px rgba(197, 155, 39, 0.35);
   transition: all 0.2s ease;
 }
 
 .btn-schedule-hero:hover {
-  background: var(--brick-700, #b83619);
-  border-color: var(--brick-700, #b83619);
+  background: linear-gradient(135deg, #d8ac32 0%, #c59b27 100%);
+  border-color: #f5df9e;
   transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(197, 155, 39, 0.45);
 }
 
 .btn-pricing-link {
@@ -651,7 +654,7 @@ defineEmits(['open-modal']);
 .inspector-title {
   font-size: 0.84rem;
   font-weight: 600;
-  color: var(--queens-blue, #0e5a8a);
+  color: var(--nassau-navy, #0b1a2e);
   margin-top: 2px;
 }
 
@@ -758,23 +761,23 @@ defineEmits(['open-modal']);
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: var(--brick, #d94828);
-  color: #ffffff;
-  border: none;
+  background: linear-gradient(135deg, #c59b27 0%, #b08719 100%);
+  color: #0b1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 9999px;
   padding: 13px 20px;
   font-family: var(--font-sans, 'Inter', sans-serif);
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(217, 72, 40, 0.32);
+  box-shadow: 0 4px 14px rgba(197, 155, 39, 0.35);
   transition: all 0.2s ease;
 }
 
 .btn-card-schedule:hover {
-  background: var(--brick-700, #b83619);
+  background: linear-gradient(135deg, #d4a92c 0%, #c59b27 100%);
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(217, 72, 40, 0.42);
+  box-shadow: 0 6px 18px rgba(197, 155, 39, 0.45);
 }
 
 .btn-arrow {

@@ -117,8 +117,9 @@ const faqs = [
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.74rem;
   font-weight: 700;
-  color: var(--queens-blue, #0e5a8a);
-  background: #e0f2fe;
+  color: var(--nassau-gold-dark, #9d7718);
+  background: #fdfaf2;
+  border: 1px solid #e6ce8a;
   padding: 4px 12px;
   border-radius: 9999px;
   text-transform: uppercase;
@@ -162,12 +163,12 @@ const faqs = [
 }
 
 .faq-card:hover {
-  border-color: var(--queens-blue, #0e5a8a);
+  border-color: var(--nassau-gold, #c59b27);
 }
 
 .faq-card.is-open {
-  border-color: var(--queens-blue, #0e5a8a);
-  box-shadow: 0 4px 16px rgba(14, 90, 138, 0.08);
+  border-color: var(--nassau-gold, #c59b27);
+  box-shadow: 0 4px 18px rgba(11, 26, 46, 0.08);
 }
 
 .faq-question-btn {
@@ -199,7 +200,7 @@ const faqs = [
 }
 
 .faq-card.is-open .faq-question-text {
-  color: var(--queens-blue, #0e5a8a);
+  color: var(--nassau-navy, #0b1a2e);
 }
 
 .faq-toggle-icon {
@@ -223,8 +224,8 @@ const faqs = [
 /* Rotate chevron 180 degrees when open */
 .faq-card.is-open .faq-toggle-icon {
   transform: rotate(180deg);
-  background: #e0f2fe;
-  color: var(--queens-blue, #0e5a8a);
+  background: #fdf6e6;
+  color: var(--nassau-gold-dark, #9d7718);
 }
 
 .faq-reply-wrapper {
@@ -290,9 +291,9 @@ const faqs = [
 }
 
 .btn-call-direct:hover {
-  border-color: var(--queens-blue, #0e5a8a);
-  color: var(--queens-blue, #0e5a8a);
+  border-color: var(--nassau-gold, #c59b27);
+  color: var(--nassau-navy, #0b1a2e);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(14, 90, 138, 0.1);
+  box-shadow: 0 4px 12px rgba(11, 26, 46, 0.1);
 }
 </style>

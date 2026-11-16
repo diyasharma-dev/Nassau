@@ -101,8 +101,9 @@ const filteredAreas = computed(() => {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.74rem;
   font-weight: 700;
-  color: var(--queens-blue, #0e5a8a);
-  background: #e0f2fe;
+  color: var(--nassau-gold-dark, #9d7718);
+  background: #fdfaf2;
+  border: 1px solid #e6ce8a;
   padding: 4px 12px;
   border-radius: 9999px;
   text-transform: uppercase;
@@ -161,8 +162,8 @@ const filteredAreas = computed(() => {
 }
 
 .hood-search-input:focus {
-  border-color: var(--queens-blue, #0e5a8a);
-  box-shadow: 0 0 0 3px rgba(14, 90, 138, 0.15);
+  border-color: var(--nassau-gold, #c59b27);
+  box-shadow: 0 0 0 3px rgba(197, 155, 39, 0.2);
 }
 
 .clear-btn {
@@ -197,7 +198,7 @@ const filteredAreas = computed(() => {
 
 .hood-item {
   background: #ffffff;
-  color: var(--charcoal-950, #121820);
+  color: var(--nassau-navy, #0b1a2e);
   font-weight: 600;
   font-size: 0.88rem;
   border: 1.5px solid var(--border-soft, #d8dee6);
@@ -207,23 +208,24 @@ const filteredAreas = computed(() => {
   align-items: center;
   gap: 8px;
   box-shadow: 0 2px 6px rgba(18, 24, 32, 0.02);
-  transition: transform 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  transition: transform 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .hood-item:hover {
   transform: translateY(-2px);
-  border-color: var(--queens-blue, #0e5a8a);
-  color: var(--queens-blue, #0e5a8a);
+  border-color: var(--nassau-gold, #c59b27);
+  color: var(--nassau-navy, #0b1a2e);
+  box-shadow: 0 4px 12px rgba(197, 155, 39, 0.15);
 }
 
 .hood-pin {
-  color: var(--queens-blue, #0e5a8a);
+  color: var(--nassau-gold, #c59b27);
   font-size: 1.2rem;
   line-height: 1;
 }
 
 .coverage-cta-banner {
-  background: #0f172a;
+  background: linear-gradient(135deg, #0b1a2e 0%, #162a45 100%);
   color: #ffffff;
   border-radius: 14px;
   padding: 32px;
@@ -232,6 +234,8 @@ const filteredAreas = computed(() => {
   gap: 20px;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid rgba(197, 155, 39, 0.3);
+  box-shadow: 0 12px 32px rgba(11, 26, 46, 0.12);
 }
 
 @media (min-width: 860px) {

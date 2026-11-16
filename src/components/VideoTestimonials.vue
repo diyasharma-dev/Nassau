@@ -2,7 +2,7 @@
   <section class="section video-testimonials-section" id="video-reviews">
     <div class="wrap">
       <div class="section-heading text-center">
-        <span class="eyebrow-tag brick-tag">On-Site Client Walkthroughs</span>
+        <span class="eyebrow-tag gold-tag">On-Site Client Walkthroughs</span>
         <h2 class="section-title">20+ Years. Mostly Word of Mouth.</h2>
         <p class="section-sub">
           Watch real Nassau County home buyers, investors, and families share their candid on-site experience immediately following their property walkthrough with Daren Koniuk.
@@ -90,9 +90,10 @@ import { videoTestimonials } from '../data/videoTestimonialsData.js';
   margin-bottom: 12px;
 }
 
-.brick-tag {
-  color: var(--brick, #d94828);
-  background: var(--brick-light, #fff1ee);
+.gold-tag {
+  color: var(--nassau-gold-dark, #9d7718);
+  background: #fdfaf2;
+  border: 1px solid #e6ce8a;
 }
 
 .section-title {
@@ -145,8 +146,8 @@ import { videoTestimonials } from '../data/videoTestimonialsData.js';
 
 .video-card:hover {
   transform: translateY(-2px);
-  border-color: var(--brick, #d94828);
-  box-shadow: 0 8px 24px rgba(18, 24, 32, 0.09);
+  border-color: var(--nassau-gold, #c59b27);
+  box-shadow: 0 8px 24px rgba(11, 26, 46, 0.09);
 }
 
 .video-player-wrap {
@@ -190,7 +191,7 @@ import { videoTestimonials } from '../data/videoTestimonialsData.js';
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--queens-blue, #0e5a8a);
+  color: var(--nassau-gold-dark, #9d7718);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-bottom: 6px;
@@ -243,12 +244,12 @@ import { videoTestimonials } from '../data/videoTestimonialsData.js';
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: var(--surface-subtle, #eceef2);
-  border: 1px solid var(--border-soft, #d8dee6);
+  background: #fdfaf2;
+  border: 1px solid #e6ce8a;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--queens-blue, #0e5a8a);
+  color: var(--nassau-navy, #0b1a2e);
   flex-shrink: 0;
 }
 

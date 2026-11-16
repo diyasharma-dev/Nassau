@@ -58,15 +58,15 @@ defineEmits(['open-modal']);
 }
 
 .cta-band {
-  background: linear-gradient(135deg, #121820 0%, #1a2432 100%);
+  background: linear-gradient(135deg, #0b1a2e 0%, #162a45 100%);
   border-radius: 20px;
   padding: 64px 36px;
   color: #ffffff;
   text-align: center;
-  box-shadow: 0 16px 40px rgba(18, 24, 32, 0.16);
+  box-shadow: 0 20px 48px rgba(11, 26, 46, 0.25);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(197, 155, 39, 0.35);
 }
 
 .cta-band::before {
@@ -77,7 +77,7 @@ defineEmits(['open-modal']);
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(217, 72, 40, 0.2) 0%, rgba(217, 72, 40, 0) 70%);
+  background: radial-gradient(circle, rgba(197, 155, 39, 0.22) 0%, rgba(197, 155, 39, 0) 70%);
   pointer-events: none;
 }
 
@@ -89,7 +89,7 @@ defineEmits(['open-modal']);
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(201, 168, 106, 0.18) 0%, rgba(201, 168, 106, 0) 70%);
+  background: radial-gradient(circle, rgba(197, 155, 39, 0.18) 0%, rgba(197, 155, 39, 0) 70%);
   pointer-events: none;
 }
 
@@ -146,46 +146,46 @@ defineEmits(['open-modal']);
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  background: var(--brick, #d94828);
-  color: #ffffff;
+  background: linear-gradient(135deg, #c59b27 0%, #b08719 100%);
+  color: #0b1a2e;
   font-family: var(--font-sans, 'Inter', sans-serif);
   font-size: 1rem;
-  font-weight: 700;
-  padding: 14px 28px;
+  font-weight: 800;
+  padding: 14px 30px;
   border-radius: 9999px;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(217, 72, 40, 0.4);
+  box-shadow: 0 4px 18px rgba(197, 155, 39, 0.35);
   transition: all 0.2s ease;
-  border: none;
+  border: 1px solid #e6ce8a;
   cursor: pointer;
 }
 
 .btn-accent-cta:hover {
-  background: var(--brick-700, #b83619);
+  background: linear-gradient(135deg, #d8ac32 0%, #c59b27 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(217, 72, 40, 0.5);
-  color: #ffffff;
+  box-shadow: 0 6px 24px rgba(197, 155, 39, 0.5);
+  color: #0b1a2e;
 }
 
 .btn-outline-cta {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
   font-family: var(--font-sans, 'Inter', sans-serif);
   font-size: 1rem;
   font-weight: 700;
   padding: 14px 28px;
   border-radius: 9999px;
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .btn-outline-cta:hover {
   background: #ffffff;
-  color: var(--charcoal-950, #121820);
+  color: #0b1a2e;
   border-color: #ffffff;
   transform: translateY(-2px);
 }

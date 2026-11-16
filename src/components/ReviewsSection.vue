@@ -211,8 +211,9 @@ const filteredReviews = computed(() => {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.74rem;
   font-weight: 700;
-  color: var(--queens-blue, #0e5a8a);
-  background: #e0f2fe;
+  color: var(--nassau-gold-dark, #9d7718);
+  background: #fdfaf2;
+  border: 1px solid #e6ce8a;
   padding: 4px 12px;
   border-radius: 9999px;
   text-transform: uppercase;
@@ -318,8 +319,8 @@ const filteredReviews = computed(() => {
 }
 
 .btn-review-link:hover {
-  border-color: var(--queens-blue, #0e5a8a);
-  color: var(--queens-blue, #0e5a8a);
+  border-color: var(--nassau-gold, #c59b27);
+  color: var(--nassau-navy, #0b1a2e);
 }
 
 .review-filters {
@@ -331,7 +332,7 @@ const filteredReviews = computed(() => {
 }
 
 .filter-pill {
-  background: #f1f5f9;
+  background: #f8fafc;
   border: 1px solid var(--border-soft, #d8dee6);
   border-radius: 9999px;
   padding: 6px 14px;
@@ -342,11 +343,15 @@ const filteredReviews = computed(() => {
   transition: all 0.2s ease;
 }
 
-.filter-pill:hover,
+.filter-pill:hover {
+  border-color: var(--nassau-gold, #c59b27);
+  color: var(--nassau-navy, #0b1a2e);
+}
+
 .filter-pill.active {
-  background: var(--queens-blue, #0e5a8a);
+  background: var(--nassau-navy, #0b1a2e);
   color: #ffffff;
-  border-color: var(--queens-blue, #0e5a8a);
+  border-color: var(--nassau-navy, #0b1a2e);
 }
 
 .reviews-masonry {
@@ -388,7 +393,7 @@ const filteredReviews = computed(() => {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--queens-blue, #0e5a8a);
+  background: var(--nassau-navy, #0b1a2e);
   color: #ffffff;
   font-weight: 800;
   display: flex;
@@ -396,6 +401,7 @@ const filteredReviews = computed(() => {
   justify-content: center;
   font-size: 1.1rem;
   flex-shrink: 0;
+  border: 1.5px solid #c59b27;
 }
 
 .review-author-meta {

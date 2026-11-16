@@ -164,7 +164,7 @@ const closeAndBook = () => {
 }
 
 .nav-item:hover {
-  color: var(--brick, #d94828);
+  color: var(--nassau-gold-dark, #9d7718);
 }
 
 .header-actions {
@@ -179,11 +179,11 @@ const closeAndBook = () => {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: var(--surface-subtle, #eceef2);
-  color: var(--charcoal-950, #121820);
+  background-color: var(--surface-subtle, #f4f6f9);
+  color: var(--nassau-navy, #0b1a2e);
   border: 1.5px solid var(--border-soft, #d8dee6);
   border-radius: 9999px;
-  padding: 7px 12px;
+  padding: 7px 14px;
   font-family: var(--font-sans, 'Inter', sans-serif);
   font-size: 0.82rem;
   font-weight: 700;
@@ -194,39 +194,43 @@ const closeAndBook = () => {
 
 .header-call-btn:hover {
   background-color: #ffffff;
-  border-color: var(--queens-blue, #0e5a8a);
-  color: var(--queens-blue, #0e5a8a);
+  border-color: var(--nassau-gold, #c59b27);
+  color: var(--nassau-navy, #0b1a2e);
+  box-shadow: 0 2px 8px rgba(197, 155, 39, 0.15);
 }
 
 .phone-svg {
   width: 14px;
   height: 14px;
   flex-shrink: 0;
+  color: var(--nassau-gold-dark, #9d7718);
 }
 
 .header-book-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--brick, #d94828);
+  background: linear-gradient(135deg, #0b1a2e 0%, #162a45 100%);
   color: #ffffff;
-  border: none;
+  border: 1.5px solid var(--nassau-gold, #c59b27);
   border-radius: 9999px;
-  padding: 8px 14px;
+  padding: 8px 16px;
   font-family: var(--font-sans, 'Inter', sans-serif);
   font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(217, 72, 40, 0.25);
+  box-shadow: 0 2px 8px rgba(11, 26, 46, 0.2);
   transition: all 0.2s ease;
   flex-shrink: 0;
   white-space: nowrap;
 }
 
 .header-book-btn:hover {
-  background-color: var(--brick-700, #b83619);
+  background: linear-gradient(135deg, #c59b27 0%, #b08719 100%);
+  color: #0b1a2e;
+  border-color: #c59b27;
   transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(217, 72, 40, 0.35);
+  box-shadow: 0 4px 14px rgba(197, 155, 39, 0.35);
 }
 
 .nav-toggle-btn {

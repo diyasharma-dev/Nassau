@@ -23,10 +23,10 @@
 
 <style scoped>
 .utilbar {
-  background: var(--charcoal-950, #121820);
+  background: #07101d;
   color: #e2e8f0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 7px 0;
+  border-bottom: 1px solid rgba(197, 155, 39, 0.2);
+  padding: 8px 0;
   font-size: 11.5px;
   line-height: 1;
 }
@@ -72,7 +72,7 @@
 }
 
 .utilbar-phone:hover {
-  color: var(--hazard-gold, #c9a86a);
+  color: var(--nassau-gold, #c59b27);
 }
 
 .show-mobile {

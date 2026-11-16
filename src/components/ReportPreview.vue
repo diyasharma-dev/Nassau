@@ -187,8 +187,8 @@ defineEmits(['open-modal']);
 
 .watchlist-card:hover {
   transform: translateY(-3px);
-  border-color: #f87171;
-  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.08);
+  border-color: var(--nassau-gold, #c59b27);
+  box-shadow: 0 10px 26px rgba(197, 155, 39, 0.12);
 }
 
 .watchlist-card-top {
@@ -244,7 +244,7 @@ defineEmits(['open-modal']);
 }
 
 .watchlist-bottom-banner {
-  background: #121820;
+  background: linear-gradient(135deg, #0b1a2e 0%, #162a45 100%);
   color: #ffffff;
   border-radius: 14px;
   padding: 32px;
@@ -253,6 +253,8 @@ defineEmits(['open-modal']);
   gap: 20px;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid rgba(197, 155, 39, 0.3);
+  box-shadow: 0 12px 32px rgba(11, 26, 46, 0.12);
 }
 
 @media (min-width: 860px) {

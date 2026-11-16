@@ -125,8 +125,9 @@
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.74rem;
   font-weight: 700;
-  color: var(--queens-blue, #0e5a8a);
-  background: #e0f2fe;
+  color: var(--nassau-gold-dark, #9d7718);
+  background: #fdfaf2;
+  border: 1px solid #e6ce8a;
   padding: 4px 12px;
   border-radius: 9999px;
   text-transform: uppercase;
@@ -153,7 +154,7 @@
 }
 
 .diagram-feature-box {
-  background: #0f172a;
+  background: linear-gradient(135deg, #0b1a2e 0%, #162a45 100%);
   color: #ffffff;
   border-radius: 14px;
   padding: 32px;
@@ -162,6 +163,8 @@
   gap: 32px;
   align-items: center;
   margin-bottom: 40px;
+  border: 1px solid rgba(197, 155, 39, 0.3);
+  box-shadow: 0 12px 32px rgba(11, 26, 46, 0.12);
 }
 
 @media (min-width: 900px) {
@@ -256,25 +259,27 @@
 }
 
 .check-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--queens-blue, #0e5a8a);
+  transform: translateY(-3px);
+  border-color: var(--nassau-gold, #c59b27);
+  box-shadow: 0 8px 24px rgba(11, 26, 46, 0.08);
 }
 
 .check-card-header {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .check-num {
-  font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.88rem;
+  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-size: 1.1rem;
   font-weight: 800;
-  color: var(--queens-blue, #0e5a8a);
-  background: #e0f2fe;
-  padding: 2px 8px;
-  border-radius: 4px;
+  color: var(--nassau-gold, #c59b27);
+  background: #fdfaf2;
+  border: 1px solid #e6ce8a;
+  padding: 2px 9px;
+  border-radius: 6px;
   flex-shrink: 0;
 }
 
