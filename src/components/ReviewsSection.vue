@@ -4,16 +4,16 @@
       <!-- Section Head -->
       <div class="section-head text-center">
         <span class="section-tag">Google Reviews</span>
-        <h2 class="section-title">Rated 4.9 Stars Across NYC &amp; Long Island</h2>
+        <h2 class="section-title">Rated 4.9 Stars Across Nassau County</h2>
         <p class="section-sub">
-          Real reviews from home buyers, co-op purchasers, real estate investors, and tradesmen across all five NYC boroughs and Nassau/Suffolk counties.
+          Real Google-verified reviews from single-family home buyers, co-op purchasers, and real estate attorneys across Nassau County, Long Island.
         </p>
       </div>
 
       <!-- Rating Header Box -->
       <div class="rating-summary-card">
         <div class="rsc-left">
-          <div class="rsc-brand">Queens Home Inspector / HomeStar Professional Home Inspections</div>
+          <div class="rsc-brand">HomeStar Professional Home Inspections &bull; Nassau County Division</div>
           <div class="rsc-badge">Google Verified</div>
         </div>
         <div class="rsc-center">

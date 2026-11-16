@@ -34,13 +34,10 @@
       <!-- Section 7: Coverage Map (Areas We Inspect in Nassau County - 80 Neighborhoods) -->
       <NassauTowns />
 
-      <!-- Section 8: All Service Areas (Explore other NYC & Long Island regions) -->
-      <OtherRegions />
-
-      <!-- Section 9: Verified Client Feedback (Rated 4.9 Stars Across NYC & Long Island) -->
+      <!-- Section 8: Verified Client Feedback (Rated 4.9 Stars Across Nassau County) -->
       <ReviewsSection />
 
-      <!-- Section 10: Final CTA Band (Know what you're buying before you buy it) -->
+      <!-- Section 9: Final CTA Band (Know what you're buying before you buy it) -->
       <BookingSection @open-modal="handleOpenModal" />
     </main>
 
@@ -74,7 +71,6 @@ import ReportPreview from './components/ReportPreview.vue';
 import ChecklistExplorer from './components/ChecklistExplorer.vue';
 import FaqAccordion from './components/FaqAccordion.vue';
 import NassauTowns from './components/NassauTowns.vue';
-import OtherRegions from './components/OtherRegions.vue';
 import ReviewsSection from './components/ReviewsSection.vue';
 import BookingSection from './components/BookingSection.vue';
 import AppFooter from './components/AppFooter.vue';

@@ -92,9 +92,9 @@
             <div class="card-inspector-header">
               <div class="inspector-photo-wrapper">
                 <img
-                  src="/images/inspector-daren.jpg"
-                  alt="Daren Koniuk - NYS Licensed Home Inspector #16000009862"
-                  class="inspector-avatar-img"
+                  src="/images/homestar-logo-big.webp"
+                  alt="HomeStar Inspection Services — Nassau County Division"
+                  class="inspector-avatar-img logo-avatar"
                   width="72"
                   height="72"
                 />
@@ -597,6 +597,12 @@ defineEmits(['open-modal']);
   object-fit: cover;
   border: 2.5px solid var(--hazard-gold, #c9a86a);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.inspector-avatar-img.logo-avatar {
+  background: #ffffff;
+  padding: 4px;
+  object-fit: contain;
 }
 
 .status-indicator {

@@ -10,7 +10,7 @@
         <span class="mono-label">InterNACHI Certified Professional Inspector</span>
       </div>
       <div class="utilbar-right">
-        <span class="utilbar-scope">Serving All 3 Nassau Townships + Long Island Daily</span>
+        <span class="utilbar-scope">Serving All 3 Nassau Townships (Hempstead, North Hempstead, Oyster Bay) Daily</span>
         <span class="utilbar-sep">•</span>
         <a href="tel:7182087092" class="utilbar-phone">Direct Line: 718-208-7092</a>
       </div>

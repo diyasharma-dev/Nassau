@@ -53,9 +53,9 @@
             <a href="tel:7182087092" class="footer-phone">(718) 208-7092</a>
           </div>
           <div class="footer-contact-item">
-            <span class="contact-lbl">Inspector Email:</span>
-            <a href="mailto:daren@homestarinspectionsny.com" class="footer-email">
-              daren@homestarinspectionsny.com
+            <span class="contact-lbl">Inspector Direct Email:</span>
+            <a href="mailto:dkoniuk@yahoo.com" class="footer-email">
+              dkoniuk@yahoo.com
             </a>
           </div>
           <div class="footer-contact-item">

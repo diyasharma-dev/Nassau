@@ -65,7 +65,6 @@
           <a href="#video-reviews" class="m-link" @click="closeMobileMenu">On-Site Client Video Reviews</a>
           <a href="#neighborhoods" class="m-link" @click="closeMobileMenu">80 Areas We Inspect</a>
           <a href="#faq" class="m-link" @click="closeMobileMenu">Nassau Inspection Questions</a>
-          <a href="#regions" class="m-link" @click="closeMobileMenu">Other NYC &amp; Long Island Regions</a>
           <a href="#reviews" class="m-link" @click="closeMobileMenu">Google Reviews (4.9 Stars)</a>
         </nav>
         <div class="mobile-drawer-cta">
