@@ -3,12 +3,15 @@
     <div class="container footer-container">
       <div class="footer-top-grid">
         <div class="footer-col brand-col">
-          <div class="logo-mark">
-            <svg viewBox="0 0 40 40" fill="none" class="brand-icon">
-              <rect width="40" height="40" rx="10" fill="#0A2540"/>
-              <path d="M20 9L9 18H13V30H18V24H22V30H27V18H31L20 9Z" fill="#F59E0B"/>
-              <path d="M20 14L22.2 19.5L28 19.8L23.5 23.4L25 29L20 25.8L15 29L16.5 23.4L12 19.8L17.8 19.5L20 14Z" fill="#FFFFFF" opacity="0.9"/>
-            </svg>
+          <div class="footer-logo-wrap">
+            <img
+              src="/images/homestar-nassau-logo.svg"
+              alt="HomeStar Inspections - Nassau County Division"
+              class="footer-logo-img"
+              width="240"
+              height="48"
+              loading="lazy"
+            />
           </div>
           <h4>HomeStar Inspection Services, LLC</h4>
           <p class="footer-desc">

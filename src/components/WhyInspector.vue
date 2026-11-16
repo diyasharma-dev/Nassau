@@ -36,7 +36,7 @@
           <div class="inspector-profile-card">
             <div class="profile-header">
               <div class="profile-photo-wrapper">
-                <img src="/images/inspector-daren.jpg" alt="Daren Koniuk - NYS Licensed Home Inspector" class="profile-real-photo" />
+                <img src="/images/daren-avatar.webp" alt="Daren Koniuk - NYS Licensed Home Inspector" class="profile-real-photo" />
                 <span class="online-indicator" title="Available 7 Days A Week"></span>
               </div>
               <div class="profile-info">

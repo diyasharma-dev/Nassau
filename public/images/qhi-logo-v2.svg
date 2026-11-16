@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="74" viewBox="0 0 440 74" role="img" aria-labelledby="title desc">
+  <title id="title">Queens Home Inspector</title>
+  <desc id="desc">Original 100% Money Back Guaranteed Seal &amp; Queens Home Inspector Wordmark.</desc>
+  <defs>
+    <linearGradient id="origGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="35%" stop-color="#F59E0B"/>
+      <stop offset="70%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+  </defs>
+
+  <g fill="none" fill-rule="evenodd">
+    <!-- Original Starburst 100% Money Back Seal Emblem -->
+    <g transform="translate(4, 4)">
+      <!-- Starburst Teeth -->
+      <g fill="url(#origGoldGrad)" stroke="#121820" stroke-width="1.2">
+        <polygon points="33,2 38,8 45,5 48,12 55,11 55,19 62,21 59,28 65,33 59,38 62,45 55,47 55,55 48,54 45,61 38,58 33,64 28,58 21,61 18,54 11,55 11,47 4,45 7,38 1,33 7,28 4,21 11,19 11,11 18,12 21,5 28,8"/>
+      </g>
+
+      <!-- Outer Ring -->
+      <circle cx="33" cy="33" r="25" fill="#070A0E" stroke="#F5B700" stroke-width="1.5"/>
+      <!-- Beaded Inner Line -->
+      <circle cx="33" cy="33" r="22" fill="none" stroke="#F5B700" stroke-width="0.8" stroke-dasharray="2,1.5"/>
+
+      <!-- Text Arcs -->
+      <path id="qArcTop" d="M 14 33 A 19 19 0 0 1 52 33" fill="none"/>
+      <path id="qArcBot" d="M 52 33 A 19 19 0 0 1 14 33" fill="none"/>
+
+      <text fill="#F5B700" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="4.5" font-weight="900" letter-spacing="0.16em">
+        <textPath href="#qArcTop" startOffset="50%" text-anchor="middle">MONEY BACK</textPath>
+      </text>
+      <text fill="#F5B700" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="4.2" font-weight="900" letter-spacing="0.14em">
+        <textPath href="#qArcBot" startOffset="50%" text-anchor="middle">GUARANTEE</textPath>
+      </text>
+
+      <!-- Center Medallion -->
+      <circle cx="33" cy="33" r="13" fill="#D94828" stroke="#F5B700" stroke-width="1.2"/>
+      <text x="33" y="37" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="9.5" font-weight="900" text-anchor="middle" letter-spacing="-0.04em">100%</text>
+    </g>
+
+    <!-- Typography Wordmark -->
+    <g transform="translate(78, 9)">
+      <!-- Main Brand Name -->
+      <text x="0" y="24" fill="#070A0E" font-family="'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif" font-size="23" font-weight="900" letter-spacing="-0.035em">QUEENS HOME INSPECTOR</text>
+      
+      <!-- Sub-headline from original site -->
+      <text x="0" y="41" fill="#D94828" font-family="'Outfit', sans-serif" font-size="11.5" font-weight="800" letter-spacing="0.06em">QUEENS HOME INSPECTIONS &#8226; NYS LICENSED</text>
+      
+      <!-- License Badge -->
+      <g transform="translate(0, 47)">
+        <rect x="0" y="0" width="180" height="15" rx="3" fill="#070A0E"/>
+        <text x="7" y="11" fill="#F5B700" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="800" letter-spacing="0.08em">NYS LIC. #16000009862</text>
+      </g>
+    </g>
+  </g>
+</svg>

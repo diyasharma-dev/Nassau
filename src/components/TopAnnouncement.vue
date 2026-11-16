@@ -1,24 +1,96 @@
 <template>
-  <aside class="top-bar" aria-label="Announcement">
-    <div class="container top-bar-inner">
-      <div class="top-bar-left">
-        <span class="badge-pill">Nassau County Exclusive</span>
-        <span class="top-bar-text">Serving Town of Hempstead, North Hempstead &amp; Oyster Bay Daily</span>
-      </div>
-      <div class="top-bar-right">
-        <span class="top-bar-contact">
-          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          Direct Line: <a href="tel:7182087092" class="phone-link"><strong>(718) 208-7092</strong></a>
+  <aside class="utilbar" aria-label="Official Inspection Credentials">
+    <div class="wrap utilbar-inner">
+      <div class="utilbar-left">
+        <span class="mono-label">
+          <span class="hide-mobile">NYS Home Inspector License #16000009862</span>
+          <span class="show-mobile">NYS Lic. #16000009862</span>
         </span>
-        <span class="divider-dot">•</span>
-        <span class="top-bar-availability">Available 7 Days A Week (Same-Day / Next-Day)</span>
+        <span class="utilbar-sep">•</span>
+        <span class="mono-label">InterNACHI Certified Professional Inspector</span>
+      </div>
+      <div class="utilbar-right">
+        <span class="utilbar-scope">Serving All 3 Nassau Townships + Long Island Daily</span>
+        <span class="utilbar-sep">•</span>
+        <a href="tel:7182087092" class="utilbar-phone">Direct Line: 718-208-7092</a>
       </div>
     </div>
   </aside>
 </template>
 
 <script setup>
-// Component for announcement banner
 </script>
+
+<style scoped>
+.utilbar {
+  background: var(--charcoal-950, #121820);
+  color: #e2e8f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 7px 0;
+  font-size: 11.5px;
+  line-height: 1;
+}
+
+.utilbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.utilbar-left,
+.utilbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mono-label {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.utilbar-sep {
+  color: #64748b;
+  font-size: 10px;
+}
+
+.utilbar-scope {
+  color: #94a3b8;
+  font-size: 11.5px;
+}
+
+.utilbar-phone {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.utilbar-phone:hover {
+  color: var(--hazard-gold, #c9a86a);
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+  .show-mobile {
+    display: inline;
+  }
+  .utilbar-scope {
+    display: none;
+  }
+  .utilbar-inner {
+    justify-content: center;
+  }
+}
+</style>
