@@ -44,18 +44,6 @@
                 &#10003; {{ hl }}
               </span>
             </div>
-
-            <div class="video-card-footer">
-              <div class="author-avatar-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-                </svg>
-              </div>
-              <div class="author-details">
-                <strong>{{ video.client }}</strong>
-                <span>{{ video.property }} &bull; {{ video.verifiedBadge }}</span>
-              </div>
-            </div>
           </div>
         </article>
       </div>
@@ -219,7 +207,7 @@ import { videoTestimonials } from '../data/videoTestimonialsData.js';
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 18px;
+  margin-bottom: 0;
 }
 
 .hl-badge {
@@ -230,46 +218,5 @@ import { videoTestimonials } from '../data/videoTestimonialsData.js';
   padding: 3px 8px;
   border-radius: 4px;
   border: 1px solid var(--border-soft, #d8dee6);
-}
-
-.video-card-footer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-top: 14px;
-  border-top: 1px solid var(--border-soft, #d8dee6);
-}
-
-.author-avatar-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #fdfaf2;
-  border: 1px solid #e6ce8a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--nassau-navy, #0b1a2e);
-  flex-shrink: 0;
-}
-
-.author-avatar-icon svg {
-  width: 18px;
-  height: 18px;
-}
-
-.author-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.author-details strong {
-  font-size: 0.86rem;
-  color: var(--charcoal-950, #121820);
-}
-
-.author-details span {
-  font-size: 0.74rem;
-  color: #64748b;
 }
 </style>
