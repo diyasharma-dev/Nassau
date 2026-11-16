@@ -87,6 +87,25 @@
         <!-- Right Column: Inspector Credibility & Dispatch Assurance Card -->
         <div class="hero-right-col">
           <div class="inspector-card">
+            <!-- Featured Nassau Inspection Real Property Photo -->
+            <div class="card-featured-photo-box">
+              <img
+                src="/images/nassau-county-official-homestar.webp"
+                alt="Official Nassau County Residential Property Inspection by HomeStar"
+                class="card-featured-photo"
+                loading="eager"
+              />
+              <div class="card-photo-scrim">
+                <span class="photo-live-tag">
+                  <span class="live-dot-pulse"></span>
+                  Active In Nassau Today
+                </span>
+                <span class="photo-termite-tag">
+                  Free NPMA-33 Termite Form Included
+                </span>
+              </div>
+            </div>
+
             <!-- Card Header: Profile Info -->
             <div class="card-inspector-header">
               <div class="inspector-photo-wrapper">
@@ -209,7 +228,7 @@ defineEmits(['open-modal']);
     radial-gradient(circle at 80% 20%, rgba(201, 168, 106, 0.12) 0%, transparent 45%),
     radial-gradient(circle at 10% 80%, rgba(14, 90, 138, 0.18) 0%, transparent 50%),
     linear-gradient(135deg, rgba(11, 21, 35, 0.94) 0%, rgba(15, 29, 48, 0.88) 50%, rgba(11, 21, 35, 0.92) 100%),
-    url('/images/nassau-hero-house.webp');
+    url('/images/nassau-county-official-homestar.webp');
   background-size: cover;
   background-position: center 30%;
   color: #ffffff;
@@ -471,6 +490,82 @@ defineEmits(['open-modal']);
   color: var(--charcoal-950, #121820);
   box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.card-featured-photo-box {
+  position: relative;
+  width: calc(100% + 48px);
+  margin: -24px -24px 18px -24px;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  height: 265px;
+}
+
+.card-featured-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  display: block;
+}
+
+.card-photo-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(14, 24, 36, 0.75) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 10px 14px;
+  gap: 8px;
+}
+
+.photo-live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(18, 24, 32, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  padding: 4px 10px;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.live-dot-pulse {
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.35);
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+.photo-termite-tag {
+  background: rgba(201, 168, 106, 0.95);
+  color: #121820;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  white-space: nowrap;
 }
 
 .card-inspector-header {
@@ -733,6 +828,18 @@ defineEmits(['open-modal']);
 
   .inspector-card {
     padding: 18px;
+  }
+
+  .card-featured-photo-box {
+    width: calc(100% + 36px);
+    margin: -18px -18px 16px -18px;
+    height: 215px;
+  }
+
+  .card-photo-scrim {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 }
 </style>

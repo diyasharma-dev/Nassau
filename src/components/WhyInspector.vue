@@ -31,6 +31,29 @@
               </tbody>
             </table>
           </div>
+
+          <!-- Real On-Site Inspection Evidence Strip -->
+          <div class="onsite-inspections-strip">
+            <span class="onsite-label">Actual On-Site Inspections by Daren Koniuk Across Long Island:</span>
+            <div class="onsite-photos-grid">
+              <div class="onsite-photo-card">
+                <img src="/images/inspect-1-daren.webp" alt="Daren Koniuk inspecting foundation and framing" class="onsite-img" loading="lazy" />
+                <span class="onsite-tag">Structure &amp; Slabs</span>
+              </div>
+              <div class="onsite-photo-card">
+                <img src="/images/inspect-2-daren.webp" alt="Daren Koniuk testing residential heating boiler" class="onsite-img" loading="lazy" />
+                <span class="onsite-tag">Boilers &amp; Heating</span>
+              </div>
+              <div class="onsite-photo-card">
+                <img src="/images/inspect-3-daren.webp" alt="Daren Koniuk evaluating main electrical panel" class="onsite-img" loading="lazy" />
+                <span class="onsite-tag">Electrical Panels</span>
+              </div>
+              <div class="onsite-photo-card">
+                <img src="/images/inspect-4-daren.webp" alt="Daren Koniuk inspecting roof structure and flashing" class="onsite-img" loading="lazy" />
+                <span class="onsite-tag">Roof &amp; Chimneys</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Right Column: Sticky Inspector Profile Card -->
@@ -219,6 +242,74 @@ const certs = [
 
 .comparison-table tbody tr:last-child td {
   border-bottom: none;
+}
+
+/* On-Site Inspections Evidence Strip */
+.onsite-inspections-strip {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1.5px solid var(--border-soft, #d8dee6);
+}
+
+.onsite-label {
+  display: block;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.onsite-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 600px) {
+  .onsite-photos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.onsite-photo-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft, #d8dee6);
+  background: #000000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.onsite-img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.onsite-photo-card:hover .onsite-img {
+  transform: scale(1.05);
+}
+
+.onsite-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(14, 24, 36, 0.88);
+  backdrop-filter: blur(2px);
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 6px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ==========================================================================

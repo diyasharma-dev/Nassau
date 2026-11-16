@@ -2,115 +2,115 @@
   <section class="section serious-defects-section" id="serious-defects">
     <div class="wrap">
       <div class="section-heading text-center">
-        <span class="eyebrow-tag brick-tag">Serious Defects Dossier</span>
-        <h2 class="section-title">Costly Defects We Uncover Before You Buy</h2>
+        <span class="eyebrow-tag brick-tag">Nassau Home Inspection Case Studies</span>
+        <h2 class="section-title">Real Nassau County Homes We Inspect &amp; The Costly Defects Uncovered</h2>
         <p class="section-sub">
-          These are real photos documented by Daren Koniuk during recent residential inspections across Nassau County. Finding these before closing gave our clients thousands of dollars in seller repair credits.
+          Every Nassau County town has unique architectural vulnerabilities. Here is how our comprehensive pre-contract inspections protected home buyers across Garden City, Levittown, Great Neck, and Massapequa.
         </p>
       </div>
 
       <!-- Defect Cards Grid -->
       <div class="defects-grid">
-        <!-- Defect 1: Boiler -->
+        <!-- Card 1: Garden City -->
         <article class="defect-card">
           <div class="defect-img-wrap">
             <img
-              src="/images/defect-real-boiler.webp"
-              alt="Cracked and rusted residential steam boiler in Nassau basement"
+              src="/images/garden-city-actual-house.jpg"
+              alt="Historic Garden City Residence in Town of Hempstead, Nassau County"
               class="defect-img"
               loading="lazy"
             />
-            <span class="defect-badge tag-danger">Major Safety &amp; Heating Hazard</span>
+            <span class="defect-badge tag-warning">Town of Hempstead &bull; Historic Colonial</span>
           </div>
           <div class="defect-body">
             <div class="defect-meta-row">
-              <span class="defect-loc">Garden City &bull; 1930s Tudor</span>
+              <span class="defect-loc">Garden City &bull; Historic Estate</span>
               <span class="defect-savings">Saved Buyer: $9,500</span>
             </div>
-            <h3 class="defect-title">Cracked Cast-Iron Boiler Heat Exchanger</h3>
+            <h3 class="defect-title">Cracked Cast-Iron Boiler &amp; Vintage Hydronic Piping</h3>
             <p class="defect-desc">
-              Heavy corrosion and thermal stress cracks found in the cast-iron sectional heat exchanger. Posed an active carbon monoxide hazard into living areas above. The seller was forced to credit the buyer for a full boiler replacement before closing.
+              During the basement mechanical evaluation, heavy corrosion and thermal stress cracks were uncovered in the cast-iron sectional heat exchanger, creating an active carbon monoxide hazard. The seller was forced to credit the buyer $9,500 for a full boiler replacement before closing.
             </p>
             <div class="defect-takeaway">
-              <strong>Inspector Action:</strong> Combustion gas analyzer triggered CO alarm; advised immediate shutdown.
+              <strong>Inspector Action:</strong> Combustion gas analyzer &amp; FLIR thermal imaging verified heat exchanger failure.
             </div>
           </div>
         </article>
 
-        <!-- Defect 2: Electrical -->
+        <!-- Card 2: Levittown -->
         <article class="defect-card">
           <div class="defect-img-wrap">
             <img
-              src="/images/defect-real-electrical.webp"
-              alt="Hazardous electrical panel with double taps in Nassau home"
+              src="/images/levittown-weber-house-color.jpg"
+              alt="Original 1950s Concrete Slab Home in Levittown, Town of Hempstead, Nassau County"
               class="defect-img"
               loading="lazy"
             />
-            <span class="defect-badge tag-danger">Fire Hazard</span>
+            <span class="defect-badge tag-danger">Town of Hempstead &bull; Post-War Slab</span>
           </div>
           <div class="defect-body">
             <div class="defect-meta-row">
-              <span class="defect-loc">Levittown &bull; 1950s Ranch</span>
+              <span class="defect-loc">Levittown &bull; 1950s Slab Ranch</span>
               <span class="defect-savings">Saved Buyer: $3,200</span>
             </div>
-            <h3 class="defect-title">Hazardous Double-Tapped Main Panel &amp; Scorched Neutral</h3>
+            <h3 class="defect-title">Hazardous Double-Tapped Main Panel &amp; Slab In-Piping</h3>
             <p class="defect-desc">
-              Multiple circuits crammed into single breaker terminals with scorched neutral conductors and melted insulation inside a vintage Zinsco panel. Insurance carriers routinely deny coverage for this configuration.
+              Multiple circuits were crammed into single breaker terminals with scorched neutral conductors inside an obsolete vintage Zinsco panel. Infrared scanning was also deployed to inspect copper radiant heating coils embedded in the concrete slab for pinhole pressure loss.
             </p>
             <div class="defect-takeaway">
-              <strong>Inspector Action:</strong> FLIR infrared thermal scan identified a 138°F hot spot on the main bus.
+              <strong>Inspector Action:</strong> FLIR scan documented a 138°F bus hot spot; seller funded full 200A electrical service replacement.
             </div>
           </div>
         </article>
 
-        <!-- Defect 3: Roof -->
+        <!-- Card 3: Great Neck -->
         <article class="defect-card">
           <div class="defect-img-wrap">
             <img
-              src="/images/defect-real-roof.webp"
-              alt="Ponding water and blistered roof membrane in Nassau"
+              src="/images/great-neck-actual-house.jpg"
+              alt="Historic North Shore Residence in Great Neck Estates, Nassau County"
               class="defect-img"
               loading="lazy"
             />
-            <span class="defect-badge tag-warning">Major Structural Deterioration</span>
+            <span class="defect-badge tag-danger">Town of North Hempstead &bull; Gold Coast</span>
           </div>
           <div class="defect-body">
             <div class="defect-meta-row">
-              <span class="defect-loc">Great Neck &bull; Split-Level Addition</span>
+              <span class="defect-loc">Great Neck Estates &bull; North Shore</span>
               <span class="defect-savings">Saved Buyer: $14,000</span>
             </div>
-            <h3 class="defect-title">Ponding Water &amp; Delaminated Roof Membrane</h3>
+            <h3 class="defect-title">Delaminated Flat Roof Membrane &amp; Hidden Flashing Leaks</h3>
             <p class="defect-desc">
-              Improper slope on low-pitch rear roof addition created severe ponding, saturated insulation, and rusted flashing into the master bedroom wall cavities. Completely invisible from street level.
+              Improper slope on a low-pitch rear architectural addition created severe water ponding, saturated wood framing, and rusted copper valley flashing leaking into upper wall cavities—completely invisible from street level.
             </p>
             <div class="defect-takeaway">
-              <strong>Inspector Action:</strong> Walked the full roof surface and documented active membrane seam splitting.
+              <strong>Inspector Action:</strong> Walked the full roof surface and documented active seam splitting; secured a $14,000 credit.
             </div>
           </div>
         </article>
 
-        <!-- Defect 4: Termites -->
+        <!-- Card 4: Massapequa -->
         <article class="defect-card">
           <div class="defect-img-wrap">
             <img
-              src="/images/defect-real-termites.webp"
-              alt="Subterranean termite mud tube damage on floor joists"
+              src="/images/massapequa-actual-house.jpg"
+              alt="South Shore Canalfront Property on Ocean Avenue, Massapequa, Nassau County"
               class="defect-img"
               loading="lazy"
             />
-            <span class="defect-badge tag-warning">Wood-Destroying Organism</span>
+            <span class="defect-badge tag-warning">Town of Oyster Bay &bull; South Shore Waterfront</span>
           </div>
           <div class="defect-body">
             <div class="defect-meta-row">
-              <span class="defect-loc">Massapequa &bull; South Shore Colonial</span>
+              <span class="defect-loc">Massapequa &bull; Ocean Ave Coastal</span>
               <span class="defect-savings">Saved Buyer: $4,800</span>
             </div>
-            <h3 class="defect-title">Subterranean Termite Mud Tubes on Rim Joists</h3>
+            <h3 class="defect-title">Subterranean Termite Mud Tubes on Timber Sill Plates</h3>
             <p class="defect-desc">
-              Active eastern subterranean termite mud shelter tubes tunneling into load-bearing sill plates behind finished basement insulation. Covered under our included <strong>Free Official NPMA-33 Termite Report</strong>.
+              Active eastern subterranean termite mud shelter tubes tunneling into load-bearing sill plates behind finished basement sheetrock. Discovered during our included <strong>Free Official NPMA-33 Termite Inspection</strong>.
             </p>
             <div class="defect-takeaway">
-              <strong>Inspector Action:</strong> Probed hollowed timber and provided official NPMA-33 form for lender mortgage escrow.
+              <strong>Inspector Action:</strong> Probed structural timber and provided official NPMA-33 form requiring professional seller treatment.
             </div>
           </div>
         </article>
@@ -216,15 +216,31 @@ defineEmits(['open-modal']);
 
 .defect-img-wrap {
   position: relative;
-  height: 230px;
+  height: 290px;
   width: 100%;
   background: #121820;
+  overflow: hidden;
+}
+
+.defect-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(14, 24, 36, 0.55) 0%, rgba(14, 24, 36, 0) 30%);
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .defect-img-wrap {
+    height: 220px;
+  }
 }
 
 .defect-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
 }
 

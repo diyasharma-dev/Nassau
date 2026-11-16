@@ -18,8 +18,8 @@
         <article class="dossier-card">
           <div class="dossier-img-box">
             <img
-              src="/images/nassau-colonial-real.jpg"
-              alt="North Shore Gold Coast Colonials & Tudors - Great Neck, Manhasset, Roslyn"
+              src="/images/roslyn-willet-titus-house.jpg"
+              alt="Historic Roslyn Residence, Town of North Hempstead, Nassau County"
               class="dossier-img"
               loading="lazy"
             />
@@ -58,8 +58,8 @@
         <article class="dossier-card">
           <div class="dossier-img-box">
             <img
-              src="/images/nassau-split-level-real.jpg"
-              alt="Central Nassau Colonials & Split-Levels - Garden City, Syosset, Jericho"
+              src="/images/garden-city-actual-house.jpg"
+              alt="Historic Garden City Residence, Town of Hempstead, Nassau County"
               class="dossier-img"
               loading="lazy"
             />
@@ -98,8 +98,8 @@
         <article class="dossier-card">
           <div class="dossier-img-box">
             <img
-              src="/images/nassau-levittown-cape-real.jpg"
-              alt="Levittown & Mid-Century Slab Ranches"
+              src="/images/levittown-weber-house-color.jpg"
+              alt="Authentic Levittown Post-War Concrete Slab House, Levittown, Town of Hempstead, Nassau County"
               class="dossier-img"
               loading="lazy"
             />
@@ -138,12 +138,12 @@
         <article class="dossier-card">
           <div class="dossier-img-box">
             <img
-              src="/images/nassau-southshore-real.jpg"
-              alt="South Shore & Barrier Island Waterfront - Massapequa, Long Beach, Freeport"
+              src="/images/massapequa-actual-house.jpg"
+              alt="South Shore Long Island Waterfront & Canalfront Home - Ocean Avenue, Massapequa, Town of Oyster Bay, Nassau County"
               class="dossier-img"
               loading="lazy"
             />
-            <span class="dossier-tag blue-tag">Waterfront &bull; South Shore &amp; Long Beach</span>
+            <span class="dossier-tag blue-tag">Waterfront &bull; Town of Oyster Bay &amp; Long Beach</span>
           </div>
           <div class="dossier-body">
             <h3 class="dossier-title">South Shore Canals &amp; Barrier Island Waterfront</h3>
@@ -254,16 +254,31 @@
 
 .dossier-img-box {
   position: relative;
-  height: 220px;
+  height: 290px;
   width: 100%;
   overflow: hidden;
   background: #121820;
+}
+
+.dossier-img-box::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(14, 24, 36, 0.65) 0%, rgba(14, 24, 36, 0) 35%);
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .dossier-img-box {
+    height: 220px;
+  }
 }
 
 .dossier-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -276,6 +291,7 @@
   position: absolute;
   bottom: 12px;
   left: 12px;
+  z-index: 2;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.72rem;
   font-weight: 700;
