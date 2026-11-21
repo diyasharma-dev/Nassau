@@ -23,12 +23,14 @@
 
 <style scoped>
 .utilbar {
-  background: #07101d;
-  color: #e2e8f0;
-  border-bottom: 1px solid rgba(197, 155, 39, 0.2);
-  padding: 8px 0;
+  background: #0c1424;
+  color: #cbd5e1;
+  border-bottom: 1px solid rgba(229, 223, 213, 0.15);
+  padding: 9px 0;
   font-size: 11.5px;
   line-height: 1;
+  position: relative;
+  z-index: 1001;
 }
 
 .utilbar-inner {
@@ -43,36 +45,43 @@
 .utilbar-right {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .mono-label {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 11px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: #cbd5e1;
-  font-weight: 600;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
 }
 
 .utilbar-sep {
-  color: #64748b;
+  color: var(--bronze, #8c6d46);
   font-size: 10px;
+  opacity: 0.8;
 }
 
 .utilbar-scope {
   color: #94a3b8;
   font-size: 11.5px;
+  letter-spacing: 0.02em;
 }
 
 .utilbar-phone {
-  color: #ffffff;
-  font-weight: 700;
+  color: #c5a880;
+  font-weight: 600;
   text-decoration: none;
-  transition: color 0.2s ease;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
 .utilbar-phone:hover {
-  color: var(--nassau-gold, #c59b27);
+  color: #ffffff;
 }
 
 .show-mobile {

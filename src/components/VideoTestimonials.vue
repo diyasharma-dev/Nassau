@@ -58,55 +58,57 @@ import { videoTestimonials } from '../data/videoTestimonialsData.js';
 <style scoped>
 .video-testimonials-section {
   background-color: #ffffff;
-  padding: 80px 0;
-  border-bottom: 1.5px solid var(--border-soft, #d8dee6);
+  padding: 88px 0;
+  border-bottom: 1px solid #e5dfd5;
+  position: relative;
 }
 
 .section-heading {
-  margin-bottom: 48px;
+  margin-bottom: 52px;
 }
 
 .eyebrow-tag {
   display: inline-block;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  padding: 4px 12px;
-  border-radius: 9999px;
+  padding: 5px 14px;
+  border-radius: 4px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
 }
 
 .gold-tag {
-  color: var(--nassau-gold-dark, #9d7718);
-  background: #fdfaf2;
-  border: 1px solid #e6ce8a;
+  color: #8c6d46;
+  background: #f6f2ec;
+  border: 1px solid #dcd4c7;
 }
 
 .section-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  line-height: 1.2;
-  margin-bottom: 12px;
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  font-weight: 700;
+  color: #0c1424;
+  line-height: 1.18;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
 }
 
 .section-sub {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 1.02rem;
-  color: var(--text-secondary, #475569);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.05rem;
+  color: #475569;
   max-width: 720px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* 3-Column Grid on Desktop - Perfectly Balanced */
 .video-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 28px;
+  gap: 30px;
 }
 
 @media (min-width: 768px) {
@@ -122,20 +124,20 @@ import { videoTestimonials } from '../data/videoTestimonialsData.js';
 }
 
 .video-card {
-  background: #ffffff;
-  border: 1.5px solid var(--border-soft, #d8dee6);
-  border-radius: 12px;
+  background: #fbf9f6;
+  border: 1px solid #e5dfd5;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(18, 24, 32, 0.05);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .video-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--nassau-gold, #c59b27);
-  box-shadow: 0 8px 24px rgba(11, 26, 46, 0.09);
+  transform: translateY(-4px);
+  border-color: #8c6d46;
+  box-shadow: 0 14px 32px rgba(140, 109, 70, 0.12);
 }
 
 .video-player-wrap {
@@ -144,6 +146,7 @@ import { videoTestimonials } from '../data/videoTestimonialsData.js';
   width: 100%;
   background: #000000;
   overflow: hidden;
+  border-bottom: 1px solid #e5dfd5;
 }
 
 .testimonial-video-elem {
@@ -156,20 +159,22 @@ import { videoTestimonials } from '../data/videoTestimonialsData.js';
 
 .video-duration-pill {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(0, 0, 0, 0.75);
+  bottom: 12px;
+  right: 12px;
+  background: rgba(12, 20, 36, 0.88);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.72rem;
-  font-weight: 700;
-  padding: 3px 8px;
+  font-weight: 600;
+  padding: 4px 9px;
   border-radius: 4px;
   pointer-events: none;
 }
 
 .video-card-body {
-  padding: 22px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -179,26 +184,28 @@ import { videoTestimonials } from '../data/videoTestimonialsData.js';
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--nassau-gold-dark, #9d7718);
+  color: #8c6d46;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 6px;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
 }
 
 .video-card-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  line-height: 1.3;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0c1424;
+  line-height: 1.32;
   margin-bottom: 10px;
+  letter-spacing: -0.01em;
 }
 
 .video-card-quote {
-  font-size: 0.88rem;
-  color: var(--text-secondary, #475569);
-  line-height: 1.55;
-  margin-bottom: 16px;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.92rem;
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 18px;
   font-style: italic;
   flex-grow: 1;
 }
@@ -206,17 +213,18 @@ import { videoTestimonials } from '../data/videoTestimonialsData.js';
 .video-highlights-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
   margin-bottom: 0;
 }
 
 .hl-badge {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.72rem;
   font-weight: 600;
-  background: var(--surface-subtle, #eceef2);
-  color: var(--charcoal-900, #1a222d);
-  padding: 3px 8px;
+  background: #ffffff;
+  color: #6e5432;
+  padding: 4px 10px;
   border-radius: 4px;
-  border: 1px solid var(--border-soft, #d8dee6);
+  border: 1px solid #dcd4c7;
 }
 </style>

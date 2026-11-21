@@ -109,52 +109,54 @@
 
 <style scoped>
 .housing-types-section {
-  background: #ffffff;
-  padding: 80px 0;
-  border-bottom: 1.5px solid var(--border-soft, #d8dee6);
+  background: #faf7f2;
+  padding: 88px 0;
+  border-bottom: 1px solid #e5dfd5;
+  position: relative;
 }
 
 .section-head {
-  margin-bottom: 48px;
+  margin-bottom: 52px;
 }
 
 .section-tag {
   display: inline-block;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  color: var(--nassau-gold-dark, #9d7718);
-  background: #fdfaf2;
-  border: 1px solid #e6ce8a;
-  padding: 4px 12px;
-  border-radius: 9999px;
+  color: #8c6d46;
+  background: #f6f2ec;
+  border: 1px solid #dcd4c7;
+  padding: 5px 14px;
+  border-radius: 4px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
 }
 
 .section-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  line-height: 1.2;
-  margin: 0 0 12px 0;
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  font-weight: 700;
+  color: #0c1424;
+  line-height: 1.18;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.02em;
 }
 
 .section-sub {
-  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
   font-size: 1.05rem;
-  color: var(--text-secondary, #475569);
+  color: #475569;
   max-width: 720px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .housing-types-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 24px;
+  gap: 28px;
 }
 
 @media (min-width: 640px) {
@@ -171,35 +173,28 @@
 
 .housing-card {
   background: #ffffff;
-  border: 1.5px solid var(--border-soft, #d8dee6);
-  border-radius: 12px;
+  border: 1px solid #e5dfd5;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(18, 24, 32, 0.04);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .housing-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--nassau-gold, #c59b27);
-  box-shadow: 0 10px 28px rgba(197, 155, 39, 0.15);
+  transform: translateY(-4px);
+  border-color: #8c6d46;
+  box-shadow: 0 14px 32px rgba(140, 109, 70, 0.12);
 }
 
 .housing-img-box {
   position: relative;
-  height: 200px;
+  height: 210px;
   width: 100%;
   overflow: hidden;
-  background: #121820;
-}
-
-.housing-img-box::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(14, 24, 36, 0.75) 0%, rgba(14, 24, 36, 0) 40%);
-  pointer-events: none;
+  background: #f1ece4;
+  border-bottom: 1px solid #e5dfd5;
 }
 
 .housing-img {
@@ -208,7 +203,7 @@
   object-fit: cover;
   object-position: center top;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .housing-card:hover .housing-img {
@@ -217,22 +212,23 @@
 
 .card-loc-pill {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 12px;
+  left: 12px;
   z-index: 2;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.66rem;
-  font-weight: 700;
-  padding: 3px 8px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 4px 10px;
   border-radius: 4px;
-  background: rgba(18, 24, 32, 0.85);
+  background: rgba(12, 20, 36, 0.88);
   backdrop-filter: blur(4px);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.04em;
 }
 
 .housing-card-body {
-  padding: 20px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -240,34 +236,35 @@
 
 .housing-type-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  margin: 0 0 8px 0;
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #0c1424;
+  margin: 0 0 10px 0;
   line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 .housing-type-desc {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: var(--text-secondary, #475569);
-  margin: 0 0 16px 0;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0 0 18px 0;
   flex-grow: 1;
 }
 
 .housing-card-foot {
   margin-top: auto;
-  padding-top: 12px;
-  border-top: 1px dashed #e2e8f0;
+  padding-top: 14px;
+  border-top: 1px dashed #e5dfd5;
 }
 
 .checklist-badge {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.72rem;
-  font-weight: 800;
-  color: var(--nassau-gold-dark, #9d7718);
+  font-weight: 700;
+  color: #8c6d46;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 </style>

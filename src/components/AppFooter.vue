@@ -81,10 +81,11 @@
 
 <style scoped>
 .site-footer {
-  background-color: #0b1420;
+  background-color: #0c1424;
   color: #94a3b8;
-  padding: 68px 0 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 76px 0 36px;
+  border-top: 1px solid rgba(229, 223, 213, 0.15);
+  position: relative;
 }
 
 .footer-container {
@@ -98,7 +99,7 @@
   grid-template-columns: 1fr;
   gap: 36px;
   padding-bottom: 44px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 @media (min-width: 640px) {
@@ -176,7 +177,7 @@
 }
 
 .footer-links a:hover {
-  color: var(--hazard-gold, #c9a86a);
+  color: #c5a880;
 }
 
 .footer-contact-item {
@@ -203,15 +204,15 @@
 }
 
 .footer-phone:hover {
-  color: var(--hazard-gold, #c9a86a) !important;
+  color: #c5a880 !important;
 }
 
 .footer-email {
   font-size: 0.92rem;
   font-weight: 600;
-  color: #38bdf8 !important; /* High-contrast Sky Blue for perfect legibility on dark background */
+  color: #c5a880 !important;
   text-decoration: underline;
-  text-decoration-color: rgba(56, 189, 248, 0.4);
+  text-decoration-color: rgba(197, 168, 128, 0.4);
   transition: all 0.2s ease;
   word-break: break-all;
 }

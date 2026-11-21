@@ -52,7 +52,7 @@
 
           <div class="form-group" v-if="customNotes">
             <label>Selected Fee / Calculation Notes</label>
-            <input type="text" readonly :value="customNotes" style="background:#eef2f6; font-size: 0.85rem;" />
+            <input type="text" readonly :value="customNotes" style="background: #faf7f2; color: #8c6d46; border: 1px solid #dcd4c7; font-size: 0.85rem;" />
           </div>
 
           <button type="submit" class="btn btn-primary btn-block submit-modal-btn">
@@ -63,7 +63,7 @@
           </button>
 
           <p class="modal-footer-note">
-            Prefer to talk right now? Call Daren at <a href="tel:7182087092"><strong>(718) 208-7092</strong></a>
+            Prefer to talk right now? Call Daren at <a href="tel:7182087092" style="color: #8c6d46; text-decoration: underline;"><strong>(718) 208-7092</strong></a>
           </p>
         </form>
       </div>

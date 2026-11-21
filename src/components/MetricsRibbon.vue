@@ -47,15 +47,18 @@
 
 <style scoped>
 .three-pillars-section {
-  background: #fafbfd;
-  padding: 42px 0;
-  border-bottom: 1.5px solid var(--border-soft, #d8dee6);
+  background: #faf7f2;
+  padding: 56px 0;
+  border-bottom: 1px solid #e5dfd5;
+  position: relative;
 }
 
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 24px;
+  gap: 28px;
+  position: relative;
+  z-index: 2;
 }
 
 @media (min-width: 840px) {
@@ -66,72 +69,73 @@
 
 .pillar-card {
   background: #ffffff;
-  border: 1.5px solid var(--border-soft, #d8dee6);
-  border-radius: 12px;
-  padding: 30px 26px;
-  box-shadow: 0 4px 16px rgba(11, 26, 46, 0.04);
+  border: 1px solid #e5dfd5;
+  border-radius: 10px;
+  padding: 34px 28px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.25s ease;
   position: relative;
 }
 
 .pillar-card:hover {
   transform: translateY(-3px);
-  border-color: var(--nassau-gold, #c59b27);
-  box-shadow: 0 10px 24px rgba(11, 26, 46, 0.08);
+  border-color: #8c6d46;
+  box-shadow: 0 12px 30px rgba(140, 109, 70, 0.12);
 }
 
 .pillar-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .card-step {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.7rem;
-  font-weight: 800;
-  color: var(--nassau-gold, #c59b27);
-  background: transparent;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #8c6d46;
   padding: 0;
   line-height: 1;
+  letter-spacing: -0.03em;
 }
 
 .pillar-tag {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--nassau-gold-dark, #9d7718);
-  background: #fdfaf2;
-  border: 1px solid #e6ce8a;
+  letter-spacing: 0.08em;
+  color: #8c6d46;
+  background: #f6f2ec;
+  border: 1px solid #dcd4c7;
   padding: 4px 10px;
-  border-radius: 9999px;
+  border-radius: 4px;
 }
 
 .highlight-tag {
-  color: #047857;
+  color: #059669;
   background: #ecfdf5;
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  border: 1px solid #a7f3d0;
 }
 
 .pillar-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.22rem;
-  font-weight: 800;
-  color: var(--nassau-navy, #0b1a2e);
-  margin: 0 0 10px 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0c1424;
+  margin: 0 0 12px 0;
   line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 .pillar-text {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: var(--text-secondary, #475569);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #475569;
   margin: 0;
 }
 </style>

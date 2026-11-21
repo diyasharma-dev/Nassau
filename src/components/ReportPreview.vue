@@ -112,52 +112,54 @@ defineEmits(['open-modal']);
 
 <style scoped>
 .defect-watchlist-section {
-  background: #fafbfd;
-  padding: 80px 0;
-  border-bottom: 1.5px solid var(--border-soft, #d8dee6);
+  background: #ffffff;
+  padding: 88px 0;
+  border-bottom: 1px solid #e5dfd5;
+  position: relative;
 }
 
 .section-head {
-  margin-bottom: 48px;
+  margin-bottom: 52px;
 }
 
 .danger-tag {
   display: inline-block;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: #991b1b;
   background: #fef2f2;
   border: 1px solid #fecaca;
-  padding: 4px 12px;
-  border-radius: 9999px;
+  padding: 5px 14px;
+  border-radius: 4px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
 }
 
 .section-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  line-height: 1.2;
-  margin: 0 0 12px 0;
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  font-weight: 700;
+  color: #0c1424;
+  line-height: 1.18;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.02em;
 }
 
 .section-sub {
-  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
   font-size: 1.05rem;
-  color: var(--text-secondary, #475569);
+  color: #475569;
   max-width: 720px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .watchlist-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 24px;
+  gap: 28px;
   margin-bottom: 48px;
 }
 
@@ -174,21 +176,21 @@ defineEmits(['open-modal']);
 }
 
 .watchlist-card {
-  background: #ffffff;
-  border: 1.5px solid var(--border-soft, #d8dee6);
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 16px rgba(18, 24, 32, 0.04);
+  background: #faf7f2;
+  border: 1px solid #e5dfd5;
+  border-radius: 10px;
+  padding: 26px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .watchlist-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--nassau-gold, #c59b27);
-  box-shadow: 0 10px 26px rgba(197, 155, 39, 0.12);
+  transform: translateY(-4px);
+  border-color: #8c6d46;
+  box-shadow: 0 14px 32px rgba(140, 109, 70, 0.12);
 }
 
 .watchlist-card-top {
@@ -201,60 +203,63 @@ defineEmits(['open-modal']);
   align-items: center;
   gap: 6px;
   background: #fef2f2;
-  border: 1.5px solid #f87171;
-  border-radius: 6px;
-  padding: 4px 9px;
+  border: 1px solid #fecaca;
+  border-radius: 4px;
+  padding: 4px 10px;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.74rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #991b1b;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   align-self: flex-start;
+  letter-spacing: 0.03em;
 }
 
 .watchlist-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0c1424;
   margin: 0 0 10px 0;
-  line-height: 1.3;
+  line-height: 1.32;
+  letter-spacing: -0.01em;
 }
 
 .watchlist-desc {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: var(--text-secondary, #475569);
-  margin: 0 0 16px 0;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0 0 18px 0;
 }
 
 .watchlist-card-foot {
   margin-top: auto;
   padding-top: 14px;
-  border-top: 1px dashed #e2e8f0;
+  border-top: 1px dashed #e5dfd5;
 }
 
 .report-proof-text {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.72rem;
   font-weight: 700;
-  color: #64748b;
+  color: #8c6d46;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .watchlist-bottom-banner {
-  background: linear-gradient(135deg, #0b1a2e 0%, #162a45 100%);
+  background: #0c1424;
   color: #ffffff;
-  border-radius: 14px;
-  padding: 32px;
+  border-radius: 12px;
+  padding: 36px 32px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid rgba(197, 155, 39, 0.3);
-  box-shadow: 0 12px 32px rgba(11, 26, 46, 0.12);
+  border: 1px solid #1e293b;
+  box-shadow: 0 12px 36px rgba(12, 20, 36, 0.15);
 }
 
 @media (min-width: 860px) {
@@ -265,23 +270,26 @@ defineEmits(['open-modal']);
 
 .wbb-text h3 {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.35rem;
-  font-weight: 800;
+  font-size: 1.45rem;
+  font-weight: 700;
   color: #ffffff;
-  margin: 0 0 6px 0;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.01em;
 }
 
 .wbb-text p {
-  font-size: 0.92rem;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.94rem;
   color: #cbd5e1;
   margin: 0;
   max-width: 620px;
+  line-height: 1.6;
 }
 
 .wbb-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
   flex-shrink: 0;
 }
@@ -289,18 +297,22 @@ defineEmits(['open-modal']);
 .btn-call-white {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: #ffffff;
-  color: #121820;
-  padding: 10px 18px;
-  border-radius: 9999px;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 12px 22px;
+  border-radius: 6px;
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .btn-call-white:hover {
-  background: var(--hazard-gold, #c9a86a);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 </style>

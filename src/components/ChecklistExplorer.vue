@@ -111,60 +111,62 @@
 
 <style scoped>
 .checklist-section {
-  background: #ffffff;
-  padding: 80px 0;
-  border-bottom: 1.5px solid var(--border-soft, #d8dee6);
+  background: #faf7f2;
+  padding: 88px 0;
+  border-bottom: 1px solid #e5dfd5;
+  position: relative;
 }
 
 .section-head {
-  margin-bottom: 44px;
+  margin-bottom: 52px;
 }
 
 .section-tag {
   display: inline-block;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  color: var(--nassau-gold-dark, #9d7718);
-  background: #fdfaf2;
-  border: 1px solid #e6ce8a;
-  padding: 4px 12px;
-  border-radius: 9999px;
+  color: #8c6d46;
+  background: #f6f2ec;
+  border: 1px solid #dcd4c7;
+  padding: 5px 14px;
+  border-radius: 4px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
 }
 
 .section-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  line-height: 1.2;
-  margin: 0 0 12px 0;
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  font-weight: 700;
+  color: #0c1424;
+  line-height: 1.18;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.02em;
 }
 
 .section-sub {
-  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
   font-size: 1.05rem;
-  color: var(--text-secondary, #475569);
+  color: #475569;
   max-width: 720px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .diagram-feature-box {
-  background: linear-gradient(135deg, #0b1a2e 0%, #162a45 100%);
+  background: #0c1424;
   color: #ffffff;
-  border-radius: 14px;
-  padding: 32px;
+  border-radius: 12px;
+  padding: 36px 32px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
+  gap: 36px;
   align-items: center;
-  margin-bottom: 40px;
-  border: 1px solid rgba(197, 155, 39, 0.3);
-  box-shadow: 0 12px 32px rgba(11, 26, 46, 0.12);
+  margin-bottom: 44px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 12px 36px rgba(12, 20, 36, 0.12);
 }
 
 @media (min-width: 900px) {
@@ -180,37 +182,41 @@
   display: block;
   border-radius: 8px;
   background: #ffffff;
-  padding: 12px;
+  padding: 16px;
+  border: 1px solid #e5dfd5;
 }
 
 .df-badge {
   display: inline-block;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
-  color: var(--hazard-gold, #c9a86a);
-  background: rgba(201, 168, 106, 0.15);
-  border: 1px solid rgba(201, 168, 106, 0.3);
-  padding: 3px 8px;
+  color: #c5a880;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(229, 223, 213, 0.25);
+  padding: 4px 10px;
   border-radius: 4px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  letter-spacing: 0.05em;
 }
 
 .df-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.55rem;
+  font-weight: 700;
   color: #ffffff;
-  margin: 0 0 12px 0;
+  margin: 0 0 14px 0;
   line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
 .df-desc {
-  font-size: 0.94rem;
-  line-height: 1.65;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.95rem;
+  line-height: 1.7;
   color: #cbd5e1;
-  margin: 0 0 20px 0;
+  margin: 0 0 22px 0;
 }
 
 .df-trust-pills {
@@ -219,21 +225,21 @@
   gap: 10px;
   font-size: 0.82rem;
   font-weight: 600;
-  color: #94a3b8;
+  color: #cbd5e1;
 }
 
 .df-trust-pills span {
   background: rgba(255, 255, 255, 0.08);
-  padding: 4px 10px;
-  border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #e2e8f0;
+  padding: 6px 14px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 .checklist-six-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 @media (min-width: 640px) {
@@ -249,54 +255,56 @@
 }
 
 .check-card {
-  background: #fafbfd;
-  border: 1.5px solid var(--border-soft, #d8dee6);
-  border-radius: 12px;
-  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5dfd5;
+  border-radius: 10px;
+  padding: 26px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s ease;
 }
 
 .check-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--nassau-gold, #c59b27);
-  box-shadow: 0 8px 24px rgba(11, 26, 46, 0.08);
+  transform: translateY(-4px);
+  border-color: #8c6d46;
+  box-shadow: 0 14px 32px rgba(140, 109, 70, 0.12);
 }
 
 .check-card-header {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .check-num {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 800;
-  color: var(--nassau-gold, #c59b27);
-  background: #fdfaf2;
-  border: 1px solid #e6ce8a;
-  padding: 2px 9px;
-  border-radius: 6px;
+  color: #8c6d46;
+  background: #f6f2ec;
+  border: 1px solid #dcd4c7;
+  padding: 3px 10px;
+  border-radius: 4px;
   flex-shrink: 0;
 }
 
 .check-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.08rem;
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0c1424;
   margin: 0;
   line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
 .check-desc {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: var(--text-secondary, #475569);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #475569;
   margin: 0;
 }
 </style>

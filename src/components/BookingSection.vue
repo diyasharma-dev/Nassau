@@ -53,173 +53,153 @@ defineEmits(['open-modal']);
 
 <style scoped>
 .cta-section {
-  padding: 60px 0 80px;
-  background: #ffffff;
+  padding: 80px 0 96px;
+  background: #faf7f2;
+  position: relative;
 }
 
 .cta-band {
-  background: linear-gradient(135deg, #0b1a2e 0%, #162a45 100%);
-  border-radius: 20px;
-  padding: 64px 36px;
+  background: #0c1424;
+  border-radius: 16px;
+  padding: 72px 40px;
   color: #ffffff;
   text-align: center;
-  box-shadow: 0 20px 48px rgba(11, 26, 46, 0.25);
+  box-shadow: 0 20px 50px rgba(12, 20, 36, 0.2);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(197, 155, 39, 0.35);
-}
-
-.cta-band::before {
-  content: '';
-  position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(197, 155, 39, 0.22) 0%, rgba(197, 155, 39, 0) 70%);
-  pointer-events: none;
-}
-
-.cta-band::after {
-  content: '';
-  position: absolute;
-  bottom: -60px;
-  left: -60px;
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(197, 155, 39, 0.18) 0%, rgba(197, 155, 39, 0) 70%);
-  pointer-events: none;
+  border: 1px solid #1e293b;
 }
 
 .cta-content {
   position: relative;
   z-index: 2;
-  max-width: 780px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .cta-pill {
   display: inline-block;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.74rem;
-  font-weight: 700;
+  font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  background: rgba(201, 168, 106, 0.2);
-  color: var(--hazard-gold, #f59e0b);
-  border: 1px solid rgba(201, 168, 106, 0.4);
-  padding: 4px 14px;
-  border-radius: 9999px;
-  margin-bottom: 20px;
+  letter-spacing: 0.1em;
+  background: rgba(255, 255, 255, 0.08);
+  color: #c5a880;
+  border: 1px solid rgba(229, 223, 213, 0.25);
+  padding: 5px 16px;
+  border-radius: 4px;
+  margin-bottom: 24px;
 }
 
 .cta-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: clamp(2rem, 3.8vw, 3rem);
-  font-weight: 800;
-  line-height: 1.18;
-  margin: 0 0 18px 0;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
   color: #ffffff;
   letter-spacing: -0.02em;
 }
 
 .cta-subtitle {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: clamp(1rem, 1.3vw, 1.15rem);
-  line-height: 1.65;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(1.02rem, 1.3vw, 1.15rem);
+  line-height: 1.7;
   color: #cbd5e1;
-  margin: 0 0 36px 0;
+  margin: 0 0 40px 0;
 }
 
 .cta-actions {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 .btn-accent-cta {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  background: linear-gradient(135deg, #c59b27 0%, #b08719 100%);
-  color: #0b1a2e;
-  font-family: var(--font-sans, 'Inter', sans-serif);
+  gap: 10px;
+  background: #8c6d46;
+  color: #ffffff;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 700;
   padding: 14px 30px;
-  border-radius: 9999px;
+  border-radius: 6px;
   text-decoration: none;
-  box-shadow: 0 4px 18px rgba(197, 155, 39, 0.35);
+  box-shadow: 0 4px 16px rgba(140, 109, 70, 0.25);
   transition: all 0.2s ease;
-  border: 1px solid #e6ce8a;
+  border: 1px solid #8c6d46;
   cursor: pointer;
+  letter-spacing: 0.01em;
 }
 
 .btn-accent-cta:hover {
-  background: linear-gradient(135deg, #d8ac32 0%, #c59b27 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(197, 155, 39, 0.5);
-  color: #0b1a2e;
+  background: #a38157;
+  border-color: #a38157;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(140, 109, 70, 0.35);
+  color: #ffffff;
 }
 
 .btn-outline-cta {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
-  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
   font-size: 1rem;
   font-weight: 700;
   padding: 14px 28px;
-  border-radius: 9999px;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .btn-outline-cta:hover {
-  background: #ffffff;
-  color: #0b1a2e;
+  background: rgba(255, 255, 255, 0.16);
   border-color: #ffffff;
-  transform: translateY(-2px);
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .btn-email-cta {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: transparent;
-  color: #94a3b8;
-  font-family: var(--font-sans, 'Inter', sans-serif);
+  background: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
   font-size: 0.95rem;
   font-weight: 600;
-  padding: 14px 20px;
-  border-radius: 9999px;
-  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  padding: 14px 22px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .btn-email-cta:hover {
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
 }
 
 .cta-trust-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.76rem;
-  color: #94a3b8;
+  color: #cbd5e1;
   flex-wrap: wrap;
 }
 
@@ -228,13 +208,13 @@ defineEmits(['open-modal']);
 }
 
 .bullet {
-  color: #64748b;
+  color: #8c6d46;
 }
 
 @media (max-width: 640px) {
   .cta-band {
-    padding: 44px 20px;
-    border-radius: 16px;
+    padding: 48px 24px;
+    border-radius: 12px;
   }
   .cta-actions {
     flex-direction: column;

@@ -198,58 +198,61 @@ const filteredReviews = computed(() => {
 <style scoped>
 .reviews-section {
   background: #ffffff;
-  padding: 80px 0;
-  border-bottom: 1.5px solid var(--border-soft, #d8dee6);
+  padding: 88px 0;
+  border-bottom: 1px solid #e5dfd5;
+  position: relative;
 }
 
 .section-head {
-  margin-bottom: 36px;
+  margin-bottom: 48px;
 }
 
 .section-tag {
   display: inline-block;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  color: var(--nassau-gold-dark, #9d7718);
-  background: #fdfaf2;
-  border: 1px solid #e6ce8a;
-  padding: 4px 12px;
-  border-radius: 9999px;
+  color: #8c6d46;
+  background: #f6f2ec;
+  border: 1px solid #dcd4c7;
+  padding: 5px 14px;
+  border-radius: 4px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
 }
 
 .section-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  line-height: 1.2;
-  margin: 0 0 12px 0;
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  font-weight: 700;
+  color: #0c1424;
+  line-height: 1.18;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.02em;
 }
 
 .section-sub {
-  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
   font-size: 1.05rem;
-  color: var(--text-secondary, #475569);
+  color: #475569;
   max-width: 720px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .rating-summary-card {
-  background: #fafbfd;
-  border: 1.5px solid var(--border-soft, #d8dee6);
+  background: #faf7f2;
+  border: 1px solid #e5dfd5;
   border-radius: 12px;
-  padding: 24px 32px;
+  padding: 28px 36px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
 }
 
 @media (min-width: 860px) {
@@ -260,10 +263,11 @@ const filteredReviews = computed(() => {
 
 .rsc-brand {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: var(--charcoal-950, #121820);
-  margin-bottom: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0c1424;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
 }
 
 .rsc-badge {
@@ -271,35 +275,37 @@ const filteredReviews = computed(() => {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.68rem;
   font-weight: 700;
-  background: #e0f2fe;
-  color: #0284c7;
-  padding: 2px 8px;
+  background: #ffffff;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+  padding: 3px 8px;
   border-radius: 4px;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .rsc-center {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .rsc-score {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: var(--charcoal-950, #121820);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #8c6d46;
   line-height: 1;
 }
 
 .rsc-stars {
-  color: #f59e0b;
-  font-size: 1.3rem;
+  color: #8c6d46;
+  font-size: 1.35rem;
   letter-spacing: 2px;
 }
 
 .rsc-count {
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   color: #64748b;
   font-weight: 600;
 }
@@ -307,36 +313,38 @@ const filteredReviews = computed(() => {
 .btn-review-link {
   display: inline-flex;
   align-items: center;
-  background: #ffffff;
-  color: var(--charcoal-950, #121820);
-  border: 1.5px solid var(--border-soft, #d8dee6);
-  border-radius: 9999px;
-  padding: 9px 18px;
+  background: #0c1424;
+  color: #ffffff;
+  border: 1px solid #0c1424;
+  border-radius: 6px;
+  padding: 10px 22px;
   font-weight: 700;
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .btn-review-link:hover {
-  border-color: var(--nassau-gold, #c59b27);
-  color: var(--nassau-navy, #0b1a2e);
+  background: #8c6d46;
+  border-color: #8c6d46;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .review-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   justify-content: center;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 
 .filter-pill {
-  background: #f8fafc;
-  border: 1px solid var(--border-soft, #d8dee6);
-  border-radius: 9999px;
-  padding: 6px 14px;
-  font-size: 0.82rem;
+  background: #ffffff;
+  border: 1px solid #e5dfd5;
+  border-radius: 6px;
+  padding: 7px 18px;
+  font-size: 0.84rem;
   font-weight: 600;
   color: #475569;
   cursor: pointer;
@@ -344,20 +352,21 @@ const filteredReviews = computed(() => {
 }
 
 .filter-pill:hover {
-  border-color: var(--nassau-gold, #c59b27);
-  color: var(--nassau-navy, #0b1a2e);
+  border-color: #8c6d46;
+  color: #0c1424;
 }
 
 .filter-pill.active {
-  background: var(--nassau-navy, #0b1a2e);
+  background: #0c1424;
   color: #ffffff;
-  border-color: var(--nassau-navy, #0b1a2e);
+  border-color: #0c1424;
+  font-weight: 700;
 }
 
 .reviews-masonry {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 24px;
+  gap: 26px;
 }
 
 @media (min-width: 640px) {
@@ -373,35 +382,42 @@ const filteredReviews = computed(() => {
 }
 
 .review-item {
-  background: #ffffff;
-  border: 1.5px solid var(--border-soft, #d8dee6);
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 16px rgba(18, 24, 32, 0.04);
+  background: #fbf9f6;
+  border: 1px solid #e5dfd5;
+  border-radius: 10px;
+  padding: 26px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
   display: flex;
   flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.review-item:hover {
+  transform: translateY(-4px);
+  border-color: #8c6d46;
+  box-shadow: 0 14px 32px rgba(140, 109, 70, 0.12);
 }
 
 .review-item-header {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .review-avatar {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: var(--nassau-navy, #0b1a2e);
-  color: #ffffff;
-  font-weight: 800;
+  background: #f6f2ec;
+  color: #0c1424;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   flex-shrink: 0;
-  border: 1.5px solid #c59b27;
+  border: 1px solid #dcd4c7;
 }
 
 .review-author-meta {
@@ -411,8 +427,9 @@ const filteredReviews = computed(() => {
 }
 
 .author-name {
-  font-size: 0.95rem;
-  color: var(--charcoal-950, #121820);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #0c1424;
 }
 
 .author-sub {
@@ -424,34 +441,37 @@ const filteredReviews = computed(() => {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.65rem;
   font-weight: 700;
-  background: #f1f5f9;
-  color: #475569;
-  padding: 2px 6px;
+  background: #faf7f2;
+  color: #8c6d46;
+  border: 1px solid #dcd4c7;
+  padding: 3px 8px;
   border-radius: 4px;
   text-transform: uppercase;
 }
 
 .review-stars-gold {
-  color: #f59e0b;
+  color: #8c6d46;
   font-size: 0.95rem;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
 }
 
 .review-quote-title {
   font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   font-weight: 700;
-  color: var(--charcoal-950, #121820);
-  margin: 0 0 8px 0;
+  color: #0c1424;
+  margin: 0 0 10px 0;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
 }
 
 .review-quote-text {
-  font-family: var(--font-sans, 'Inter', sans-serif);
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: var(--text-secondary, #475569);
-  margin: 0 0 16px 0;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #334155;
+  margin: 0 0 18px 0;
   flex-grow: 1;
 }
 
@@ -460,12 +480,13 @@ const filteredReviews = computed(() => {
   align-items: center;
   gap: 6px;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  color: #047857;
+  color: #059669;
   text-transform: uppercase;
   margin-top: auto;
-  padding-top: 10px;
-  border-top: 1px dashed #e2e8f0;
+  padding-top: 12px;
+  border-top: 1px dashed #e5dfd5;
+  letter-spacing: 0.04em;
 }
 </style>

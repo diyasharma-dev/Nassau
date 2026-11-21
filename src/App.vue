@@ -99,5 +99,8 @@ const closeModal = () => {
 .app-root {
   overflow-x: hidden;
   width: 100%;
+  background-color: var(--bg-body, #fbf9f6);
+  color: var(--text-main, #0f172a);
+  min-height: 100vh;
 }
 </style>
