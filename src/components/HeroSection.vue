@@ -19,7 +19,7 @@
           <!-- Official Licensing Tag -->
           <div class="hero-eyebrow-pill">
             <span class="gold-star">&#9733;</span>
-            <span class="eyebrow-text">NYS Licensed &bull; Nassau County</span>
+            <span class="eyebrow-text">NYS Licensed &bull; Nassau County Executive 1-Pager</span>
           </div>
 
           <!-- Main Official H1 Headline -->
@@ -53,6 +53,16 @@
 
             <button class="btn-schedule-hero" @click="$emit('open-modal', 'Nassau County Home Inspection')">
               <span>Request Quote Online &rarr;</span>
+            </button>
+
+            <button class="btn-one-pager-hero" @click="$emit('open-one-pager')" title="View Executive 1-Pager Document">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+              <span>Executive 1-Pager</span>
             </button>
           </div>
 
@@ -199,7 +209,7 @@
 </template>
 
 <script setup>
-defineEmits(['open-modal']);
+defineEmits(['open-modal', 'open-one-pager']);
 </script>
 
 <style scoped>
@@ -385,6 +395,29 @@ defineEmits(['open-modal']);
   border-color: #a38157;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(140, 109, 70, 0.35);
+}
+
+.btn-one-pager-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #c5a880;
+  border: 1px solid rgba(229, 223, 213, 0.3);
+  border-radius: 6px;
+  padding: 13px 22px;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.94rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-one-pager-hero:hover {
+  background: #8c6d46;
+  border-color: #8c6d46;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .hero-trust-notes {

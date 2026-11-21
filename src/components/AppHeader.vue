@@ -25,6 +25,17 @@
 
       <!-- Header Actions: Never Cut Off -->
       <div class="header-actions">
+        <!-- Executive 1-Pager Brief Button -->
+        <button class="header-one-pager-btn" @click="$emit('open-one-pager')" title="View Executive 1-Pager Document">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+          <span class="one-pager-btn-text">Executive 1-Pager</span>
+        </button>
+
         <!-- Direct Phone Call Button -->
         <a href="tel:7182087092" class="header-call-btn" aria-label="Call Lead Inspector Daren Koniuk directly at 718-208-7092">
           <svg class="phone-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -68,6 +79,9 @@
           <a href="#reviews" class="m-link" @click="closeMobileMenu">Google Reviews (4.9 Stars)</a>
         </nav>
         <div class="mobile-drawer-cta">
+          <button class="btn btn-secondary btn-block" @click="closeAndOpenOnePager">
+            📄 View Executive 1-Pager Document
+          </button>
           <a href="tel:7182087092" class="btn btn-outline btn-block">
             Call Inspector: (718) 208-7092
           </a>
@@ -83,7 +97,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const emit = defineEmits(['open-modal']);
+const emit = defineEmits(['open-modal', 'open-one-pager']);
 const mobileMenuOpen = ref(false);
 
 const toggleMobileMenu = () => {
@@ -92,6 +106,11 @@ const toggleMobileMenu = () => {
 
 const closeMobileMenu = () => {
   mobileMenuOpen.value = false;
+};
+
+const closeAndOpenOnePager = () => {
+  mobileMenuOpen.value = false;
+  emit('open-one-pager');
 };
 
 const closeAndBook = () => {
@@ -199,6 +218,30 @@ const closeAndBook = () => {
   white-space: nowrap;
 }
 
+.header-one-pager-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #f6f2ec;
+  color: #8c6d46;
+  border: 1px solid #dcd4c7;
+  border-radius: 6px;
+  padding: 9px 14px;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.header-one-pager-btn:hover {
+  background: #0c1424;
+  border-color: #0c1424;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
 .header-call-btn {
   display: inline-flex;
   align-items: center;
@@ -295,9 +338,21 @@ const closeAndBook = () => {
   .header-call-btn {
     padding: 8px 10px;
   }
+  .one-pager-btn-text {
+    display: none;
+  }
+  .header-one-pager-btn {
+    padding: 8px 10px;
+  }
 }
 
 /* Very narrow mobile: Hide call button, show Logo + Book Button + Hamburger */
+@media (max-width: 480px) {
+  .header-one-pager-btn {
+    display: none;
+  }
+}
+
 @media (max-width: 420px) {
   .header-call-btn {
     display: none;
